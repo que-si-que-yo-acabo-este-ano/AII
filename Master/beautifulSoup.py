@@ -30,4 +30,11 @@ if __name__ == "__main__":
         print(li.find(attrs={"class": "title"}).get("title"))
         """print(li.find(attrs={"class": "threadstats td alt"}))
         print("--------------------------------------------------------------------")"""
+        for m in li.find(attrs={"class":"threadstats td alt"}).find_all("li"):
+            print(m.get_text())
+        print("--------------------------------------------------------------------")
+        #print(li.find(attrs={"class": "threadstats td alt"}))
+        
+        
+       
         
