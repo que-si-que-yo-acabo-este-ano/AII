@@ -23,7 +23,7 @@ def beautifulRead(html):
 
 if __name__ == "__main__":
     file="foros"
-    #open_url("https://foros.derecho.com/foro/20-Derecho-Civil-General",file)
+    open_url("https://foros.derecho.com/foro/20-Derecho-Civil-General",file)
     html_doc = open(file,"r")
     soup = beautifulRead(html_doc)
     for li in soup.find_all("li",attrs={"class": "threadbit"}):
