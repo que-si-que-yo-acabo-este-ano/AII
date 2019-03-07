@@ -28,7 +28,7 @@ if __name__ == "__main__":
     soup = beautifulRead(html_doc)
     for li in soup.find_all("li",attrs={"class": "threadbit"}):
         print(li.find(attrs={"class": "title"}).get("title"))
-        #aa ver si sale este comentario.
+        
         for m in li.find(attrs={"class":"threadstats td alt"}).find_all("li"):
             print(m.get_text())
         print("--------------------------------------------------------------------")
