@@ -27,7 +27,18 @@ if __name__ == "__main__":
     html_doc = open(file,"r")
     soup = beautifulRead(html_doc)
     for li in soup.find_all("li",attrs={"class": "threadbit"}):
-        print(li.find(attrs={"class": "title"}).get("title"))
-        """print(li.find(attrs={"class": "threadstats td alt"}))
-        print("--------------------------------------------------------------------")"""
+        print("Título: ",li.find(attrs={"class": "title"}).get("title"))
+        respvis = []
+        for m in li.find(attrs={"class":"threadstats td alt"}).find_all("li",limit=2):
+            print(m.get_text()[-1])
+            respvis.append(m.get_text()[-1])
+        #TODO 
+        #Posición 0 respuestas
+        #Posición 1 visitas
+        print("--------------------------------------------------------------------")
+       #pepepepepe
+        
+        
+        
+       
         
