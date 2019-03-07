@@ -36,8 +36,7 @@ statsmenu.add_command(label="Temas mas populares", command=donothing)
 menubar.add_cascade(label="Estadisticas", menu=statsmenu)
 
 root.config(menu=menubar)
-root.mainloop()
-
+#root.mainloop()
 ##############################################################################################
 
 def abrir_url(url,file):
@@ -59,16 +58,16 @@ def extraer_datos():
     if abrir_url("https://foros.derecho.com/foro/20-Derecho-Civil-General",fichero):
         f = open (fichero)
         soup = BeautifulSoup(f, 'html.parser')
-        l = 
+        # l = 
         f.close()
-        return l
+        # return l
 
 
 def almacenar_bd():
     conn = sqlite3.connect('test.db')
     conn.text_factory = str  # para evitar problemas con el conjunto de caracteres que maneja la BD
-    conn.execute("DROP TABLE IF EXISTS FORUM")   
-    conn.execute('''CREATE TABLE FORUM
+    # conn.execute("DROP TABLE IF EXISTS FORUM")   
+    conn.execute('''CREATE TABLE IF NOT EXISTS FORUM
        (ID INTEGER PRIMARY KEY  AUTOINCREMENT,
        TITLE        TEXT       NOT NULL,
        LINK         TEXT       NOT NULL,
@@ -77,10 +76,16 @@ def almacenar_bd():
        ANSWERS      INTEGER    NOT NULL,
        VISITS       INTEGER    NOT NULL);''')
 
-    l = extraer_datos()
+    # l = extraer_datos()
+    l = [["Titulo a","Otros"]]
     for i in l: # Cambiar los indices de i en la linea de abajo por los correspondientes al hacer el extraer_datos
-        conn.execute("""INSERT INTO FORUM (TITLE, LINK, DATE, ANSWERS, VISITS) VALUES (?,?,?,?,?)""",(i[0],i[0],i[3],i[3],i[3]))
-    conn.commit()
+        conn.execute("""INSERT INTO FORUM (TITLE, LINK, AUTHOR, DATE, ANSWERS, VISITS) VALUES (?,?,?,?,?,?)""",(i[0],i[0],i[0],i[1],i[1],i[1]))
+        conn.commit()
     cursor = conn.execute("SELECT COUNT(*) FROM FORUM")
-    messagebox.showinfo( "Base Datos", "Base de datos creada correctamente \nHay " + str(cursor.fetchone()[0]) + " registros")
+    ver = conn.execute("SELECT * FROM FORUM")
+    # messagebox.showinfo( "Base Datos", "Base de datos creada correctamente \nHay " + str(cursor.fetchone()[0]) + " registros")
+    print( "Base Datos", "Base de datos creada correctamente \nHay " + str(cursor.fetchone()[0]) + " registros")
+    tabla = ver.fetchall()
+    for i in tabla:
+        print(i)
     conn.close()
