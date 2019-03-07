@@ -32,7 +32,7 @@ if __name__ == "__main__":
         for m in li.find(attrs={"class":"threadstats td alt"}).find_all("li"):
             print(m.get_text())
         print("--------------------------------------------------------------------")
-       
+       #pepepepepe
         
         
         
