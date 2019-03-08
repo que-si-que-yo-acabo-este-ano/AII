@@ -26,15 +26,23 @@ if __name__ == "__main__":
     open_url("https://foros.derecho.com/foro/20-Derecho-Civil-General",file)
     html_doc = open(file,"r")
     soup = beautifulRead(html_doc)
+    linkRaiz = str(soup.find("base").get("href"))
     for li in soup.find_all("li",attrs={"class": "threadbit"}):
-        print("Título: ",li.find(attrs={"class": "title"}).get("title"))
+        titulo = li.find(attrs={"class": "title"}).get("title")
+        link = linkRaiz + str(li.find(attrs={"class": "title"}).get("href"))
+        autor = li.find(attrs={"class": "username understate"}).get_text()
         respvis = []
         for m in li.find(attrs={"class":"threadstats td alt"}).find_all("li",limit=2):
-            print(m.get_text()[-1])
             respvis.append(m.get_text()[-1])
-        #TODO 
+        
+        #TODO insertar en bd
+        print("Título: ",titulo)
+        print("Link: ",link)
+        print("Autor: ",autor)
         #Posición 0 respuestas
+        print("Respuestas: ",respvis[0])
         #Posición 1 visitas
+        print("Visitas: ",respvis[1])
         print("--------------------------------------------------------------------")
        #pepepepepe
         
