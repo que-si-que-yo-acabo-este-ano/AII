@@ -31,20 +31,21 @@ if __name__ == "__main__":
         titulo = li.find(attrs={"class": "title"}).get("title")
         link = linkRaiz + str(li.find(attrs={"class": "title"}).get("href"))
         autor = li.find(attrs={"class": "username understate"}).get_text()
+        fechaHora = li.find(attrs={"class":"label"}).get_text().split(",")
         respvis = []
         for m in li.find(attrs={"class":"threadstats td alt"}).find_all("li",limit=2):
             respvis.append(m.get_text()[-1])
         
         #TODO insertar en bd
-        print("Título: ",titulo)
-        print("Link: ",link)
-        print("Autor: ",autor)
+        print("Título:",titulo)
+        print("Link:",link)
+        print("Autor:",autor)
+        print("Fecha y Hora:",str(fechaHora[1]).lstrip())
         #Posición 0 respuestas
-        print("Respuestas: ",respvis[0])
+        print("Respuestas:",respvis[0])
         #Posición 1 visitas
-        print("Visitas: ",respvis[1])
+        print("Visitas:",respvis[1])
         print("--------------------------------------------------------------------")
-       #pepepepepe
         
         
         
