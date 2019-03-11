@@ -2,19 +2,13 @@
 
 import dataBase
 import urllib.request, re
-import os.path
 from bs4 import BeautifulSoup
 from idlelib.iomenu import encoding
 
 
 def open_url(url,file):
     try:
-        if os.path.exists(file):
-            recarga = input("La página ya ha sido cargada. Desea recargarla (s/n)?")
-            if recarga == "s":
-                urllib.request.urlretrieve(url,file)
-        else:
-            urllib.request.urlretrieve(url,file)
+        urllib.request.urlretrieve(url,file)
         return file
     except:
         print  ("Error al conectarse a la página")

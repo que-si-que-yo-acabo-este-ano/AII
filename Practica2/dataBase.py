@@ -62,6 +62,11 @@ def selectDataBaseOfertas():
     conn.close()
     return res
 
+def removeTable():
+    conn = sqlite3.connect('ulalox.db')
+    conn.execute("""DROP TABLE IF EXISTS PRODUCTO""")
+    conn.close()
+
 """productosPrueba = [['Gluton','Artg','www.gluten.com',2.0,None],['Gluton22323','OFERTON','www.gluten.com',2.0,1.0]]
 startDataBase()
 insertDataBase(productosPrueba)

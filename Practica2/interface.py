@@ -6,7 +6,7 @@ from tkinter import messagebox
 import dataBase
 import beautifulSoup
 
-almacenado = False
+
 
 def donothing():
    filewin = Toplevel(root)
@@ -15,6 +15,7 @@ def donothing():
 
 
 def importProducts():
+   dataBase.removeTable()
    dataBase.startDataBase()
    dataBase.insertDataBase(beautifulSoup.lecturaWeb())
    global almacenado
@@ -48,6 +49,7 @@ def selectProductsFromBrand(win):
 
 
 def importAndClose(win):
+   dataBase.removeTable()
    dataBase.startDataBase()
    dataBase.insertDataBase(beautifulSoup.lecturaWeb())
    global almacenado
@@ -85,8 +87,10 @@ def selectProductsOnSale():
    sales.pack()
    saleScroll.config(command=sales.yview)
 
+almacenado = False
 
-   
+dataBase.removeTable()
+
 root = Tk()
 menubar = Menu(root)
 
