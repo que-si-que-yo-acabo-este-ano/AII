@@ -28,7 +28,7 @@ def selectDataBaseMarcas():
     for producto in rows.fetchall():
         res.append(producto[0])
     conn.close()
-    return set(res)
+    return sorted(set(res))
 
 
 def selectDataBaseMarca(marca):
