@@ -23,7 +23,19 @@ def insertDataBase(productos):
 
 def selectDataBaseMarca(marca):
     conn = sqlite3.connect('ulalox.db')
-    rows = conn.execute("""SELECT * FROM PRODUCTO""")
+    rows = conn.execute("""
+    SELECT NOMBRE,
+        CASE PRECIO_OFERTA
+            WHEN PRECIO_OFERTA is not NULL 
+                THEN 
+                    PRECIO_OFERTA 
+            ELSE 
+                    PRECIO 
+        END PRECIO_FINAL 
+    FROM 
+        PRODUCTO
+    WHERE
+        MARCA = '{0}'""".format(marca))
     res = []
     for producto in rows.fetchall():
         res.append(producto)
@@ -39,8 +51,7 @@ def selectDataBaseOfertas():
     conn.close()
     return res
 
-productosPrueba = [['Gluton','Artg','www.gluten.com',2.0,None],['Gluton22323','Artg','www.gluten.com',2.0,1.0]]
+"""productosPrueba = [['Gluton','Artg','www.gluten.com',2.0,None],['Gluton22323','OFERTON','www.gluten.com',2.0,1.0]]
 startDataBase()
 insertDataBase(productosPrueba)
-#selectDataBaseMarca()
-print(selectDataBaseOfertas())
+print(selectDataBaseMarca("Gluton22323"))"""
