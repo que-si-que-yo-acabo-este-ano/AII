@@ -3,6 +3,8 @@
 
 from tkinter import *
 from tkinter import messagebox
+import dataBase
+import beautifulSoup
 
 
 def donothing():
@@ -11,10 +13,13 @@ def donothing():
    button.pack()
 
 
+def importProducts():
+   dataBase.insertDataBase(beautifulSoup.lecturaWeb())
+
+
 
 def getBrands():
-   # Un select de las marcas, meterlas en una lista
-   brandsList = ["a","b","c"]
+   brandsList = dataBase.selectDataBaseMarcas()
    return brandsList
 
 
@@ -50,7 +55,7 @@ def selectProductsOnSale():
 root = Tk()
 menubar = Menu(root)
 
-almacenar = Button(root, text ="Almacenar Productos", command = donothing)
+almacenar = Button(root, text ="Almacenar Productos", command = importProducts)
 almacenar.grid(row=0, column=0, columnspan=2, sticky=E+W, pady=5)
 
 marca = Button(root, text ="Mostrar Marca", command = selectProductsFromBrand)
@@ -59,7 +64,7 @@ marca.grid(row=1, column=0, sticky=E+W, pady=5)
 ofertas = Button(root, text ="Buscar Ofertas", command = selectProductsOnSale)
 ofertas.grid(row=2, column=0, columnspan=2, sticky=E+W, pady=5)
 
-brandsSpin = Spinbox(root,values=getBrands(), wrap=True)
+brandsSpin = Spinbox(root,values=list(getBrands()), wrap=True)
 brandsSpin.grid(row=1, column=1)
 
 

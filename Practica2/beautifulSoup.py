@@ -5,8 +5,6 @@ import urllib.request, re
 import os.path
 from bs4 import BeautifulSoup
 from idlelib.iomenu import encoding
-from decimal import Decimal
-from test.test_functools import decimal
 
 
 def open_url(url,file):
@@ -41,12 +39,12 @@ def lecturaWeb():
         nombre = li.find(attrs={"class": "product-item__main"}).find(attrs={"class": "product-item__title"}).find(attrs="product-item__name zeta face-normal | flush--bottom").find("a").get_text().lstrip()
         nombre = nombre.rstrip(' ')
         nombre = nombre.rstrip("\n")
-        print(marca)
+        # print(marca)
         
         precio = li.find(attrs={"class": "delta"}).get_text()
         precio2 = li.find(attrs={"class": "milli"}).get_text()
         precioFinal = (precio + precio2[:-2]).replace(",",".")
-        precioFinal = Decimal(precioFinal)
+        precioFinal = float(precioFinal)
 #         print(precio)
 #         print(precio2)
         lista=[]
@@ -55,19 +53,22 @@ def lecturaWeb():
             oferta = str(oferta).replace("<del class=\"product-item__price product-item__price--old product-grid-footer__price--old nano | flush--bottom\">","")[:-8]   
             lista.append(marca)
             lista.append(nombre)
+            lista.append(url)
             lista.append(oferta)
             lista.append(precioFinal)
         else:
             lista.append(marca)
             lista.append(nombre)
+            lista.append(url)
             lista.append(precioFinal)
             lista.append(None)
             
         listaFinal.append(lista)
     return listaFinal
 
-print(lecturaWeb())
-       
+# for x in lecturaWeb():
+#     print(x)
+# print(lecturaWeb())
         
     #dataBase.startDataBase()
         

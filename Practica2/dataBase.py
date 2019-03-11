@@ -10,8 +10,8 @@ def startDataBase():
        MARCA          TEXT       NOT NULL,
        NOMBRE         TEXT       NOT NULL,
        LINK           TEXT       NOT NULL,
-       PRECIO         DOUBLE       NOT NULL,
-       PRECIO_OFERTA      INTEGER);''')
+       PRECIO         DOUBLE     NOT NULL,
+       PRECIO_OFERTA  DOUBLE);''')
     
 
 def insertDataBase(productos):
@@ -20,6 +20,16 @@ def insertDataBase(productos):
         conn.execute("""INSERT INTO PRODUCTO (MARCA,NOMBRE,LINK,PRECIO,PRECIO_OFERTA) VALUES (?,?,?,?,?)""",(producto[0],producto[1],producto[2],producto[3],producto[4]))
     conn.commit()
     conn.close()    
+
+def selectDataBaseMarcas():
+    conn = sqlite3.connect('ulalox.db')
+    rows = conn.execute("""SELECT MARCA FROM PRODUCTO""")
+    res = []
+    for producto in rows.fetchall():
+        res.append(producto[0])
+    conn.close()
+    return set(res)
+
 
 def selectDataBaseMarca(marca):
     conn = sqlite3.connect('ulalox.db')
