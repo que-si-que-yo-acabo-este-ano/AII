@@ -6,6 +6,7 @@ from tkinter import messagebox
 import dataBase
 import beautifulSoup
 
+almacenado = False
 
 def donothing():
    filewin = Toplevel(root)
@@ -16,6 +17,8 @@ def donothing():
 def importProducts():
    dataBase.startDataBase()
    dataBase.insertDataBase(beautifulSoup.lecturaWeb())
+   global almacenado
+   almacenado = True
 
 
 
@@ -25,7 +28,7 @@ def getBrands():
 
 
 
-def selectProductsFromBrand():
+def selectProductsFromBrand(win):
    productsWin = Toplevel(root)
    prodScroll = Scrollbar(productsWin, orient="vertical")
    prodScroll.pack(side=RIGHT, fill=Y)
@@ -37,9 +40,36 @@ def selectProductsFromBrand():
    for x in blev:
       aux.append(str(x[0]) + " " + str(x[1]))
    for y in aux:
-      products.insert(y)
+      products.insert(END, y)
    products.pack()
    prodScroll.config(command=products.yview)
+   win.destroy()
+
+
+
+def importAndClose(win):
+   dataBase.startDataBase()
+   dataBase.insertDataBase(beautifulSoup.lecturaWeb())
+   global almacenado
+   almacenado = True
+   win.destroy()
+
+
+
+def selectBrand():
+   brandWin = Toplevel(root)
+   if almacenado:
+      brandsSpin = Spinbox(brandWin,values=getBrands, wrap=True)
+      brandsSpin.grid(row=0)
+      brandsButton = Button(brandWin, text="Elegir marca", command= lambda : selectProductsFromBrand(brandWin))
+      brandsButton.grid(row=1)
+
+   else:
+      alertLabel = Label(brandWin, text="No se han almacenado productos todavia")
+      alertLabel.grid(row=0)
+      alertButton = Button(brandWin, text="Almacenar productos", command= lambda : importAndClose(brandWin))
+      alertButton.grid(row=1)
+
 
 
 
@@ -63,15 +93,12 @@ menubar = Menu(root)
 almacenar = Button(root, text ="Almacenar Productos", command = importProducts)
 almacenar.grid(row=0, column=0, columnspan=2, sticky=E+W, pady=5)
 
-marca = Button(root, text ="Mostrar Marca", command = selectProductsFromBrand)
+marca = Button(root, text ="Mostrar Marca", command = selectBrand)
 marca.grid(row=1, column=0, sticky=E+W, pady=5)
 
 ofertas = Button(root, text ="Buscar Ofertas", command = selectProductsOnSale)
 ofertas.grid(row=2, column=0, columnspan=2, sticky=E+W, pady=5)
 
-brandsList = []
-brandsSpin = Spinbox(root,values=brandsList, wrap=True)
-brandsSpin.grid(row=1, column=1)
 
 
 root.config(menu=menubar)
