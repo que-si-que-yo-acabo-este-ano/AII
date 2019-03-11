@@ -12,24 +12,13 @@ def donothing():
    
 root = Tk()
 menubar = Menu(root)
-datamenu = Menu(menubar, tearoff=0)
-datamenu.add_command(label="Cargar", command=donothing)
-datamenu.add_command(label="Mostrar", command=donothing)
-datamenu.add_separator()
-datamenu.add_command(label="Salir", command=root.destroy)
-menubar.add_cascade(label="Datos", menu=datamenu)
 
-
-buscarmenu = Menu(menubar, tearoff=0)
-buscarmenu.add_command(label="Tema", command=donothing)
-buscarmenu.add_command(label="Autor", command=donothing)
-menubar.add_cascade(label="Buscar", menu=buscarmenu)
-
-
-statsmenu = Menu(menubar, tearoff=0)
-statsmenu.add_command(label="Temas mas populares", command=donothing)
-statsmenu.add_command(label="Temas mas populares", command=donothing)
-menubar.add_cascade(label="Estadisticas", menu=statsmenu)
+almacenar = Button(root, text ="Almacenar Productos", command = donothing)
+almacenar.grid(row=0, column=0, sticky=E+W, pady=5)
+marca = Button(root, text ="Mostrar Marca", command = donothing)
+marca.grid(row=1, column=0, sticky=E+W, pady=5)
+ofertas = Button(root, text ="Buscar Ofertas", command = donothing)
+ofertas.grid(row=2, column=0, sticky=E+W, pady=5)
 
 root.config(menu=menubar)
 root.mainloop()
