@@ -48,6 +48,7 @@ def selectDataBaseMarca(marca):
         MARCA = '{0}'""".format(marca))
     res = []
     for producto in rows.fetchall():
+        print(producto) ##### print
         res.append(producto)
     conn.close()
     return res
