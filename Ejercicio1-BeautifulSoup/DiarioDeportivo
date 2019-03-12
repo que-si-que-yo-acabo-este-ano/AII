@@ -342,7 +342,7 @@ function publi_AS_genera_banner(data)
 <div class="csel-item                                     previo
 " data-idpartido="265690">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -380,7 +380,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="265692">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -423,7 +423,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="241787">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">19:00h</span>
 </time>
@@ -539,47 +539,9 @@ width="22">
 <span class="title">Copa Libertadores</span>                                           
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="265880">
-<div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
-<span class="fecha">MAR 12/03</span>
-<span class="hora">23:15h</span>
-</time>
-</div>
-<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_c_2_265880/" class="item-content" title="Última hora Olimpia - U. de Conce">
-<div class="equipo  team1">
-<img alt="Olimpia"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1078.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1078.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1078.png 2x"
-width="22">
-<span class="equipo-nom large">Olimpia</span>
-<abbr title="Olimpia" class="equipo-nom">OLI</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-<div class="equipo  team2">
-<img alt="U. de Conce"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3931.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3931.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3931.png 2x"
-width="22">
-<span class="equipo-nom large">U. de Conce</span>
-<abbr title="U. de Conce" class="equipo-nom">UNC</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-</a>
-<div class="item-mas">
-<ul class="mas-ops">
-<li></li>
-</ul>
-</div>
-</div>
-<div class="csel-item                                     previo
 " data-idpartido="265833">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">23:15h</span>
 </time>
@@ -617,7 +579,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="265820">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">23:15h</span>
 </time>
@@ -642,6 +604,44 @@ width="22">
 width="22">
 <span class="equipo-nom large">FBC Melgar</span>
 <abbr title="FBC Melgar" class="equipo-nom">MEL</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="265880">
+<div class="item-info">
+<time datetime="2019-03-12T15:01:51+01:00">
+<span class="fecha">MAR 12/03</span>
+<span class="hora">23:15h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_c_2_265880/" class="item-content" title="Última hora Olimpia - U. de Conce">
+<div class="equipo  team1">
+<img alt="Olimpia"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1078.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1078.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1078.png 2x"
+width="22">
+<span class="equipo-nom large">Olimpia</span>
+<abbr title="Olimpia" class="equipo-nom">OLI</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="U. de Conce"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3931.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3931.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3931.png 2x"
+width="22">
+<span class="equipo-nom large">U. de Conce</span>
+<abbr title="U. de Conce" class="equipo-nom">UNC</abbr>
 <p class="dato">                                    -
 </p>
 </div>
@@ -785,7 +785,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272225">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">19:00h</span>
 </time>
@@ -812,7 +812,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272217">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">19:00h</span>
 </time>
@@ -837,9 +837,36 @@ width="22">
 </a>
 </div>
 <div class="csel-item                                     previo
+" data-idpartido="272222">
+<div class="item-info">
+<time datetime="2019-03-12T15:01:51+01:00">
+<span class="fecha">MAR 12/03</span>
+<span class="hora">21:00h</span>
+</time>
+</div>
+<span class="item-content">
+<div id="equipo_denis_shapovalov" class="equipo  ">
+<img class="equipo-bandera" alt="denis_shapovalov" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/can.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/can.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/can.png 2x" width="22">
+<span class="hide">Denis Shapovalov</span>
+<abbr title="Denis Shapovalov" class="equipo-nom">SHA</abbr>
+<div class="dato-group">
+<span class="dato">-</span>
+</div>
+</div>
+<div id="equipo_marin_cilic" class="equipo  ">
+<img class="equipo-bandera" alt="marin_cilic" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/cro.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/cro.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/cro.png 2x" width="22">
+<span class="hide">Marin Cilic</span>
+<abbr title="Marin Cilic" class="equipo-nom">CIL</abbr>
+<div class="dato-group">
+<span class="dato">-</span>
+</div>
+</div>
+</a>
+</div>
+<div class="csel-item                                     previo
 " data-idpartido="272224">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -871,36 +898,9 @@ width="22">
 </div>
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="272222">
-<div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
-<span class="fecha">MAR 12/03</span>
-<span class="hora">21:00h</span>
-</time>
-</div>
-<span class="item-content">
-<div id="equipo_denis_shapovalov" class="equipo  ">
-<img class="equipo-bandera" alt="denis_shapovalov" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/can.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/can.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/can.png 2x" width="22">
-<span class="hide">Denis Shapovalov</span>
-<abbr title="Denis Shapovalov" class="equipo-nom">SHA</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-<div id="equipo_marin_cilic" class="equipo  ">
-<img class="equipo-bandera" alt="marin_cilic" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/cro.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/cro.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/cro.png 2x" width="22">
-<span class="hide">Marin Cilic</span>
-<abbr title="Marin Cilic" class="equipo-nom">CIL</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     previo
 " data-idpartido="272256">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">23:00h</span>
 </time>
@@ -1010,7 +1010,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272221">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">19:00h</span>
 </time>
@@ -1037,7 +1037,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272219">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">19:00h</span>
 </time>
@@ -1064,7 +1064,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272218">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -1091,7 +1091,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272226">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">23:00h</span>
 </time>
@@ -1175,7 +1175,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="248776">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">16:00h</span>
 </time>
@@ -1206,42 +1206,9 @@ width="22">
 </span>
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="248780">
-<div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
-<span class="fecha">MAR 12/03</span>
-<span class="hora">18:30h</span>
-</time>
-</div>
-<span class="item-content">
-<div class="equipo  team1">
-<img alt="Levante UD Femenino"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4699.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4699.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4699.png 2x"
-width="22">
-<span class="equipo-nom large">Levante UD Femenino</span>
-<abbr title="Levante UD Femenino" class="equipo-nom">LEVF</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-<div class="equipo  team2">
-<img alt="UD Granadilla Femenino"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4700.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4700.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4700.png 2x"
-width="22">
-<span class="equipo-nom large">UD Granadilla Femenino</span>
-<abbr title="UD Granadilla Femenino" class="equipo-nom">GRAF</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-</span>
-</div>
-<div class="csel-item                                     previo
 " data-idpartido="248781">
 <div class="item-info">
-<time datetime="2019-03-12T10:26:26+01:00">
+<time datetime="2019-03-12T15:01:51+01:00">
 <span class="fecha">MAR 12/03</span>
 <span class="hora">18:30h</span>
 </time>
@@ -1266,6 +1233,39 @@ width="22">
 width="22">
 <span class="equipo-nom large">Real Sociedad Femenino</span>
 <abbr title="Real Sociedad Femenino" class="equipo-nom">RSOF</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="248780">
+<div class="item-info">
+<time datetime="2019-03-12T15:01:51+01:00">
+<span class="fecha">MAR 12/03</span>
+<span class="hora">18:30h</span>
+</time>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Levante UD Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4699.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4699.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4699.png 2x"
+width="22">
+<span class="equipo-nom large">Levante UD Femenino</span>
+<abbr title="Levante UD Femenino" class="equipo-nom">LEVF</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="UD Granadilla Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4700.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4700.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4700.png 2x"
+width="22">
+<span class="equipo-nom large">UD Granadilla Femenino</span>
+<abbr title="UD Granadilla Femenino" class="equipo-nom">GRAF</abbr>
 <p class="dato">                                    -
 </p>
 </div>
