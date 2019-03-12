@@ -67,30 +67,43 @@ def listMatches():
         alertButton = Button(matchesWin, text="Almacenar partidos", command=lambda: importAndClose(matchesWin))
         alertButton.grid(row=1)
 
+def daySelect():
+    daySelectWin = Toplevel(root)
 
-def searchMatches(day):
-    searchMatchWin = Toplevel(root)
-    
     if almacenado:
-        searchMatchWin.geometry("400x150")
-        searchMatcScroll = Scrollbar(searchMatchWin, orient="vertical")
-        searchMatcScroll.pack(side=RIGHT, fill=Y)
-        matchesSearched = Listbox(searchMatchWin, yscrollcommand=searchMatcScroll.set)
-        matchSearchSelect = []# Select partidos de la jornada en concreto (variable "day")
-        matchSearchList = []
-        for s in matchSearchSelect:
-            matchSearchList.append(s[0] + ". - Precio: " + str(s[1]) + " - Oferta: " + str(s[2])) # Modificar acorde a la estructura de lo almacenado
-        for l  in matchSearchList:
-            matchesSearched.insert(END, l)
-        matchesSearched.pack(fill=BOTH)
-        searchMatcScroll.config(command=matchesSearched.yview)
+        daySelectLabel = Label(daySelectWin, text="Indroduzca un número de jornada")
+        daySelectLabel.grid(row=0, rowspan=2)
+        daySelectEntry = Entry(daySelectWin)
+        daySelectEntry.grid(row=1, column=0)
+        daySelectButton = Button(daySelectWin, text="Buscar", command=lambda: searchMatches(daySelectEntry.get(),daySelectWin))
+        daySelectButton.grid(row=1, column=1)
 
     else:
-        alertLabel = Label(searchMatchWin, text="No se han almacenado partidos todavia")
+        alertLabel = Label(daySelectWin, text="No se han almacenado partidos todavia")
         alertLabel.grid(row=0)
-        alertButton = Button(searchMatchWin, text="Almacenar partidos", command=lambda: importAndClose(searchMatchWin))
+        alertButton = Button(daySelectWin, text="Almacenar partidos", command=lambda: importAndClose(daySelectWin))
         alertButton.grid(row=1)
 
+
+
+def searchMatches(day,win):
+    searchMatchWin = Toplevel(root)
+    win.destroy()
+    # Se podría hacer control sobre si el dato es válido, es decir, que el número de la jornada exista
+    searchMatchWin.geometry("400x150")
+    searchMatcScroll = Scrollbar(searchMatchWin, orient="vertical")
+    searchMatcScroll.pack(side=RIGHT, fill=Y)
+    matchesSearched = Listbox(searchMatchWin, yscrollcommand=searchMatcScroll.set)
+    matchSearchSelect = []# Select partidos de la jornada en concreto (variable "day")
+    matchSearchList = []
+    for s in matchSearchSelect:
+        matchSearchList.append(s[0] + ". - Precio: " + str(s[1]) + " - Oferta: " + str(s[2])) # Modificar acorde a la estructura de lo almacenado
+    for l  in matchSearchList:
+        matchesSearched.insert(END, l)
+    matchesSearched.pack(fill=BOTH)
+    searchMatcScroll.config(command=matchesSearched.yview)
+
+    
 
 def searchGoals():
     pass
