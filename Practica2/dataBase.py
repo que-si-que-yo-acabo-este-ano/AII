@@ -12,6 +12,7 @@ def startDataBase():
        LINK           TEXT       NOT NULL,
        PRECIO         DOUBLE     NOT NULL,
        PRECIO_OFERTA  DOUBLE);''')
+    conn.close()
     
 
 def insertDataBase(productos):
