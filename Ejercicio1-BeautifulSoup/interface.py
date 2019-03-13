@@ -3,6 +3,7 @@
 
 from tkinter import *
 from tkinter import messagebox
+import beautifulSoup
 
 root = Tk()
 almacenado = False
@@ -29,12 +30,14 @@ def mainWindow():
 
 
 def importResults():
-    ## Funcion de almacenado
+    beautifulSoup.startDataBase()
+    beautifulSoup.insertDataBase(beautifulSoup.lecturaWeb())
+
     global almacenado
     almacenado = True
     resultsWin = Toplevel(root)
     numReg = 0 # Select count del numero de registros en la BD
-    resultsLabel = Label(resultsWin, text="Hay " + numReg +" registros.")
+    resultsLabel = Label(resultsWin, text="Hay " + str(numReg) +" registros.")
     resultsLabel.grid(row=0)
 
 
@@ -52,10 +55,10 @@ def listMatches():
         matchScroll = Scrollbar(matchesWin, orient="vertical")
         matchScroll.pack(side=RIGHT, fill=Y)
         matches = Listbox(matchesWin, yscrollcommand=matchScroll.set)
-        matchSelect = []# Select partidos 
+        matchSelect = beautifulSoup.selectDataBaseJornadas() 
         matchList = []
         for s in matchSelect:
-            matchList.append(s[0] + ". - Precio: " + str(s[1]) + " - Oferta: " + str(s[2])) # Modificar acorde a la estructura de lo almacenado
+            matchList.append("Jornada: " + str(s[0]) + ".  " + s[1] + " " + str(s[3]) + " - " + str(s[4]) + " " + s[2]) # Modificar acorde a la estructura de lo almacenado
         for l  in matchList:
             matches.insert(END, l)
         matches.pack(fill=BOTH)
