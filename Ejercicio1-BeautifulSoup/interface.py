@@ -17,7 +17,7 @@ def mainWindow():
     jornada = Button(root, text="Listar Jornadas", command=listMatches)
     jornada.grid(row=1, column=0, sticky=E + W, pady=5)
 
-    buscarJornada = Button(root, text="Buscar Jornada", command=searchMatches)
+    buscarJornada = Button(root, text="Buscar Jornada", command=daySelect)
     buscarJornada.grid(row=2, column=0, columnspan=2, sticky=E + W, pady=5)
 
     buscarGoles = Button(root, text="Buscar Goles", command=searchGoals)
@@ -58,7 +58,7 @@ def listMatches():
         matchSelect = beautifulSoup.selectDataBaseJornadas() 
         matchList = []
         for s in matchSelect:
-            matchList.append("Jornada: " + str(s[0]) + ".  " + s[1] + " " + str(s[3]) + " - " + str(s[4]) + " " + s[2]) # Modificar acorde a la estructura de lo almacenado
+            matchList.append("Jornada: " + str(s[0]) + ".  " + s[1] + " " + str(s[3]) + " - " + str(s[4]) + " " + s[2])
         for l  in matchList:
             matches.insert(END, l)
         matches.pack(fill=BOTH)
@@ -74,8 +74,8 @@ def daySelect():
     daySelectWin = Toplevel(root)
 
     if almacenado:
-        daySelectLabel = Label(daySelectWin, text="Indroduzca un número de jornada")
-        daySelectLabel.grid(row=0, rowspan=2)
+        daySelectLabel = Label(daySelectWin, text="Introduzca un número de jornada")
+        daySelectLabel.grid(row=0, columnspan=2)
         daySelectEntry = Entry(daySelectWin)
         daySelectEntry.grid(row=1, column=0)
         daySelectButton = Button(daySelectWin, text="Buscar", command=lambda: searchMatches(daySelectEntry.get(),daySelectWin))
@@ -97,10 +97,10 @@ def searchMatches(day,win):
     searchMatcScroll = Scrollbar(searchMatchWin, orient="vertical")
     searchMatcScroll.pack(side=RIGHT, fill=Y)
     matchesSearched = Listbox(searchMatchWin, yscrollcommand=searchMatcScroll.set)
-    matchSearchSelect = []# Select partidos de la jornada en concreto (variable "day")
+    matchSearchSelect = beautifulSoup.selectDataBasePartidosPorJornada(day)
     matchSearchList = []
     for s in matchSearchSelect:
-        matchSearchList.append(s[0] + ". - Precio: " + str(s[1]) + " - Oferta: " + str(s[2])) # Modificar acorde a la estructura de lo almacenado
+        matchSearchList.append(s[1] + " " + str(s[3]) + " - " + str(s[4]) + " " + s[2])
     for l  in matchSearchList:
         matchesSearched.insert(END, l)
     matchesSearched.pack(fill=BOTH)
@@ -109,6 +109,53 @@ def searchMatches(day,win):
     
 
 def searchGoals():
-    pass
+    searchGoalsWin = Toplevel(root)
+
+    if almacenado:
+        searchGoalsLabel = Label(searchGoalsWin, text="Introduzca un número de jornada")
+        searchGoalsLabel.grid(row=0, columnspan=2)
+        searchGoalsEntry = Entry(searchGoalsWin)
+        searchGoalsEntry.grid(row=1, column=0)
+        searchGoalsButton = Button(searchGoalsWin, text="Buscar", command=lambda: searchMatchesForGoals(searchGoalsEntry.get(),searchGoalsWin))
+        searchGoalsButton.grid(row=1, column=1)
+
+    else:
+        alertLabel = Label(searchGoalsWin, text="No se han almacenado partidos todavia")
+        alertLabel.grid(row=0)
+        alertButton = Button(searchGoalsWin, text="Almacenar partidos", command=lambda: importAndClose(searchGoalsWin))
+        alertButton.grid(row=1)
 
 
+def searchMatchesForGoals(day,win):
+    # searchGoalsScroll = Scrollbar(win, orient="vertical")
+    # searchGoalsScroll.grid(column=3, sticky=N+S)
+    searchGoalsLB = Listbox(win) # , yscrollcommand=searchGoalsScroll.set
+    searchGoalsLB.grid(row=2, column=0, columnspan=4)
+    searchGoalsSelect = beautifulSoup.selectDataBasePartidosPorJornada(day)
+    searchGoalsList = []
+    for s in searchGoalsSelect:
+        searchGoalsList.append(s[1] + " " + str(s[3]) + " - " + str(s[4]) + " " + s[2])
+    for l  in searchGoalsList:
+        searchGoalsLB.insert(END, l)
+    # searchGoalsScroll.config(command=searchGoalsLB.yview)
+    showGoalsButton = Button(win, text="Mostrar", command=lambda: showGoalsForMatch(day,searchGoalsLB.get(searchGoalsLB.curselection()),win))
+    showGoalsButton.grid(row=3)
+
+
+def showGoalsForMatch(day,match,win):
+    showGoalsWin = Toplevel(root)
+    win.destroy()
+    partido = match.split()
+
+    showGoalsScroll = Scrollbar(showGoalsWin, orient="vertical")
+    showGoalsScroll.pack(side=RIGHT, fill=Y)
+    showGoalsLB = Listbox(showGoalsWin, yscrollcommand=showGoalsScroll.set)
+
+    matchSelect = beautifulSoup.lecturaWebGoles(day,partido[0],partido[4]) # Cambiar para goles
+    matchList = []
+    for s in matchSelect:
+        matchList.append(s)
+    for l  in matchList:
+        showGoalsLB.insert(END, l)
+    showGoalsLB.pack(fill=BOTH)
+    showGoalsScroll.config(command=showGoalsLB.yview)

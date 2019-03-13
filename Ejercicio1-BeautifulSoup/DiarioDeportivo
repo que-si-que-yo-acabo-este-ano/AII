@@ -343,7 +343,7 @@ function publi_AS_genera_banner(data)
 <div class="csel-item                                     previo
 " data-idpartido="265695">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -381,7 +381,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="265696">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -424,7 +424,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="265857">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">23:15h</span>
 </time>
@@ -462,7 +462,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="265821">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">23:15h</span>
 </time>
@@ -500,7 +500,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="265868">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">23:15h</span>
 </time>
@@ -526,6 +526,41 @@ width="22">
 <span class="equipo-nom large">Deportivo Lara</span>
 <abbr title="Deportivo Lara" class="equipo-nom">GLA</abbr>
 <p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="265881">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_c_2_265881/" class="item-content" title="Resultado Sporting Cristal 1 - Godoy Cruz 1">
+<div class="equipo  team1">
+<img alt="Sporting Cristal"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4220.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4220.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4220.png 2x"
+width="22">
+<span class="equipo-nom large">Sporting Cristal</span>
+<abbr title="Sporting Cristal" class="equipo-nom">SCR</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Godoy Cruz"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3787.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3787.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3787.png 2x"
+width="22">
+<span class="equipo-nom large">Godoy Cruz</span>
+<abbr title="Godoy Cruz" class="equipo-nom">GOD</abbr>
+<p class="dato">                                    1
 </p>
 </div>
 </a>
@@ -605,41 +640,6 @@ width="22">
 </ul>
 </div>
 </div>
-<div class="csel-item                                     finalizado
-" data-idpartido="265881">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_c_2_265881/" class="item-content" title="Resultado Sporting Cristal 1 - Godoy Cruz 1">
-<div class="equipo  team1">
-<img alt="Sporting Cristal"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4220.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4220.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4220.png 2x"
-width="22">
-<span class="equipo-nom large">Sporting Cristal</span>
-<abbr title="Sporting Cristal" class="equipo-nom">SCR</abbr>
-<p class="dato">                                    1
-</p>
-</div>
-<div class="equipo  team2">
-<img alt="Godoy Cruz"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3787.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3787.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3787.png 2x"
-width="22">
-<span class="equipo-nom large">Godoy Cruz</span>
-<abbr title="Godoy Cruz" class="equipo-nom">GOD</abbr>
-<p class="dato">                                    1
-</p>
-</div>
-</a>
-<div class="item-mas">
-<ul class="mas-ops">
-<li></li>
-</ul>
-</div>
-</div>
 </div>
 <div class="csel-agrup futbol">
 <div class="csel-item title" id="comp-holanda"> 
@@ -648,7 +648,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="242307">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">18:30h</span>
 </time>
@@ -684,26 +684,6 @@ width="22">
 <span class="title">NBA</span>                                           
 </div>
 <div class="csel-item                                     finalizado
-" data-idpartido="260834">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div class="equipo ganador team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4463.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4463.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4463.png 2x" width="22">
-<span class="equipo-nom large">Indiana Pacers</span>
-<abbr title="Indiana Pacers" class="equipo-nom">IND</abbr>
-<p class="dato">103</p>
-</div>
-<div class="equipo  team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4471.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4471.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4471.png 2x" width="22">
-<span class="equipo-nom large">New York Knicks</span>
-<abbr title="New York Knicks" class="equipo-nom">NYK</abbr>
-<p class="dato">98</p>
-</div>
-</span>
-</div>
-<div class="csel-item                                     finalizado
 " data-idpartido="260835">
 <div class="item-info">
 <span class="tiempo">FINALIZADO</span>
@@ -724,22 +704,42 @@ width="22">
 </span>
 </div>
 <div class="csel-item                                     finalizado
-" data-idpartido="260836">
+" data-idpartido="260834">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4463.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4463.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4463.png 2x" width="22">
+<span class="equipo-nom large">Indiana Pacers</span>
+<abbr title="Indiana Pacers" class="equipo-nom">IND</abbr>
+<p class="dato">103</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4471.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4471.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4471.png 2x" width="22">
+<span class="equipo-nom large">New York Knicks</span>
+<abbr title="New York Knicks" class="equipo-nom">NYK</abbr>
+<p class="dato">98</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="260838">
 <div class="item-info">
 <span class="tiempo">FINALIZADO</span>
 </div>
 <span class="item-content">
 <div class="equipo  team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4456.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4456.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4456.png 2x" width="22">
-<span class="equipo-nom large">Chicago Bulls</span>
-<abbr title="Chicago Bulls" class="equipo-nom">CHI</abbr>
-<p class="dato">107</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4458.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4458.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4458.png 2x" width="22">
+<span class="equipo-nom large">Dallas Mavericks</span>
+<abbr title="Dallas Mavericks" class="equipo-nom">DAL</abbr>
+<p class="dato">105</p>
 </div>
 <div class="equipo ganador team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4465.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4465.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4465.png 2x" width="22">
-<span class="equipo-nom large">Los Angeles Lakers</span>
-<abbr title="Los Angeles Lakers" class="equipo-nom">LAL</abbr>
-<p class="dato">123</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4478.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4478.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4478.png 2x" width="22">
+<span class="equipo-nom large">San Antonio Spurs</span>
+<abbr title="San Antonio Spurs" class="equipo-nom">SAS</abbr>
+<p class="dato">112</p>
 </div>
 </span>
 </div>
@@ -764,22 +764,22 @@ width="22">
 </span>
 </div>
 <div class="csel-item                                     finalizado
-" data-idpartido="260838">
+" data-idpartido="260836">
 <div class="item-info">
 <span class="tiempo">FINALIZADO</span>
 </div>
 <span class="item-content">
 <div class="equipo  team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4458.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4458.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4458.png 2x" width="22">
-<span class="equipo-nom large">Dallas Mavericks</span>
-<abbr title="Dallas Mavericks" class="equipo-nom">DAL</abbr>
-<p class="dato">105</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4456.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4456.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4456.png 2x" width="22">
+<span class="equipo-nom large">Chicago Bulls</span>
+<abbr title="Chicago Bulls" class="equipo-nom">CHI</abbr>
+<p class="dato">107</p>
 </div>
 <div class="equipo ganador team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4478.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4478.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4478.png 2x" width="22">
-<span class="equipo-nom large">San Antonio Spurs</span>
-<abbr title="San Antonio Spurs" class="equipo-nom">SAS</abbr>
-<p class="dato">112</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4465.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4465.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4465.png 2x" width="22">
+<span class="equipo-nom large">Los Angeles Lakers</span>
+<abbr title="Los Angeles Lakers" class="equipo-nom">LAL</abbr>
+<p class="dato">123</p>
 </div>
 </span>
 </div>
@@ -831,7 +831,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="270748">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">17:00h</span>
 </time>
@@ -854,7 +854,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="270749">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">19:00h</span>
 </time>
@@ -877,7 +877,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="270750">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">20:30h</span>
 </time>
@@ -905,7 +905,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272254">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">19:00h</span>
 </time>
@@ -932,7 +932,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272265">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">19:00h</span>
 </time>
@@ -966,7 +966,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272264">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -993,7 +993,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272250">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -1020,7 +1020,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272270">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">23:00h</span>
 </time>
@@ -1047,7 +1047,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272267">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">23:00h</span>
 </time>
@@ -1131,7 +1131,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="272263">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">21:00h</span>
 </time>
@@ -1271,7 +1271,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="270497">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">21:10h</span>
 </time>
@@ -1309,7 +1309,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="248775">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">18:00h</span>
 </time>
@@ -1342,7 +1342,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="248778">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">18:00h</span>
 </time>
@@ -1375,7 +1375,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="248777">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">20:00h</span>
 </time>
@@ -1408,7 +1408,7 @@ width="22">
 <div class="csel-item                                     previo
 " data-idpartido="248774">
 <div class="item-info">
-<time datetime="2019-03-13T13:21:05+01:00">
+<time datetime="2019-03-13T14:12:46+01:00">
 <span class="fecha">MIÉ 13/03</span>
 <span class="hora">20:30h</span>
 </time>
@@ -1743,7 +1743,7 @@ v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,
 <li><a href="https://as.com/futbol/2019/03/12/champions/1552429332_843277.html">Gesto Cristiano</a></li>
 <li><a href="https://as.com/futbol/2019/03/12/champions/1552406852_970852.html">Cristiano Atleti</a></li>
 <li><a href="https://as.com/futbol/2019/03/12/champions/1552426866_411929.html">Cristiano goles</a></li>
-<li><a href="https://as.com/ciclismo/2019/03/12/mas_ciclismo/1552386402_674396.html">Paris - Niza etapa 3</a></li>
+<li><a href="https://as.com/ciclismo/2019/03/13/mas_ciclismo/1552472950_678381.html">Paris - Niza etapa 4</a></li>
 <li><a href="https://as.com/futbol/2019/03/13/champions/1552460877_411649.html">Barcelona - Lyon TV</a></li>
 <li><a href="https://as.com/futbol/2019/03/13/champions/1552463623_025393.html">Bayern - Liverpool TV</a></li>
 <li><a href="https://as.com/tenis/2019/03/13/masters_1000/1552464649_493775.html">Nadal - Krajinovic TV</a></li>
