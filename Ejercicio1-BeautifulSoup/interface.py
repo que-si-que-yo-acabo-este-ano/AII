@@ -36,7 +36,7 @@ def importResults():
     global almacenado
     almacenado = True
     resultsWin = Toplevel(root)
-    numReg = 0 # Select count del numero de registros en la BD
+    numReg = beautifulSoup.selectDataBaseCount()
     resultsLabel = Label(resultsWin, text="Hay " + str(numReg) +" registros.")
     resultsLabel.grid(row=0)
 
@@ -134,7 +134,7 @@ def searchMatchesForGoals(day,win):
     searchGoalsSelect = beautifulSoup.selectDataBasePartidosPorJornada(day)
     searchGoalsList = []
     for s in searchGoalsSelect:
-        searchGoalsList.append(s[1] + " " + str(s[3]) + " - " + str(s[4]) + " " + s[2])
+        searchGoalsList.append(s[1] + ": " + str(s[3]) + " - " + str(s[4]) + " :" + s[2])
     for l  in searchGoalsList:
         searchGoalsLB.insert(END, l)
     # searchGoalsScroll.config(command=searchGoalsLB.yview)
@@ -145,16 +145,15 @@ def searchMatchesForGoals(day,win):
 def showGoalsForMatch(day,match,win):
     showGoalsWin = Toplevel(root)
     win.destroy()
-    partido = match.split()
+    partido = match.split(":")
 
     showGoalsScroll = Scrollbar(showGoalsWin, orient="vertical")
     showGoalsScroll.pack(side=RIGHT, fill=Y)
     showGoalsLB = Listbox(showGoalsWin, yscrollcommand=showGoalsScroll.set)
-
-    matchSelect = beautifulSoup.lecturaWebGoles(day,partido[0],partido[4]) # Cambiar para goles
+    matchSelect = beautifulSoup.lecturaWebGoles(day,partido[0],partido[2]) # Cambiar para goles
     matchList = []
     for s in matchSelect:
-        matchList.append(s)
+        matchList.append(s[1] + " " + s[0])
     for l  in matchList:
         showGoalsLB.insert(END, l)
     showGoalsLB.pack(fill=BOTH)
