@@ -158,3 +158,6 @@ def showGoalsForMatch(day,match,win):
         showGoalsLB.insert(END, l)
     showGoalsLB.pack(fill=BOTH)
     showGoalsScroll.config(command=showGoalsLB.yview)
+    
+if __name__ == "__main__":
+    mainWindow()

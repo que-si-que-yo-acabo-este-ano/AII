@@ -321,53 +321,65 @@ function publi_AS_genera_banner(data)
 <div id="desplegableCompeticion" class="caja-desplegable">
 <a class="form-control arrow-desplegable" href="javascript:void(0);">Competición                </a>
 <ul class="desplegable hide">
-<li><a href="javascript:void(0);" data-pos="0" data-comp="comp-champions">Champions League</a></li>
-<li><a href="javascript:void(0);" data-pos="1" data-comp="comp-copa_libertadores">Copa Libertadores</a></li>
-<li><a href="javascript:void(0);" data-pos="2" data-comp="comp-holanda">Liga Holandesa</a></li>
-<li><a href="javascript:void(0);" data-pos="3" data-comp="comp-nba">NBA</a></li>
-<li><a href="javascript:void(0);" data-pos="4" data-comp="comp-eurocup">Eurocup</a></li>
-<li><a href="javascript:void(0);" data-pos="5" data-comp="comp-masters_1000_indian_wells">Masters 1000 Indian Wells</a></li>
-<li><a href="javascript:void(0);" data-pos="6" data-comp="comp-wta_indian_wells">WTA Indian Wells</a></li>
-<li><a href="javascript:void(0);" data-pos="7" data-comp="comp-copa_argentina">Copa Argentina</a></li>
-<li><a href="javascript:void(0);" data-pos="8" data-comp="comp-primera_femenina">Liga Iberdrola</a></li>
-<li><a href="javascript:void(0);" data-pos="9" data-comp="comp-actualidad">Hoy en As</a></li>
+<li><a href="javascript:void(0);" data-pos="0" data-comp="comp-primera">LaLiga Santander</a></li>
+<li><a href="javascript:void(0);" data-pos="1" data-comp="comp-segunda">LaLiga 1,2,3</a></li>
+<li><a href="javascript:void(0);" data-pos="2" data-comp="comp-formula_1">Fórmula 1</a></li>
+<li><a href="javascript:void(0);" data-pos="3" data-comp="comp-inglaterra">Premier League</a></li>
+<li><a href="javascript:void(0);" data-pos="4" data-comp="comp-italia">Serie A</a></li>
+<li><a href="javascript:void(0);" data-pos="5" data-comp="comp-alemania">Bundesliga</a></li>
+<li><a href="javascript:void(0);" data-pos="6" data-comp="comp-francia">Ligue 1</a></li>
+<li><a href="javascript:void(0);" data-pos="7" data-comp="comp-argentina">Liga Argentina</a></li>
+<li><a href="javascript:void(0);" data-pos="8" data-comp="comp-portugal">Liga Portuguesa</a></li>
+<li><a href="javascript:void(0);" data-pos="9" data-comp="comp-holanda">Liga Holandesa</a></li>
+<li><a href="javascript:void(0);" data-pos="10" data-comp="comp-belgica">Liga Belga</a></li>
+<li><a href="javascript:void(0);" data-pos="11" data-comp="comp-rumania">Liga Rumana</a></li>
+<li><a href="javascript:void(0);" data-pos="12" data-comp="comp-turquia">Liga Turca</a></li>
+<li><a href="javascript:void(0);" data-pos="13" data-comp="comp-acb">Liga Endesa ACB</a></li>
+<li><a href="javascript:void(0);" data-pos="14" data-comp="comp-nba">NBA</a></li>
+<li><a href="javascript:void(0);" data-pos="15" data-comp="comp-chile">Liga Chilena</a></li>
+<li><a href="javascript:void(0);" data-pos="16" data-comp="comp-grecia">Liga Griega</a></li>
+<li><a href="javascript:void(0);" data-pos="17" data-comp="comp-mexico_clausura">Liga Mexicana - Clausura</a></li>
+<li><a href="javascript:void(0);" data-pos="18" data-comp="comp-masters_1000_indian_wells">Masters 1000 Indian Wells</a></li>
+<li><a href="javascript:void(0);" data-pos="19" data-comp="comp-wta_indian_wells">WTA Indian Wells</a></li>
+<li><a href="javascript:void(0);" data-pos="20" data-comp="comp-primera_femenina">Liga Iberdrola</a></li>
+<li><a href="javascript:void(0);" data-pos="21" data-comp="comp-actualidad">Hoy en As</a></li>
 </ul>
 </div>
 </div>
 <div class="csel-wrap">
 <div class="csel-content" draggable="false" ondragstart="return false;">
 <div class="csel-agrup futbol">
-<div class="csel-item title" id="comp-champions"> 
-<span class="title">Champions League</span>                                           
+<div class="csel-item title" id="comp-primera"> 
+<span class="title">LaLiga Santander</span>                                           
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="265696">
+" data-idpartido="248483">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">21:00h</span>
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">18:30h</span>
 </time>
 </div>
-<a href="https://as.com/futbol/2019/03/12/champions/1552417182_835924.html" class="item-content" title="Última hora Bayern - Liverpool">
+<a href="https://as.com/futbol/2019/03/16/primera/1552767837_034702.html" class="item-content" title="Última hora Villarreal - Rayo">
 <div class="equipo  team1">
-<img alt="Bayern"
+<img alt="Villarreal"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/170.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/170.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/170.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/19.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/19.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/19.png 2x"
 width="22">
-<span class="equipo-nom large">Bayern</span>
-<abbr title="Bayern" class="equipo-nom">BAY</abbr>
+<span class="equipo-nom large">Villarreal</span>
+<abbr title="Villarreal" class="equipo-nom">VLL</abbr>
 <p class="dato">                                    -
 </p>
 </div>
 <div class="equipo  team2">
-<img alt="Liverpool"
+<img alt="Rayo"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/65.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/65.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/65.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/2.png 2x"
 width="22">
-<span class="equipo-nom large">Liverpool</span>
-<abbr title="Liverpool" class="equipo-nom">LIV</abbr>
+<span class="equipo-nom large">Rayo</span>
+<abbr title="Rayo" class="equipo-nom">RAY</abbr>
 <p class="dato">                                    -
 </p>
 </div>
@@ -379,15 +391,64 @@ width="22">
 </div>
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="265695">
+" data-idpartido="248482">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">21:00h</span>
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">18:30h</span>
 </time>
 </div>
-<a href="https://as.com/futbol/2019/03/13/champions/1552440146_534201.html" class="item-content" title="Última hora Barcelona - Lyon">
+<a href="https://as.com/futbol/2019/03/17/primera/1552789429_492509.html" class="item-content" title="Última hora Valencia - Getafe">
 <div class="equipo  team1">
+<img alt="Valencia"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/17.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/17.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/17.png 2x"
+width="22">
+<span class="equipo-nom large">Valencia</span>
+<abbr title="Valencia" class="equipo-nom">VAL</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Getafe"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/172.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/172.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/172.png 2x"
+width="22">
+<span class="equipo-nom large">Getafe</span>
+<abbr title="Getafe" class="equipo-nom">GET</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="248484">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">20:45h</span>
+</time>
+</div>
+<a href="https://as.com/futbol/2019/03/17/primera/1552780699_470905.html" class="item-content" title="Última hora Betis - Barcelona">
+<div class="equipo  team1">
+<img alt="Betis"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/171.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/171.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/171.png 2x"
+width="22">
+<span class="equipo-nom large">Betis</span>
+<abbr title="Betis" class="equipo-nom">BET</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
 <img alt="Barcelona"
                 class="equipo-escudo"
                 src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3.png"
@@ -398,15 +459,74 @@ width="22">
 <p class="dato">                                    -
 </p>
 </div>
-<div class="equipo  team2">
-<img alt="Lyon"
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="248486">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="https://as.com/futbol/2019/03/17/primera/1552827624_513032.html" class="item-content" title="Resultado Eibar 1 - Valladolid 2">
+<div class="equipo  team1">
+<img alt="Eibar"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/106.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/106.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/106.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/108.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/108.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/108.png 2x"
 width="22">
-<span class="equipo-nom large">Lyon</span>
-<abbr title="Lyon" class="equipo-nom">LYO</abbr>
-<p class="dato">                                    -
+<span class="equipo-nom large">Eibar</span>
+<abbr title="Eibar" class="equipo-nom">EIB</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="Valladolid"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/18.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/18.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/18.png 2x"
+width="22">
+<span class="equipo-nom large">Valladolid</span>
+<abbr title="Valladolid" class="equipo-nom">VAD</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="248488">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="https://as.com/futbol/2019/03/17/primera/1552833116_262855.html" class="item-content" title="Resultado Espanyol 0 - Sevilla 1">
+<div class="equipo  team1">
+<img alt="Espanyol"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/8.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/8.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/8.png 2x"
+width="22">
+<span class="equipo-nom large">Espanyol</span>
+<abbr title="Espanyol" class="equipo-nom">ESP</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="Sevilla"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/53.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/53.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/53.png 2x"
+width="22">
+<span class="equipo-nom large">Sevilla</span>
+<abbr title="Sevilla" class="equipo-nom">SEV</abbr>
+<p class="dato">                                    1
 </p>
 </div>
 </a>
@@ -418,38 +538,70 @@ width="22">
 </div>
 </div>
 <div class="csel-agrup futbol">
-<div class="csel-item title" id="comp-copa_libertadores"> 
-<span class="title">Copa Libertadores</span>                                           
+<div class="csel-item title" id="comp-segunda"> 
+<span class="title">LaLiga 1,2,3</span>                                           
 </div>
-<div class="csel-item                                     previo
-" data-idpartido="265868">
+<div class="csel-item                                     directo
+" data-idpartido="249177">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">23:15h</span>
-</time>
+<span class="tiempo">EN JUEGO</span>
 </div>
-<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_b_2_265868/" class="item-content" title="Última hora Cruzeiro - Deportivo Lara">
+<a href="https://as.com/futbol/2019/03/16/segunda/1552762099_327651.html" class="item-content" title="Almería 0 - Granada 0 en directo">
 <div class="equipo  team1">
-<img alt="Cruzeiro"
+<img alt="Almería"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4211.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4211.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4211.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/85.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/85.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/85.png 2x"
 width="22">
-<span class="equipo-nom large">Cruzeiro</span>
-<abbr title="Cruzeiro" class="equipo-nom">CRU</abbr>
-<p class="dato">                                    -
+<span class="equipo-nom large">Almería</span>
+<abbr title="Almería" class="equipo-nom">ALM</abbr>
+<p class="dato">                                    0
 </p>
 </div>
 <div class="equipo  team2">
-<img alt="Deportivo Lara"
+<img alt="Granada"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3897.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3897.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3897.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/347.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/347.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/347.png 2x"
 width="22">
-<span class="equipo-nom large">Deportivo Lara</span>
-<abbr title="Deportivo Lara" class="equipo-nom">GLA</abbr>
-<p class="dato">                                    -
+<span class="equipo-nom large">Granada</span>
+<abbr title="Granada" class="equipo-nom">GRA</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="249169">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/segunda/2018_2019/directo/regular_a_30_249169/" class="item-content" title="Osasuna 0 - R. Majadahonda 0 en directo">
+<div class="equipo  team1">
+<img alt="Osasuna"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/13.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/13.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/13.png 2x"
+width="22">
+<span class="equipo-nom large">Osasuna</span>
+<abbr title="Osasuna" class="equipo-nom">OSA</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="R. Majadahonda"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/684.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/684.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/684.png 2x"
+width="22">
+<span class="equipo-nom large">R. Majadahonda</span>
+<abbr title="R. Majadahonda" class="equipo-nom">MJD</abbr>
+<p class="dato">                                    0
 </p>
 </div>
 </a>
@@ -460,15 +612,826 @@ width="22">
 </div>
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="265821">
+" data-idpartido="249171">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">23:15h</span>
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">20:00h</span>
 </time>
 </div>
-<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_f_2_265821/" class="item-content" title="Última hora San Lorenzo de Almagro - Junior">
+<a href="https://as.com/futbol/2019/03/16/segunda/1552776428_335434.html" class="item-content" title="Última hora Las Palmas - Mallorca">
 <div class="equipo  team1">
+<img alt="Las Palmas"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/9.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/9.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/9.png 2x"
+width="22">
+<span class="equipo-nom large">Las Palmas</span>
+<abbr title="Las Palmas" class="equipo-nom">LP</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Mallorca"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/11.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/11.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/11.png 2x"
+width="22">
+<span class="equipo-nom large">Mallorca</span>
+<abbr title="Mallorca" class="equipo-nom">MLL</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="249172">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="https://as.com/futbol/2019/03/17/segunda/1552827227_394340.html" class="item-content" title="Resultado Oviedo 2 - Gimnàstic 0">
+<div class="equipo ganador team1">
+<img alt="Oviedo"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/14.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/14.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/14.png 2x"
+width="22">
+<span class="equipo-nom large">Oviedo</span>
+<abbr title="Oviedo" class="equipo-nom">OVI</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Gimnàstic"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/504.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/504.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/504.png 2x"
+width="22">
+<span class="equipo-nom large">Gimnàstic</span>
+<abbr title="Gimnàstic" class="equipo-nom">NST</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="249174">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="https://as.com/futbol/2019/03/16/segunda/1552759079_886411.html" class="item-content" title="Resultado Córdoba 1 - Sporting 2">
+<div class="equipo  team1">
+<img alt="Córdoba"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/342.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/342.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/342.png 2x"
+width="22">
+<span class="equipo-nom large">Córdoba</span>
+<abbr title="Córdoba" class="equipo-nom">COR</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="Sporting"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/76.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/76.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/76.png 2x"
+width="22">
+<span class="equipo-nom large">Sporting</span>
+<abbr title="Sporting" class="equipo-nom">SPO</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="csel-agrup motor">
+<div class="csel-item title" id="comp-formula_1"> 
+<span class="title">Fórmula 1</span>                                           
+</div>
+<div class="csel-item                                     finalizado
+">
+<a class="item-content" href="//resultados.as.com/resultados/motor/formula_1/2019/directo/carrera_a_1_271274/">
+<div class="carrera">
+<div class="carrera-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<p class="carrera-nom">GP Australia</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li> 
+<a href="//resultados.as.com/resultados/motor/formula_1/2019/calendario/">Resultados</a>    
+</li>
+</ul>               
+</div>
+}
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="271274">
+<div class="equipo">
+<div class="equipo-info">
+<span class="pos destacado">1</span>
+<span class="tiempo">1h25:27.325</span>
+</div>
+<p class="piloto">V. Bottas</p>
+<p class="equipo-piloto tam-fijo">Mercedes</p> 
+<span class="f1-equipo-color mercedes"></span>
+</div>
+<div class="equipo">
+<div class="equipo-info">
+<span class="pos destacado">2</span>
+<span class="tiempo">a 20.900</span>
+</div>
+<p class="piloto">L. Hamilton</p>
+<p class="equipo-piloto tam-fijo">Mercedes</p> 
+<span class="f1-equipo-color mercedes"></span>
+</div>
+<div class="equipo">
+<div class="equipo-info">
+<span class="pos destacado">3</span>
+<span class="tiempo">a 22.500</span>
+</div>
+<p class="piloto">M. Verstappen</p>
+<p class="equipo-piloto tam-fijo">Red_bull</p> 
+<span class="f1-equipo-color red_bull"></span>
+</div>
+<div class="equipo">
+<div class="equipo-info">
+<span class="pos">20</span>
+<span class="tiempo">a 3 vueltas</span>
+</div>
+<p class="piloto">C. Sainz Jr.</p>
+<p class="equipo-piloto tam-fijo">Mclaren</p> 
+<span class="f1-equipo-color mclaren"></span>
+</div>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-inglaterra"> 
+<span class="title">Premier League</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="243090">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/inglaterra/2018_2019/directo/regular_a_31_243090/" class="item-content" title="Everton 0 - Chelsea 0 en directo">
+<div class="equipo  team1">
+<img alt="Everton"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/61.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/61.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/61.png 2x"
+width="22">
+<span class="equipo-nom large">Everton</span>
+<abbr title="Everton" class="equipo-nom">EVE</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Chelsea"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/58.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/58.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/58.png 2x"
+width="22">
+<span class="equipo-nom large">Chelsea</span>
+<abbr title="Chelsea" class="equipo-nom">CHE</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="243093">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">13:00h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/inglaterra/2018_2019/directo/regular_a_31_243093/" class="item-content" title="Última hora Tottenham - Crystal Palace">
+<div class="equipo  team1">
+<img alt="Tottenham"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/72.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/72.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/72.png 2x"
+width="22">
+<span class="equipo-nom large">Tottenham</span>
+<abbr title="Tottenham" class="equipo-nom">TOT</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Crystal Palace"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1027.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1027.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1027.png 2x"
+width="22">
+<span class="equipo-nom large">Crystal Palace</span>
+<abbr title="Crystal Palace" class="equipo-nom">CRY</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="243091">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/inglaterra/2018_2019/directo/regular_a_31_243091/" class="item-content" title="Resultado Fulham 1 - Liverpool 2">
+<div class="equipo  team1">
+<img alt="Fulham"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/563.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/563.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/563.png 2x"
+width="22">
+<span class="equipo-nom large">Fulham</span>
+<abbr title="Fulham" class="equipo-nom">FUL</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="Liverpool"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/65.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/65.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/65.png 2x"
+width="22">
+<span class="equipo-nom large">Liverpool</span>
+<abbr title="Liverpool" class="equipo-nom">LIV</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-italia"> 
+<span class="title">Serie A</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="249861">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/italia/2018_2019/directo/regular_a_28_249861/" class="item-content" title="Nápoles 0 - Udinese 0 en directo">
+<div class="equipo  team1">
+<img alt="Nápoles"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/28.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/28.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/28.png 2x"
+width="22">
+<span class="equipo-nom large">Nápoles</span>
+<abbr title="Nápoles" class="equipo-nom">NAP</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Udinese"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/37.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/37.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/37.png 2x"
+width="22">
+<span class="equipo-nom large">Udinese</span>
+<abbr title="Udinese" class="equipo-nom">UDI</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="249865">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">20:30h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/italia/2018_2019/directo/regular_a_28_249865/" class="item-content" title="Última hora Milan - Inter">
+<div class="equipo  team1">
+<img alt="Milan"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/22.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/22.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/22.png 2x"
+width="22">
+<span class="equipo-nom large">Milan</span>
+<abbr title="Milan" class="equipo-nom">MIL</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Inter"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/35.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/35.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/35.png 2x"
+width="22">
+<span class="equipo-nom large">Inter</span>
+<abbr title="Inter" class="equipo-nom">INT</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="249870">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/italia/2018_2019/directo/regular_a_28_249870/" class="item-content" title="Resultado Genoa 2 - Juventus 0">
+<div class="equipo ganador team1">
+<img alt="Genoa"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1137.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1137.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1137.png 2x"
+width="22">
+<span class="equipo-nom large">Genoa</span>
+<abbr title="Genoa" class="equipo-nom">GEN</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Juventus"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/29.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/29.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/29.png 2x"
+width="22">
+<span class="equipo-nom large">Juventus</span>
+<abbr title="Juventus" class="equipo-nom">JUV</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="249869">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/italia/2018_2019/directo/regular_a_28_249869/" class="item-content" title="Resultado Empoli 2 - Frosinone 1">
+<div class="equipo ganador team1">
+<img alt="Empoli"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/980.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/980.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/980.png 2x"
+width="22">
+<span class="equipo-nom large">Empoli</span>
+<abbr title="Empoli" class="equipo-nom">EMP</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Frosinone"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4243.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4243.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4243.png 2x"
+width="22">
+<span class="equipo-nom large">Frosinone</span>
+<abbr title="Frosinone" class="equipo-nom">FRO</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="249866">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/italia/2018_2019/directo/regular_a_28_249866/" class="item-content" title="Resultado Lazio 4 - Parma 1">
+<div class="equipo ganador team1">
+<img alt="Lazio"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/23.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/23.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/23.png 2x"
+width="22">
+<span class="equipo-nom large">Lazio</span>
+<abbr title="Lazio" class="equipo-nom">LAZ</abbr>
+<p class="dato">                                    4
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Parma"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/30.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/30.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/30.png 2x"
+width="22">
+<span class="equipo-nom large">Parma</span>
+<abbr title="Parma" class="equipo-nom">PAR</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="249868">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/italia/2018_2019/directo/regular_a_28_249868/" class="item-content" title="Resultado Atalanta 1 - Chievo 1">
+<div class="equipo  team1">
+<img alt="Atalanta"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/21.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/21.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/21.png 2x"
+width="22">
+<span class="equipo-nom large">Atalanta</span>
+<abbr title="Atalanta" class="equipo-nom">ATA</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Chievo"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1351.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1351.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1351.png 2x"
+width="22">
+<span class="equipo-nom large">Chievo</span>
+<abbr title="Chievo" class="equipo-nom">CHI</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-alemania"> 
+<span class="title">Bundesliga</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="244515">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/alemania/2018_2019/directo/regular_a_26_244515/" class="item-content" title="Bayern 1 - Mainz 05 0 en directo">
+<div class="equipo  team1">
+<img alt="Bayern"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/170.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/170.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/170.png 2x"
+width="22">
+<span class="equipo-nom large">Bayern</span>
+<abbr title="Bayern" class="equipo-nom">BAY</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Mainz 05"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1674.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1674.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1674.png 2x"
+width="22">
+<span class="equipo-nom large">Mainz 05</span>
+<abbr title="Mainz 05" class="equipo-nom">M05</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="244511">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/alemania/2018_2019/directo/regular_a_26_244511/" class="item-content" title="Resultado Leverkusen 1 - W. Bremen 3">
+<div class="equipo  team1">
+<img alt="Leverkusen"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/169.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/169.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/169.png 2x"
+width="22">
+<span class="equipo-nom large">Leverkusen</span>
+<abbr title="Leverkusen" class="equipo-nom">BLE</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="W. Bremen"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/303.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/303.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/303.png 2x"
+width="22">
+<span class="equipo-nom large">W. Bremen</span>
+<abbr title="W. Bremen" class="equipo-nom">WBR</abbr>
+<p class="dato">                                    3
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="244513">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/alemania/2018_2019/directo/regular_a_26_244513/" class="item-content" title="Resultado Eintracht Fr. 1 - Nüremberg 0">
+<div class="equipo ganador team1">
+<img alt="Eintracht Fr."
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/469.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/469.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/469.png 2x"
+width="22">
+<span class="equipo-nom large">Eintracht Fr.</span>
+<abbr title="Eintracht Fr." class="equipo-nom">EFR</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Nüremberg"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/534.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/534.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/534.png 2x"
+width="22">
+<span class="equipo-nom large">Nüremberg</span>
+<abbr title="Nüremberg" class="equipo-nom">NÜR</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-francia"> 
+<span class="title">Ligue 1</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="241896">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/francia/2018_2019/directo/regular_a_29_241896/" class="item-content" title="Girondins 0 - Rennes 0 en directo">
+<div class="equipo  team1">
+<img alt="Girondins"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/483.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/483.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/483.png 2x"
+width="22">
+<span class="equipo-nom large">Girondins</span>
+<abbr title="Girondins" class="equipo-nom">GIR</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Rennes"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/123.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/123.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/123.png 2x"
+width="22">
+<span class="equipo-nom large">Rennes</span>
+<abbr title="Rennes" class="equipo-nom">REN</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="241904">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">21:00h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/francia/2018_2019/directo/regular_a_29_241904/" class="item-content" title="Última hora PSG - Marsella">
+<div class="equipo  team1">
+<img alt="PSG"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/49.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/49.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/49.png 2x"
+width="22">
+<span class="equipo-nom large">PSG</span>
+<abbr title="PSG" class="equipo-nom">PSG</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Marsella"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/338.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/338.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/338.png 2x"
+width="22">
+<span class="equipo-nom large">Marsella</span>
+<abbr title="Marsella" class="equipo-nom">MAR</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="241900">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/francia/2018_2019/directo/regular_a_29_241900/" class="item-content" title="Resultado Lyon 3 - Montpellier 2">
+<div class="equipo ganador team1">
+<img alt="Lyon"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/106.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/106.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/106.png 2x"
+width="22">
+<span class="equipo-nom large">Lyon</span>
+<abbr title="Lyon" class="equipo-nom">LYO</abbr>
+<p class="dato">                                    3
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Montpellier"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/480.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/480.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/480.png 2x"
+width="22">
+<span class="equipo-nom large">Montpellier</span>
+<abbr title="Montpellier" class="equipo-nom">MTP</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="241903">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/francia/2018_2019/directo/regular_a_29_241903/" class="item-content" title="Resultado Stade de Reims 1 - Nantes 0">
+<div class="equipo ganador team1">
+<img alt="Stade de Reims"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1496.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1496.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1496.png 2x"
+width="22">
+<span class="equipo-nom large">Stade de Reims</span>
+<abbr title="Stade de Reims" class="equipo-nom">STA</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Nantes"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/134.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/134.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/134.png 2x"
+width="22">
+<span class="equipo-nom large">Nantes</span>
+<abbr title="Nantes" class="equipo-nom">NAN</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-argentina"> 
+<span class="title">Liga Argentina</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="247992">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/argentina/2018_2019/directo/regular_a_23_247992/" class="item-content" title="Talleres 0 - Tigre 2 en directo">
+<div class="equipo  team1">
+<img alt="Talleres"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/515.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/515.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/515.png 2x"
+width="22">
+<span class="equipo-nom large">Talleres</span>
+<abbr title="Talleres" class="equipo-nom">TLL</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Tigre"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/421.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/421.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/421.png 2x"
+width="22">
+<span class="equipo-nom large">Tigre</span>
+<abbr title="Tigre" class="equipo-nom">TGR</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="247994">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">19:30h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/argentina/2018_2019/directo/regular_a_23_247994/" class="item-content" title="Última hora Rosario Central - San Lorenzo de Almagro">
+<div class="equipo  team1">
+<img alt="Rosario Central"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4278.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4278.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4278.png 2x"
+width="22">
+<span class="equipo-nom large">Rosario Central</span>
+<abbr title="Rosario Central" class="equipo-nom">RCE</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
 <img alt="San Lorenzo de Almagro"
                 class="equipo-escudo"
                 src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3790.png"
@@ -479,14 +1442,154 @@ width="22">
 <p class="dato">                                    -
 </p>
 </div>
-<div class="equipo  team2">
-<img alt="Junior"
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="247996">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">21:45h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/argentina/2018_2019/directo/regular_a_23_247996/" class="item-content" title="Última hora River Plate - Independiente">
+<div class="equipo  team1">
+<img alt="River Plate"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3851.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3851.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3851.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/107.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/107.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/107.png 2x"
 width="22">
-<span class="equipo-nom large">Junior</span>
-<abbr title="Junior" class="equipo-nom">JUN</abbr>
+<span class="equipo-nom large">River Plate</span>
+<abbr title="River Plate" class="equipo-nom">RP</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Independiente"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4320.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4320.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4320.png 2x"
+width="22">
+<span class="equipo-nom large">Independiente</span>
+<abbr title="Independiente" class="equipo-nom">IND</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="248001">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/argentina/2018_2019/directo/regular_a_23_248001/" class="item-content" title="Resultado Racing Club 1 - Belgrano 0">
+<div class="equipo ganador team1">
+<img alt="Racing Club"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4225.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4225.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4225.png 2x"
+width="22">
+<span class="equipo-nom large">Racing Club</span>
+<abbr title="Racing Club" class="equipo-nom">RAC</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Belgrano"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/356.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/356.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/356.png 2x"
+width="22">
+<span class="equipo-nom large">Belgrano</span>
+<abbr title="Belgrano" class="equipo-nom">BLG</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="248002">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/argentina/2018_2019/directo/regular_a_23_248002/" class="item-content" title="Resultado Patronato 2 - Defensa y Justicia 0">
+<div class="equipo ganador team1">
+<img alt="Patronato"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4330.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4330.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4330.png 2x"
+width="22">
+<span class="equipo-nom large">Patronato</span>
+<abbr title="Patronato" class="equipo-nom">PAT</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Defensa y Justicia"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4325.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4325.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4325.png 2x"
+width="22">
+<span class="equipo-nom large">Defensa y Justicia</span>
+<abbr title="Defensa y Justicia" class="equipo-nom">DYJ</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-portugal"> 
+<span class="title">Liga Portuguesa</span>                                           
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="245999">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">18:30h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/portugal/2018_2019/directo/regular_a_26_245999/" class="item-content" title="Última hora Moreirense - Benfica">
+<div class="equipo  team1">
+<img alt="Moreirense"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2917.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2917.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/2917.png 2x"
+width="22">
+<span class="equipo-nom large">Moreirense</span>
+<abbr title="Moreirense" class="equipo-nom">MOR</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Benfica"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/44.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/44.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/44.png 2x"
+width="22">
+<span class="equipo-nom large">Benfica</span>
+<abbr title="Benfica" class="equipo-nom">BEN</abbr>
 <p class="dato">                                    -
 </p>
 </div>
@@ -498,33 +1601,33 @@ width="22">
 </div>
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="265857">
+" data-idpartido="246001">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">23:15h</span>
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">21:00h</span>
 </time>
 </div>
-<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_e_2_265857/" class="item-content" title="Última hora Cerro Porteño - Zamora F.C">
+<a href="//resultados.as.com/resultados/futbol/portugal/2018_2019/directo/regular_a_26_246001/" class="item-content" title="Última hora Tondela - Feirense">
 <div class="equipo  team1">
-<img alt="Cerro Porteño"
+<img alt="Tondela"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4213.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4213.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4213.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4254.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4254.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4254.png 2x"
 width="22">
-<span class="equipo-nom large">Cerro Porteño</span>
-<abbr title="Cerro Porteño" class="equipo-nom">CPO</abbr>
+<span class="equipo-nom large">Tondela</span>
+<abbr title="Tondela" class="equipo-nom">CDT</abbr>
 <p class="dato">                                    -
 </p>
 </div>
 <div class="equipo  team2">
-<img alt="Zamora F.C"
+<img alt="Feirense"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3889.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3889.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3889.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1848.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1848.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1848.png 2x"
 width="22">
-<span class="equipo-nom large">Zamora F.C</span>
-<abbr title="Zamora F.C" class="equipo-nom">ZAM</abbr>
+<span class="equipo-nom large">Feirense</span>
+<abbr title="Feirense" class="equipo-nom">FEI</abbr>
 <p class="dato">                                    -
 </p>
 </div>
@@ -536,100 +1639,65 @@ width="22">
 </div>
 </div>
 <div class="csel-item                                     finalizado
-" data-idpartido="265881">
+" data-idpartido="245997">
 <div class="item-info">
 <span class="tiempo">FINALIZADO</span>
 </div>
-<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_c_2_265881/" class="item-content" title="Resultado Sporting Cristal 1 - Godoy Cruz 1">
+<a href="//resultados.as.com/resultados/futbol/portugal/2018_2019/directo/regular_a_26_245997/" class="item-content" title="Resultado Desportivo Aves 0 - GD Chaves 1">
 <div class="equipo  team1">
-<img alt="Sporting Cristal"
+<img alt="Desportivo Aves"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4220.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4220.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4220.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1847.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1847.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1847.png 2x"
 width="22">
-<span class="equipo-nom large">Sporting Cristal</span>
-<abbr title="Sporting Cristal" class="equipo-nom">SCR</abbr>
-<p class="dato">                                    1
-</p>
-</div>
-<div class="equipo  team2">
-<img alt="Godoy Cruz"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3787.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3787.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3787.png 2x"
-width="22">
-<span class="equipo-nom large">Godoy Cruz</span>
-<abbr title="Godoy Cruz" class="equipo-nom">GOD</abbr>
-<p class="dato">                                    1
-</p>
-</div>
-</a>
-<div class="item-mas">
-<ul class="mas-ops">
-<li></li>
-</ul>
-</div>
-</div>
-<div class="csel-item                                     finalizado
-" data-idpartido="265856">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<a href="https://as.com/futbol/2019/03/13/internacional/1552431632_903275.html" class="item-content" title="Resultado Nacional de Montevideo 1 - Atlético Mineiro 0">
-<div class="equipo ganador team1">
-<img alt="Nacional de Montevideo"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/47.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/47.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/47.png 2x"
-width="22">
-<span class="equipo-nom large">Nacional de Montevideo</span>
-<abbr title="Nacional de Montevideo" class="equipo-nom">NCM</abbr>
-<p class="dato">                                    1
-</p>
-</div>
-<div class="equipo  team2">
-<img alt="Atlético Mineiro"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4222.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4222.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4222.png 2x"
-width="22">
-<span class="equipo-nom large">Atlético Mineiro</span>
-<abbr title="Atlético Mineiro" class="equipo-nom">AMI</abbr>
-<p class="dato">                                    0
-</p>
-</div>
-</a>
-<div class="item-mas">
-<ul class="mas-ops">
-<li></li>
-</ul>
-</div>
-</div>
-<div class="csel-item                                     finalizado
-" data-idpartido="265845">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<a href="//resultados.as.com/resultados/futbol/copa_libertadores/2019/directo/grupos_h_2_265845/" class="item-content" title="Resultado Gremio de Porto Alegre 0 - Libertad 1">
-<div class="equipo  team1">
-<img alt="Gremio de Porto Alegre"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4279.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4279.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4279.png 2x"
-width="22">
-<span class="equipo-nom large">Gremio de Porto Alegre</span>
-<abbr title="Gremio de Porto Alegre" class="equipo-nom">GPA</abbr>
+<span class="equipo-nom large">Desportivo Aves</span>
+<abbr title="Desportivo Aves" class="equipo-nom">AVE</abbr>
 <p class="dato">                                    0
 </p>
 </div>
 <div class="equipo ganador team2">
-<img alt="Libertad"
+<img alt="GD Chaves"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4217.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4217.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4217.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4290.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4290.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4290.png 2x"
 width="22">
-<span class="equipo-nom large">Libertad</span>
-<abbr title="Libertad" class="equipo-nom">LIB</abbr>
+<span class="equipo-nom large">GD Chaves</span>
+<abbr title="GD Chaves" class="equipo-nom">CHA</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="245996">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/portugal/2018_2019/directo/regular_a_26_245996/" class="item-content" title="Resultado Nac. Madeira 0 - Rio Ave 1">
+<div class="equipo  team1">
+<img alt="Nac. Madeira"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2848.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2848.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/2848.png 2x"
+width="22">
+<span class="equipo-nom large">Nac. Madeira</span>
+<abbr title="Nac. Madeira" class="equipo-nom">NMA</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="Rio Ave"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1192.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1192.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1192.png 2x"
+width="22">
+<span class="equipo-nom large">Rio Ave</span>
+<abbr title="Rio Ave" class="equipo-nom">RAF</abbr>
 <p class="dato">                                    1
 </p>
 </div>
@@ -645,24 +1713,21 @@ width="22">
 <div class="csel-item title" id="comp-holanda"> 
 <span class="title">Liga Holandesa</span>                                           
 </div>
-<div class="csel-item                                     previo
-" data-idpartido="242307">
+<div class="csel-item                                     directo
+" data-idpartido="242326">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">18:30h</span>
-</time>
+<span class="tiempo">EN JUEGO</span>
 </div>
 <span class="item-content">
 <div class="equipo  team1">
-<img alt="Ajax"
+<img alt="Excelsior"
                 class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/40.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/40.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/40.png 2x"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2643.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2643.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/2643.png 2x"
 width="22">
-<span class="equipo-nom large">Ajax</span>
-<abbr title="Ajax" class="equipo-nom">AA</abbr>
-<p class="dato">                                    -
+<span class="equipo-nom large">Excelsior</span>
+<abbr title="Excelsior" class="equipo-nom">ECL</abbr>
+<p class="dato">                                    0
 </p>
 </div>
 <div class="equipo  team2">
@@ -673,8 +1738,604 @@ width="22">
 width="22">
 <span class="equipo-nom large">Zwolle</span>
 <abbr title="Zwolle" class="equipo-nom">ZWO</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="242328">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="VVV-Venlo"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3598.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3598.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3598.png 2x"
+width="22">
+<span class="equipo-nom large">VVV-Venlo</span>
+<abbr title="VVV-Venlo" class="equipo-nom">VVV</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="PSV"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/114.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/114.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/114.png 2x"
+width="22">
+<span class="equipo-nom large">PSV</span>
+<abbr title="PSV" class="equipo-nom">PSV</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="242327">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img alt="Groningen"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/190.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/190.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/190.png 2x"
+width="22">
+<span class="equipo-nom large">Groningen</span>
+<abbr title="Groningen" class="equipo-nom">GRO</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="ADO Den Haag"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1112.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1112.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1112.png 2x"
+width="22">
+<span class="equipo-nom large">ADO Den Haag</span>
+<abbr title="ADO Den Haag" class="equipo-nom">ADO</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="242325">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img alt="AZ Alkmaar"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1181.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1181.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1181.png 2x"
+width="22">
+<span class="equipo-nom large">AZ Alkmaar</span>
+<abbr title="AZ Alkmaar" class="equipo-nom">AZ</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Ajax"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/40.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/40.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/40.png 2x"
+width="22">
+<span class="equipo-nom large">Ajax</span>
+<abbr title="Ajax" class="equipo-nom">AA</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-belgica"> 
+<span class="title">Liga Belga</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="242648">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Standard"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1111.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1111.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1111.png 2x"
+width="22">
+<span class="equipo-nom large">Standard</span>
+<abbr title="Standard" class="equipo-nom">SDL</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Waasland-Beveren"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4073.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4073.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4073.png 2x"
+width="22">
+<span class="equipo-nom large">Waasland-Beveren</span>
+<abbr title="Waasland-Beveren" class="equipo-nom">WAS</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="242641">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Brujas"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/112.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/112.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/112.png 2x"
+width="22">
+<span class="equipo-nom large">Brujas</span>
+<abbr title="Brujas" class="equipo-nom">BRU</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Royal Excel Mouscron"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/sin_logo.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/sin_logo.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/sin_logo.png 2x"
+width="22">
+<span class="equipo-nom large">Royal Excel Mouscron</span>
+<abbr title="Royal Excel Mouscron" class="equipo-nom">RMP</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="242646">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="STVV"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3601.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3601.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3601.png 2x"
+width="22">
+<span class="equipo-nom large">STVV</span>
+<abbr title="STVV" class="equipo-nom">STR</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Gent"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1428.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1428.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1428.png 2x"
+width="22">
+<span class="equipo-nom large">Gent</span>
+<abbr title="Gent" class="equipo-nom">GNT</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="242645">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Zulte Waregem"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1490.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1490.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1490.png 2x"
+width="22">
+<span class="equipo-nom large">Zulte Waregem</span>
+<abbr title="Zulte Waregem" class="equipo-nom">WRG</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Genk"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/248.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/248.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/248.png 2x"
+width="22">
+<span class="equipo-nom large">Genk</span>
+<abbr title="Genk" class="equipo-nom">GNK</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="242644">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="KV Oostende"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4483.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4483.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4483.png 2x"
+width="22">
+<span class="equipo-nom large">KV Oostende</span>
+<abbr title="KV Oostende" class="equipo-nom">OOS</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Anderlecht"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/115.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/115.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/115.png 2x"
+width="22">
+<span class="equipo-nom large">Anderlecht</span>
+<abbr title="Anderlecht" class="equipo-nom">ADL</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="242643">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Kortrijk"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1207.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1207.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1207.png 2x"
+width="22">
+<span class="equipo-nom large">Kortrijk</span>
+<abbr title="Kortrijk" class="equipo-nom">KOR</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Royal Antwerp"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1395.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1395.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1395.png 2x"
+width="22">
+<span class="equipo-nom large">Royal Antwerp</span>
+<abbr title="Royal Antwerp" class="equipo-nom">RAN</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="242642">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Lokeren"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1244.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1244.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1244.png 2x"
+width="22">
+<span class="equipo-nom large">Lokeren</span>
+<abbr title="Lokeren" class="equipo-nom">LOK</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Cercle Brugge"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1239.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1239.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1239.png 2x"
+width="22">
+<span class="equipo-nom large">Cercle Brugge</span>
+<abbr title="Cercle Brugge" class="equipo-nom">CER</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="242647">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Charleroi"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/116.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/116.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/116.png 2x"
+width="22">
+<span class="equipo-nom large">Charleroi</span>
+<abbr title="Charleroi" class="equipo-nom">CHR</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Eupen"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3600.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3600.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3600.png 2x"
+width="22">
+<span class="equipo-nom large">Eupen</span>
+<abbr title="Eupen" class="equipo-nom">EUP</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-rumania"> 
+<span class="title">Liga Rumana</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="272090">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Gaz Metan M."
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3626.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3626.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3626.png 2x"
+width="22">
+<span class="equipo-nom large">Gaz Metan M.</span>
+<abbr title="Gaz Metan M." class="equipo-nom">GMM</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="D. Bucarest"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/176.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/176.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/176.png 2x"
+width="22">
+<span class="equipo-nom large">D. Bucarest</span>
+<abbr title="D. Bucarest" class="equipo-nom">DBU</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="272063">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">19:30h</span>
+</time>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Astra Giurgiu"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4169.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4169.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4169.png 2x"
+width="22">
+<span class="equipo-nom large">Astra Giurgiu</span>
+<abbr title="Astra Giurgiu" class="equipo-nom">AGI</abbr>
 <p class="dato">                                    -
 </p>
+</div>
+<div class="equipo  team2">
+<img alt="Steaua"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/144.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/144.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/144.png 2x"
+width="22">
+<span class="equipo-nom large">Steaua</span>
+<abbr title="Steaua" class="equipo-nom">STE</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</span>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-turquia"> 
+<span class="title">Liga Turca</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="246686">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Bursaspor"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/987.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/987.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/987.png 2x"
+width="22">
+<span class="equipo-nom large">Bursaspor</span>
+<abbr title="Bursaspor" class="equipo-nom">BRS</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Galatasaray"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/109.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/109.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/109.png 2x"
+width="22">
+<span class="equipo-nom large">Galatasaray</span>
+<abbr title="Galatasaray" class="equipo-nom">GAL</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="246691">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img alt="Yeni Malatyaspor"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4498.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4498.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4498.png 2x"
+width="22">
+<span class="equipo-nom large">Yeni Malatyaspor</span>
+<abbr title="Yeni Malatyaspor" class="equipo-nom">YEN</abbr>
+<p class="dato">                                    3
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Ankaragücü"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/991.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/991.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/991.png 2x"
+width="22">
+<span class="equipo-nom large">Ankaragücü</span>
+<abbr title="Ankaragücü" class="equipo-nom">ANK</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="246689">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Kayserispor"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3167.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3167.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3167.png 2x"
+width="22">
+<span class="equipo-nom large">Kayserispor</span>
+<abbr title="Kayserispor" class="equipo-nom">KAY</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Basaksehir"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4379.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4379.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4379.png 2x"
+width="22">
+<span class="equipo-nom large">Basaksehir</span>
+<abbr title="Basaksehir" class="equipo-nom">BAS</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</span>
+</div>
+</div>
+<div class="csel-agrup baloncesto">
+<div class="csel-item title" id="comp-acb"> 
+<span class="title">Liga Endesa ACB</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="251966">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4108.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4108.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4108.png 2x" width="22">
+<span class="equipo-nom large">Baskonia</span>
+<abbr title="Baskonia" class="equipo-nom">BAS</abbr>
+<p class="dato">38</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4115.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4115.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4115.png 2x" width="22">
+<span class="equipo-nom large">Tenerife</span>
+<abbr title="Tenerife" class="equipo-nom">TEN</abbr>
+<p class="dato">35</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="251967">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">18:30h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/baloncesto/acb/2018_2019/directo/regular_a_23_251967/" class="item-content" title="Última hora Barcelona - Estudiantes">
+<div class="equipo  team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4110.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4110.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4110.png 2x" width="22">
+<span class="equipo-nom large">Barcelona</span>
+<abbr title="Barcelona" class="equipo-nom">BAR</abbr>
+<p class="dato">-</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4098.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4098.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4098.png 2x" width="22">
+<span class="equipo-nom large">Estudiantes</span>
+<abbr title="Estudiantes" class="equipo-nom">EST</abbr>
+<p class="dato">-</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="251965">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="https://as.com/baloncesto/2019/03/17/acb/1552829676_625708.html" class="item-content" title="Resultado Real Madrid Baloncesto 91 - Manresa 57">
+<div class="equipo ganador team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4106.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4106.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4106.png 2x" width="22">
+<span class="equipo-nom large">Real Madrid Baloncesto</span>
+<abbr title="Real Madrid Baloncesto" class="equipo-nom">RMA</abbr>
+<p class="dato">91</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4107.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4107.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4107.png 2x" width="22">
+<span class="equipo-nom large">Manresa</span>
+<abbr title="Manresa" class="equipo-nom">MAN</abbr>
+<p class="dato">57</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="251968">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4112.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4112.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4112.png 2x" width="22">
+<span class="equipo-nom large">Murcia</span>
+<abbr title="Murcia" class="equipo-nom">MUR</abbr>
+<p class="dato">116</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4113.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4113.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4113.png 2x" width="22">
+<span class="equipo-nom large">Zaragoza</span>
+<abbr title="Zaragoza" class="equipo-nom">ZAR</abbr>
+<p class="dato">94</p>
 </div>
 </span>
 </div>
@@ -683,68 +2344,146 @@ width="22">
 <div class="csel-item title" id="comp-nba"> 
 <span class="title">NBA</span>                                           
 </div>
-<div class="csel-item                                     finalizado
-" data-idpartido="260835">
+<div class="csel-item                                     previo
+" data-idpartido="260869">
 <div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div class="equipo ganador team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4474.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4474.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4474.png 2x" width="22">
-<span class="equipo-nom large">Philadelphia 76ers</span>
-<abbr title="Philadelphia 76ers" class="equipo-nom">PHI</abbr>
-<p class="dato">106</p>
-</div>
-<div class="equipo  team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4457.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4457.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4457.png 2x" width="22">
-<span class="equipo-nom large">Cleveland Cavaliers</span>
-<abbr title="Cleveland Cavaliers" class="equipo-nom">CLE</abbr>
-<p class="dato">99</p>
-</div>
-</span>
-</div>
-<div class="csel-item                                     finalizado
-" data-idpartido="260834">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div class="equipo ganador team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4463.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4463.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4463.png 2x" width="22">
-<span class="equipo-nom large">Indiana Pacers</span>
-<abbr title="Indiana Pacers" class="equipo-nom">IND</abbr>
-<p class="dato">103</p>
-</div>
-<div class="equipo  team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4471.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4471.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4471.png 2x" width="22">
-<span class="equipo-nom large">New York Knicks</span>
-<abbr title="New York Knicks" class="equipo-nom">NYK</abbr>
-<p class="dato">98</p>
-</div>
-</span>
-</div>
-<div class="csel-item                                     finalizado
-" data-idpartido="260838">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">17:00h</span>
+</time>
 </div>
 <span class="item-content">
 <div class="equipo  team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4458.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4458.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4458.png 2x" width="22">
-<span class="equipo-nom large">Dallas Mavericks</span>
-<abbr title="Dallas Mavericks" class="equipo-nom">DAL</abbr>
-<p class="dato">105</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4471.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4471.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4471.png 2x" width="22">
+<span class="equipo-nom large">New York Knicks</span>
+<abbr title="New York Knicks" class="equipo-nom">NYK</abbr>
+<p class="dato">-</p>
 </div>
-<div class="equipo ganador team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4478.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4478.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4478.png 2x" width="22">
-<span class="equipo-nom large">San Antonio Spurs</span>
-<abbr title="San Antonio Spurs" class="equipo-nom">SAS</abbr>
-<p class="dato">112</p>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4465.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4465.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4465.png 2x" width="22">
+<span class="equipo-nom large">Los Angeles Lakers</span>
+<abbr title="Los Angeles Lakers" class="equipo-nom">LAL</abbr>
+<p class="dato">-</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="260870">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">18:00h</span>
+</time>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4467.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4467.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4467.png 2x" width="22">
+<span class="equipo-nom large">Miami Heat</span>
+<abbr title="Miami Heat" class="equipo-nom">MIA</abbr>
+<p class="dato">-</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4455.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4455.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4455.png 2x" width="22">
+<span class="equipo-nom large">Charlotte Hornets</span>
+<abbr title="Charlotte Hornets" class="equipo-nom">CHA</abbr>
+<p class="dato">-</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="260871">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">20:30h</span>
+</time>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4468.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4468.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4468.png 2x" width="22">
+<span class="equipo-nom large">Milwaukee Bucks</span>
+<abbr title="Milwaukee Bucks" class="equipo-nom">MIL</abbr>
+<p class="dato">-</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4474.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4474.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4474.png 2x" width="22">
+<span class="equipo-nom large">Philadelphia 76ers</span>
+<abbr title="Philadelphia 76ers" class="equipo-nom">PHI</abbr>
+<p class="dato">-</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="260872">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">21:00h</span>
+</time>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4460.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4460.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4460.png 2x" width="22">
+<span class="equipo-nom large">Detroit Pistons</span>
+<abbr title="Detroit Pistons" class="equipo-nom">DET</abbr>
+<p class="dato">-</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4479.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4479.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4479.png 2x" width="22">
+<span class="equipo-nom large">Toronto Raptors</span>
+<abbr title="Toronto Raptors" class="equipo-nom">TOR</abbr>
+<p class="dato">-</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="260873">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">23:00h</span>
+</time>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4473.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4473.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4473.png 2x" width="22">
+<span class="equipo-nom large">Orlando Magic</span>
+<abbr title="Orlando Magic" class="equipo-nom">ORL</abbr>
+<p class="dato">-</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4452.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4452.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4452.png 2x" width="22">
+<span class="equipo-nom large">Atlanta Hawks</span>
+<abbr title="Atlanta Hawks" class="equipo-nom">ATL</abbr>
+<p class="dato">-</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="260874">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">23:00h</span>
+</time>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4477.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4477.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4477.png 2x" width="22">
+<span class="equipo-nom large">Sacramento Kings</span>
+<abbr title="Sacramento Kings" class="equipo-nom">SAC</abbr>
+<p class="dato">-</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4456.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4456.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4456.png 2x" width="22">
+<span class="equipo-nom large">Chicago Bulls</span>
+<abbr title="Chicago Bulls" class="equipo-nom">CHI</abbr>
+<p class="dato">-</p>
 </div>
 </span>
 </div>
 <div class="csel-item                                     finalizado
-" data-idpartido="260837">
+" data-idpartido="260863">
 <div class="item-info">
 <span class="tiempo">FINALIZADO</span>
 </div>
@@ -753,58 +2492,118 @@ width="22">
 <img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4470.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4470.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4470.png 2x" width="22">
 <span class="equipo-nom large">New Orleans Pelicans</span>
 <abbr title="New Orleans Pelicans" class="equipo-nom">NOP</abbr>
-<p class="dato">113</p>
+<p class="dato">136</p>
 </div>
 <div class="equipo ganador team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4468.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4468.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4468.png 2x" width="22">
-<span class="equipo-nom large">Milwaukee Bucks</span>
-<abbr title="Milwaukee Bucks" class="equipo-nom">MIL</abbr>
-<p class="dato">130</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4475.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4475.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4475.png 2x" width="22">
+<span class="equipo-nom large">Phoenix Suns</span>
+<abbr title="Phoenix Suns" class="equipo-nom">PHX</abbr>
+<p class="dato">138</p>
 </div>
 </span>
 </div>
 <div class="csel-item                                     finalizado
-" data-idpartido="260836">
+" data-idpartido="260862">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4481.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4481.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4481.png 2x" width="22">
+<span class="equipo-nom large">Washington Wizards</span>
+<abbr title="Washington Wizards" class="equipo-nom">WAS</abbr>
+<p class="dato">135</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4466.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4466.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4466.png 2x" width="22">
+<span class="equipo-nom large">Memphis Grizzlies</span>
+<abbr title="Memphis Grizzlies" class="equipo-nom">MEM</abbr>
+<p class="dato">128</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="260865">
 <div class="item-info">
 <span class="tiempo">FINALIZADO</span>
 </div>
 <span class="item-content">
 <div class="equipo  team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4456.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4456.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4456.png 2x" width="22">
-<span class="equipo-nom large">Chicago Bulls</span>
-<abbr title="Chicago Bulls" class="equipo-nom">CHI</abbr>
-<p class="dato">107</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4472.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4472.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4472.png 2x" width="22">
+<span class="equipo-nom large">Oklahoma City Thunder</span>
+<abbr title="Oklahoma City Thunder" class="equipo-nom">OKC</abbr>
+<p class="dato">88</p>
 </div>
 <div class="equipo ganador team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4465.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4465.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4465.png 2x" width="22">
-<span class="equipo-nom large">Los Angeles Lakers</span>
-<abbr title="Los Angeles Lakers" class="equipo-nom">LAL</abbr>
-<p class="dato">123</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4461.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4461.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4461.png 2x" width="22">
+<span class="equipo-nom large">Golden State Warriors</span>
+<abbr title="Golden State Warriors" class="equipo-nom">GSW</abbr>
+<p class="dato">110</p>
 </div>
 </span>
 </div>
 <div class="csel-item                                     finalizado
-" data-idpartido="260840">
+" data-idpartido="260866">
 <div class="item-info">
 <span class="tiempo">FINALIZADO</span>
 </div>
 <span class="item-content">
-<div class="equipo  team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4464.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4464.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4464.png 2x" width="22">
-<span class="equipo-nom large">Los Angeles Clippers</span>
-<abbr title="Los Angeles Clippers" class="equipo-nom">LAC</abbr>
-<p class="dato">104</p>
+<div class="equipo ganador team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4478.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4478.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4478.png 2x" width="22">
+<span class="equipo-nom large">San Antonio Spurs</span>
+<abbr title="San Antonio Spurs" class="equipo-nom">SAS</abbr>
+<p class="dato">108</p>
 </div>
-<div class="equipo ganador team2">
+<div class="equipo  team2">
 <img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4476.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4476.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4476.png 2x" width="22">
 <span class="equipo-nom large">Portland Trail Blazers</span>
 <abbr title="Portland Trail Blazers" class="equipo-nom">POR</abbr>
-<p class="dato">125</p>
+<p class="dato">103</p>
 </div>
 </span>
 </div>
 <div class="csel-item                                     finalizado
-" data-idpartido="260839">
+" data-idpartido="260864">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4458.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4458.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4458.png 2x" width="22">
+<span class="equipo-nom large">Dallas Mavericks</span>
+<abbr title="Dallas Mavericks" class="equipo-nom">DAL</abbr>
+<p class="dato">121</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4457.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4457.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4457.png 2x" width="22">
+<span class="equipo-nom large">Cleveland Cavaliers</span>
+<abbr title="Cleveland Cavaliers" class="equipo-nom">CLE</abbr>
+<p class="dato">116</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="260868">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4480.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4480.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4480.png 2x" width="22">
+<span class="equipo-nom large">Utah Jazz</span>
+<abbr title="Utah Jazz" class="equipo-nom">UTA</abbr>
+<p class="dato">114</p>
+</div>
+<div class="equipo  team2">
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4454.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4454.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4454.png 2x" width="22">
+<span class="equipo-nom large">Brooklyn Nets</span>
+<abbr title="Brooklyn Nets" class="equipo-nom">BKN</abbr>
+<p class="dato">98</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="260867">
 <div class="item-info">
 <span class="tiempo">FINALIZADO</span>
 </div>
@@ -813,89 +2612,477 @@ width="22">
 <img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4459.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4459.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4459.png 2x" width="22">
 <span class="equipo-nom large">Denver Nuggets</span>
 <abbr title="Denver Nuggets" class="equipo-nom">DEN</abbr>
-<p class="dato">133</p>
+<p class="dato">102</p>
 </div>
 <div class="equipo  team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4469.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4469.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4469.png 2x" width="22">
-<span class="equipo-nom large">Minnesota Timberwolves</span>
-<abbr title="Minnesota Timberwolves" class="equipo-nom">MIN</abbr>
-<p class="dato">107</p>
+<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4463.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4463.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4463.png 2x" width="22">
+<span class="equipo-nom large">Indiana Pacers</span>
+<abbr title="Indiana Pacers" class="equipo-nom">IND</abbr>
+<p class="dato">100</p>
 </div>
 </span>
 </div>
 </div>
-<div class="csel-agrup baloncesto">
-<div class="csel-item title" id="comp-eurocup"> 
-<span class="title">Eurocup</span>                                           
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-chile"> 
+<span class="title">Liga Chilena</span>                                           
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="270748">
+" data-idpartido="269528">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">17:00h</span>
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">20:00h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/chile/2019/directo/regular_a_5_269528/" class="item-content" title="Última hora D. Iquique - Palestino">
+<div class="equipo  team1">
+<img alt="D. Iquique"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3927.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3927.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3927.png 2x"
+width="22">
+<span class="equipo-nom large">D. Iquique</span>
+<abbr title="D. Iquique" class="equipo-nom">IQU</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Palestino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4162.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4162.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4162.png 2x"
+width="22">
+<span class="equipo-nom large">Palestino</span>
+<abbr title="Palestino" class="equipo-nom">PAL</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="269532">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">22:15h</span>
+</time>
+</div>
+<a href="//resultados.as.com/resultados/futbol/chile/2019/directo/regular_a_5_269532/" class="item-content" title="Última hora Coquimbo Unido - U. La Calera">
+<div class="equipo  team1">
+<img alt="Coquimbo Unido"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4178.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4178.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4178.png 2x"
+width="22">
+<span class="equipo-nom large">Coquimbo Unido</span>
+<abbr title="Coquimbo Unido" class="equipo-nom">COQ</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="U. La Calera"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3930.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3930.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3930.png 2x"
+width="22">
+<span class="equipo-nom large">U. La Calera</span>
+<abbr title="U. La Calera" class="equipo-nom">LAC</abbr>
+<p class="dato">                                    -
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="269530">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/chile/2019/directo/regular_a_5_269530/" class="item-content" title="Resultado A. Italiano 2 - O´Higgins 2">
+<div class="equipo  team1">
+<img alt="A. Italiano"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4156.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4156.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4156.png 2x"
+width="22">
+<span class="equipo-nom large">A. Italiano</span>
+<abbr title="A. Italiano" class="equipo-nom">AUX</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="O´Higgins"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4158.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4158.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4158.png 2x"
+width="22">
+<span class="equipo-nom large">O´Higgins</span>
+<abbr title="O´Higgins" class="equipo-nom">OHI</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="269531">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/chile/2019/directo/regular_a_5_269531/" class="item-content" title="Resultado Colo Colo 2 - U. Católica 3">
+<div class="equipo  team1">
+<img alt="Colo Colo"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4155.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4155.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4155.png 2x"
+width="22">
+<span class="equipo-nom large">Colo Colo</span>
+<abbr title="Colo Colo" class="equipo-nom">COL</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="U. Católica"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4157.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4157.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4157.png 2x"
+width="22">
+<span class="equipo-nom large">U. Católica</span>
+<abbr title="U. Católica" class="equipo-nom">UCA</abbr>
+<p class="dato">                                    3
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-grecia"> 
+<span class="title">Liga Griega</span>                                           
+</div>
+<div class="csel-item                                     directo
+" data-idpartido="252448">
+<div class="item-info">
+<span class="tiempo">EN JUEGO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Panathinaikos"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/335.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/335.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/335.png 2x"
+width="22">
+<span class="equipo-nom large">Panathinaikos</span>
+<abbr title="Panathinaikos" class="equipo-nom">PNT</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Olympiacos"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/137.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/137.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/137.png 2x"
+width="22">
+<span class="equipo-nom large">Olympiacos</span>
+<abbr title="Olympiacos" class="equipo-nom">OLY</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="252447">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
+<span class="hora">18:30h</span>
 </time>
 </div>
 <span class="item-content">
 <div class="equipo  team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4188.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4188.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4188.png 2x" width="22">
-<span class="equipo-nom large">Unics Kazan</span>
-<abbr title="Unics Kazan" class="equipo-nom">UNK</abbr>
-<p class="dato">-</p>
+<img alt="Panionios"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1098.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1098.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1098.png 2x"
+width="22">
+<span class="equipo-nom large">Panionios</span>
+<abbr title="Panionios" class="equipo-nom">PAN</abbr>
+<p class="dato">                                    -
+</p>
 </div>
 <div class="equipo  team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4132.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4132.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4132.png 2x" width="22">
-<span class="equipo-nom large">L. Kuban</span>
-<abbr title="L. Kuban" class="equipo-nom">TIV</abbr>
-<p class="dato">-</p>
+<img alt="Xanthi"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1155.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/1155.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/1155.png 2x"
+width="22">
+<span class="equipo-nom large">Xanthi</span>
+<abbr title="Xanthi" class="equipo-nom">XAN</abbr>
+<p class="dato">                                    -
+</p>
 </div>
 </span>
 </div>
-<div class="csel-item                                     previo
-" data-idpartido="270749">
+<div class="csel-item                                     finalizado
+" data-idpartido="252453">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img alt="OFI Creta"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/924.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/924.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/924.png 2x"
+width="22">
+<span class="equipo-nom large">OFI Creta</span>
+<abbr title="OFI Creta" class="equipo-nom">CRE</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Levadiakos FC"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3778.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3778.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3778.png 2x"
+width="22">
+<span class="equipo-nom large">Levadiakos FC</span>
+<abbr title="Levadiakos FC" class="equipo-nom">LEV</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="252451">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
+<img alt="Atromitos"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3191.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3191.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3191.png 2x"
+width="22">
+<span class="equipo-nom large">Atromitos</span>
+<abbr title="Atromitos" class="equipo-nom">ATR</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="AEK Atenas"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/154.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/154.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/154.png 2x"
+width="22">
+<span class="equipo-nom large">AEK Atenas</span>
+<abbr title="AEK Atenas" class="equipo-nom">AEK</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</span>
+</div>
+</div>
+<div class="csel-agrup futbol">
+<div class="csel-item title" id="comp-mexico_clausura"> 
+<span class="title">Liga Mexicana - Clausura</span>                                           
+</div>
+<div class="csel-item                                     previo
+" data-idpartido="266052">
+<div class="item-info">
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
 <span class="hora">19:00h</span>
 </time>
 </div>
-<span class="item-content">
+<a href="//resultados.as.com/resultados/futbol/mexico_clausura/2019/directo/regular_a_11_266052/" class="item-content" title="Última hora Toluca - Atlas">
 <div class="equipo  team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4191.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4191.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4191.png 2x" width="22">
-<span class="equipo-nom large">Alba Berlin</span>
-<abbr title="Alba Berlin" class="equipo-nom">ALB</abbr>
-<p class="dato">-</p>
+<img alt="Toluca"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4249.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4249.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4249.png 2x"
+width="22">
+<span class="equipo-nom large">Toluca</span>
+<abbr title="Toluca" class="equipo-nom">TOL</abbr>
+<p class="dato">                                    -
+</p>
 </div>
 <div class="equipo  team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4109.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4109.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4109.png 2x" width="22">
-<span class="equipo-nom large">Unicaja</span>
-<abbr title="Unicaja" class="equipo-nom">MAL</abbr>
-<p class="dato">-</p>
+<img alt="Atlas"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4223.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4223.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4223.png 2x"
+width="22">
+<span class="equipo-nom large">Atlas</span>
+<abbr title="Atlas" class="equipo-nom">ATL</abbr>
+<p class="dato">                                    -
+</p>
 </div>
-</span>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
 </div>
-<div class="csel-item                                     previo
-" data-idpartido="270750">
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="266057">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:24+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">20:30h</span>
-</time>
+<span class="tiempo">FINALIZADO</span>
 </div>
-<span class="item-content">
-<div class="equipo  team1">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4515.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4515.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4515.png 2x" width="22">
-<span class="equipo-nom large">Asvel Villeurbanne</span>
-<abbr title="Asvel Villeurbanne" class="equipo-nom">AVI</abbr>
-<p class="dato">-</p>
+<a href="//resultados.as.com/resultados/futbol/mexico_clausura/2019/directo/regular_a_11_266057/" class="item-content" title="Resultado Cruz Azul 4 - Pachuca 1">
+<div class="equipo ganador team1">
+<img alt="Cruz Azul"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4204.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4204.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4204.png 2x"
+width="22">
+<span class="equipo-nom large">Cruz Azul</span>
+<abbr title="Cruz Azul" class="equipo-nom">CZA</abbr>
+<p class="dato">                                    4
+</p>
 </div>
 <div class="equipo  team2">
-<img class="equipo-escudo" src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4152.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4152.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4152.png 2x" width="22">
-<span class="equipo-nom large">BC Andorra</span>
-<abbr title="BC Andorra" class="equipo-nom">AND</abbr>
-<p class="dato">-</p>
+<img alt="Pachuca"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4245.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4245.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4245.png 2x"
+width="22">
+<span class="equipo-nom large">Pachuca</span>
+<abbr title="Pachuca" class="equipo-nom">PAC</abbr>
+<p class="dato">                                    1
+</p>
 </div>
-</span>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="266056">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/mexico_clausura/2019/directo/regular_a_11_266056/" class="item-content" title="Resultado Chivas 0 - América 2">
+<div class="equipo  team1">
+<img alt="Chivas"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3678.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3678.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3678.png 2x"
+width="22">
+<span class="equipo-nom large">Chivas</span>
+<abbr title="Chivas" class="equipo-nom">GDL</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="América"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/96.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/96.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/96.png 2x"
+width="22">
+<span class="equipo-nom large">América</span>
+<abbr title="América" class="equipo-nom">AME</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="266055">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/mexico_clausura/2019/directo/regular_a_11_266055/" class="item-content" title="Resultado Tigres 4 - Gallos Blancos 1">
+<div class="equipo ganador team1">
+<img alt="Tigres"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4210.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4210.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4210.png 2x"
+width="22">
+<span class="equipo-nom large">Tigres</span>
+<abbr title="Tigres" class="equipo-nom">TIG</abbr>
+<p class="dato">                                    4
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Gallos Blancos"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4251.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4251.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4251.png 2x"
+width="22">
+<span class="equipo-nom large">Gallos Blancos</span>
+<abbr title="Gallos Blancos" class="equipo-nom">QUE</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="266060">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<a href="//resultados.as.com/resultados/futbol/mexico_clausura/2019/directo/regular_a_11_266060/" class="item-content" title="Resultado Xolos  1 - Rayados 0">
+<div class="equipo ganador team1">
+<img alt="Xolos "
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3828.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/3828.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/3828.png 2x"
+width="22">
+<span class="equipo-nom large">Xolos </span>
+<abbr title="Xolos " class="equipo-nom">TIJ</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Rayados"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4248.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4248.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4248.png 2x"
+width="22">
+<span class="equipo-nom large">Rayados</span>
+<abbr title="Rayados" class="equipo-nom">MTY</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="csel-agrup tenis">
@@ -903,160 +3090,18 @@ width="22">
 <span class="title">Masters 1000 Indian Wells</span>                                           
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="272265">
+" data-idpartido="272647">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
 <span class="hora">19:00h</span>
 </time>
 </div>
-<a class="item-content" href="//resultados.as.com/resultados/tenis/masters_1000_indian_wells/2019/directo/octavos_a_1_272265/">
-<div id="equipo_filip_krajinovic" class="equipo  ">
-<img class="equipo-bandera" alt="filip_krajinovic" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/srb.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/srb.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/srb.png 2x" width="22">
-<span class="hide">Filip Krajinovic</span>
-<abbr title="Filip Krajinovic" class="equipo-nom">Filip Krajinovic</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-<div id="equipo_rafael_nadal" class="equipo  ">
-<img class="equipo-bandera" alt="rafael_nadal" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/esp.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/esp.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/esp.png 2x" width="22">
-<span class="hide">Rafael Nadal</span>
-<abbr title="Rafael Nadal" class="equipo-nom">Rafael Nadal</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-</a>
-<div class="item-mas">
-<ul class="mas-ops">
-<li>
-<a href="//resultados.as.com/resultados/tenis/masters_1000_indian_wells/2019/directo/octavos_a_1_272265/">Previa</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="csel-item                                     previo
-" data-idpartido="272254">
-<div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">19:00h</span>
-</time>
-</div>
-<span class="item-content">
-<div id="equipo_yoshihito_nishioka" class="equipo  ">
-<img class="equipo-bandera" alt="yoshihito_nishioka" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/jpn.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/jpn.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/jpn.png 2x" width="22">
-<span class="hide">Yoshihito Nishioka</span>
-<abbr title="Yoshihito Nishioka" class="equipo-nom">Yoshihito Nishioka</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-<div id="equipo_miomir_kecmanovic" class="equipo  ">
-<img class="equipo-bandera" alt="miomir_kecmanovic" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/srb.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/srb.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/srb.png 2x" width="22">
-<span class="hide">Miomir Kecmanovic</span>
-<abbr title="Miomir Kecmanovic" class="equipo-nom">Miomir Kecmanovic</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     previo
-" data-idpartido="272250">
-<div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">21:00h</span>
-</time>
-</div>
-<span class="item-content">
-<div id="equipo_jan_lennard_struff" class="equipo  ">
-<img class="equipo-bandera" alt="jan_lennard_struff" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/ger.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/ger.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/ger.png 2x" width="22">
-<span class="hide">Jan-Lennard Struff</span>
-<abbr title="Jan-Lennard Struff" class="equipo-nom">Jan-Lennard Struff</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-<div id="equipo_milos_raonic" class="equipo  ">
-<img class="equipo-bandera" alt="milos_raonic" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/can.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/can.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/can.png 2x" width="22">
-<span class="hide">Milos Raonic</span>
-<abbr title="Milos Raonic" class="equipo-nom">Milos Raonic</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     previo
-" data-idpartido="272264">
-<div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">21:00h</span>
-</time>
-</div>
-<span class="item-content">
-<div id="equipo_hubert_hurkacz" class="equipo  ">
-<img class="equipo-bandera" alt="hubert_hurkacz" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/pol.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/pol.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/pol.png 2x" width="22">
-<span class="hide">Hubert Hurkacz</span>
-<abbr title="Hubert Hurkacz" class="equipo-nom">Hubert Hurkacz</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-<div id="equipo_denis_shapovalov" class="equipo  ">
-<img class="equipo-bandera" alt="denis_shapovalov" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/can.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/can.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/can.png 2x" width="22">
-<span class="hide">Denis Shapovalov</span>
-<abbr title="Denis Shapovalov" class="equipo-nom">Denis Shapovalov</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     previo
-" data-idpartido="272267">
-<div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">23:00h</span>
-</time>
-</div>
-<span class="item-content">
-<div id="equipo_john_isner" class="equipo  ">
-<img class="equipo-bandera" alt="john_isner" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/usa.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/usa.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/usa.png 2x" width="22">
-<span class="hide">John Isner</span>
-<abbr title="John Isner" class="equipo-nom">John Isner</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-<div id="equipo_karen_khachanov" class="equipo  ">
-<img class="equipo-bandera" alt="karen_khachanov" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/rus.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/rus.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/rus.png 2x" width="22">
-<span class="hide">Karen Khachanov</span>
-<abbr title="Karen Khachanov" class="equipo-nom">Karen Khachanov</abbr>
-<div class="dato-group">
-<span class="dato">-</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     previo
-" data-idpartido="272270">
-<div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">23:00h</span>
-</time>
-</div>
-<span class="item-content">
-<div id="equipo_kyle_edmund" class="equipo  ">
-<img class="equipo-bandera" alt="kyle_edmund" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/gbr.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/gbr.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/gbr.png 2x" width="22">
-<span class="hide">Kyle Edmund</span>
-<abbr title="Kyle Edmund" class="equipo-nom">Kyle Edmund</abbr>
+<a class="item-content" href="//resultados.as.com/resultados/tenis/masters_1000_indian_wells/2019/directo/final_a_1_272647/">
+<div id="equipo_dominic_thiem" class="equipo  ">
+<img class="equipo-bandera" alt="dominic_thiem" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/aut.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/aut.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/aut.png 2x" width="22">
+<span class="hide">Dominic Thiem</span>
+<abbr title="Dominic Thiem" class="equipo-nom">Dominic Thiem</abbr>
 <div class="dato-group">
 <span class="dato">-</span>
 </div>
@@ -1070,58 +3115,13 @@ width="22">
 </div>
 </div>
 </a>
+<div class="item-mas">
+<ul class="mas-ops">
+<li>
+<a href="//resultados.as.com/resultados/tenis/masters_1000_indian_wells/2019/directo/final_a_1_272647/">Previa</a>
+</li>
+</ul>
 </div>
-<div class="csel-item                                     finalizado
-" data-idpartido="272220">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div id="equipo_radu_albot" class="equipo  ">
-<img class="equipo-bandera" alt="radu_albot" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/mda.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/mda.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/mda.png 2x" width="22">
-<span class="hide">Radu Albot</span>
-<abbr title="Radu Albot" class="equipo-nom">Radu Albot</abbr>
-<div class="dato-group">
-<span class="dato perdido">3</span>
-<span class="dato ">3</span>
-</div>
-</div>
-<div id="equipo_kyle_edmund" class="equipo  ganador">
-<img class="equipo-bandera" alt="kyle_edmund" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/gbr.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/gbr.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/gbr.png 2x" width="22">
-<span class="hide">Kyle Edmund</span>
-<abbr title="Kyle Edmund" class="equipo-nom">Kyle Edmund</abbr>
-<div class="dato-group">
-<span class="dato ganado">6</span>
-<span class="dato ">6</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     finalizado
-" data-idpartido="272227">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div id="equipo_stan_wawrinka" class="equipo  ">
-<img class="equipo-bandera" alt="stan_wawrinka" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/sui.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/sui.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/sui.png 2x" width="22">
-<span class="hide">Stan Wawrinka</span>
-<abbr title="Stan Wawrinka" class="equipo-nom">Stan Wawrinka</abbr>
-<div class="dato-group">
-<span class="dato perdido">3</span>
-<span class="dato ">4</span>
-</div>
-</div>
-<div id="equipo_roger_federer" class="equipo  ganador">
-<img class="equipo-bandera" alt="roger_federer" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/sui.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/sui.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/sui.png 2x" width="22">
-<span class="hide">Roger Federer</span>
-<abbr title="Roger Federer" class="equipo-nom">Roger Federer</abbr>
-<div class="dato-group">
-<span class="dato ganado">6</span>
-<span class="dato ">6</span>
-</div>
-</div>
-</a>
 </div>
 </div>
 <div class="csel-agrup tenis">
@@ -1129,18 +3129,18 @@ width="22">
 <span class="title">WTA Indian Wells</span>                                           
 </div>
 <div class="csel-item                                     previo
-" data-idpartido="272263">
+" data-idpartido="272646">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
+<time datetime="2019-03-17T18:05:50+01:00">
+<span class="fecha">DOM 17/03</span>
 <span class="hora">21:00h</span>
 </time>
 </div>
 <span class="item-content">
-<div id="equipo_garbine_muguruza" class="equipo  ">
-<img class="equipo-bandera" alt="garbine_muguruza" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/esp.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/esp.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/esp.png 2x" width="22">
-<span class="hide">Garbiñe Muguruza</span>
-<abbr title="Garbiñe Muguruza" class="equipo-nom">MUG</abbr>
+<div id="equipo_angelique_kerber" class="equipo  ">
+<img class="equipo-bandera" alt="angelique_kerber" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/ger.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/ger.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/ger.png 2x" width="22">
+<span class="hide">Angelique Kerber</span>
+<abbr title="Angelique Kerber" class="equipo-nom">KER</abbr>
 <div class="dato-group">
 <span class="dato">-</span>
 </div>
@@ -1155,178 +3155,18 @@ width="22">
 </div>
 </a>
 </div>
-<div class="csel-item                                     finalizado
-" data-idpartido="272252">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div id="equipo_venus_williams" class="equipo  ganador">
-<img class="equipo-bandera" alt="venus_williams" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/usa.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/usa.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/usa.png 2x" width="22">
-<span class="hide">Venus Williams</span>
-<abbr title="Venus Williams" class="equipo-nom">WIL</abbr>
-<div class="dato-group">
-<span class="dato ganado">6</span>
-<span class="dato ">6</span>
-</div>
-</div>
-<div id="equipo_mona_barthel" class="equipo  ">
-<img class="equipo-bandera" alt="mona_barthel" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/ger.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/ger.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/ger.png 2x" width="22">
-<span class="hide">Mona Barthel</span>
-<abbr title="Mona Barthel" class="equipo-nom">BAR</abbr>
-<div class="dato-group">
-<span class="dato perdido">4</span>
-<span class="dato ">4</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     finalizado
-" data-idpartido="272249">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div id="equipo_anett_kontaveit" class="equipo  ">
-<img class="equipo-bandera" alt="anett_kontaveit" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/est.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/est.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/est.png 2x" width="22">
-<span class="hide">Anett Kontaveit</span>
-<abbr title="Anett Kontaveit" class="equipo-nom">KON</abbr>
-<div class="dato-group">
-<span class="dato perdido">6</span>
-<span class="dato ganado">6</span>
-<span class="dato ">2</span>
-</div>
-</div>
-<div id="equipo_karolina_pliskova" class="equipo  ganador">
-<img class="equipo-bandera" alt="karolina_pliskova" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/cze.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/cze.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/cze.png 2x" width="22">
-<span class="hide">Karolina Pliskova</span>
-<abbr title="Karolina Pliskova" class="equipo-nom">PLI</abbr>
-<div class="dato-group">
-<span class="dato ganado">7</span>
-<span class="dato perdido">4</span>
-<span class="dato ">6</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     finalizado
-" data-idpartido="272255">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div id="equipo_naomi_osaka" class="equipo  ">
-<img class="equipo-bandera" alt="naomi_osaka" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/jpn.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/jpn.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/jpn.png 2x" width="22">
-<span class="hide">Naomi Osaka</span>
-<abbr title="Naomi Osaka" class="equipo-nom">OSA</abbr>
-<div class="dato-group">
-<span class="dato perdido">3</span>
-<span class="dato ">1</span>
-</div>
-</div>
-<div id="equipo_belinda_bencic" class="equipo  ganador">
-<img class="equipo-bandera" alt="belinda_bencic" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/sui.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/sui.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/sui.png 2x" width="22">
-<span class="hide">Belinda Bencic</span>
-<abbr title="Belinda Bencic" class="equipo-nom">BEN</abbr>
-<div class="dato-group">
-<span class="dato ganado">6</span>
-<span class="dato ">6</span>
-</div>
-</div>
-</a>
-</div>
-<div class="csel-item                                     finalizado
-" data-idpartido="272251">
-<div class="item-info">
-<span class="tiempo">FINALIZADO</span>
-</div>
-<span class="item-content">
-<div id="equipo_aryna_sabalenka" class="equipo  ">
-<img class="equipo-bandera" alt="aryna_sabalenka" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/blr.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/blr.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/blr.png 2x" width="22">
-<span class="hide">Aryna Sabalenka</span>
-<abbr title="Aryna Sabalenka" class="equipo-nom">SAB</abbr>
-<div class="dato-group">
-<span class="dato perdido">1</span>
-<span class="dato ganado">6</span>
-<span class="dato ">4</span>
-</div>
-</div>
-<div id="equipo_angelique_kerber" class="equipo  ganador">
-<img class="equipo-bandera" alt="angelique_kerber" src="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/ger.png" srcset="//as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/ger.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/paises/x-small/2x/ger.png 2x" width="22">
-<span class="hide">Angelique Kerber</span>
-<abbr title="Angelique Kerber" class="equipo-nom">KER</abbr>
-<div class="dato-group">
-<span class="dato ganado">6</span>
-<span class="dato perdido">4</span>
-<span class="dato ">6</span>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="csel-agrup futbol">
-<div class="csel-item title" id="comp-copa_argentina"> 
-<span class="title">Copa Argentina</span>                                           
-</div>
-<div class="csel-item                                     previo
-" data-idpartido="270497">
-<div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">21:10h</span>
-</time>
-</div>
-<span class="item-content">
-<div class="equipo  team1">
-<img alt="Patronato"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4330.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4330.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4330.png 2x"
-width="22">
-<span class="equipo-nom large">Patronato</span>
-<abbr title="Patronato" class="equipo-nom">PAT</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-<div class="equipo  team2">
-<img alt="Dock Sud"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4788.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4788.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4788.png 2x"
-width="22">
-<span class="equipo-nom large">Dock Sud</span>
-<abbr title="Dock Sud" class="equipo-nom">CSD</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-</span>
-</div>
 </div>
 <div class="csel-agrup futbol">
 <div class="csel-item title" id="comp-primera_femenina"> 
 <span class="title">Liga Iberdrola</span>                                           
 </div>
-<div class="csel-item                                     previo
-" data-idpartido="248775">
+<div class="csel-item                                     finalizado
+" data-idpartido="248785">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">18:00h</span>
-</time>
+<span class="tiempo">FINALIZADO</span>
 </div>
 <span class="item-content">
 <div class="equipo  team1">
-<img alt="Sevilla Femenino"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4711.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4711.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4711.png 2x"
-width="22">
-<span class="equipo-nom large">Sevilla Femenino</span>
-<abbr title="Sevilla Femenino" class="equipo-nom">SEVF</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-<div class="equipo  team2">
 <img alt="Málaga CF Femenino"
                 class="equipo-escudo"
                 src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4706.png"
@@ -1334,65 +3174,29 @@ width="22">
 width="22">
 <span class="equipo-nom large">Málaga CF Femenino</span>
 <abbr title="Málaga CF Femenino" class="equipo-nom">MALF</abbr>
-<p class="dato">                                    -
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="Levante UD Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4699.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4699.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4699.png 2x"
+width="22">
+<span class="equipo-nom large">Levante UD Femenino</span>
+<abbr title="Levante UD Femenino" class="equipo-nom">LEVF</abbr>
+<p class="dato">                                    1
 </p>
 </div>
 </span>
 </div>
-<div class="csel-item                                     previo
-" data-idpartido="248778">
+<div class="csel-item                                     finalizado
+" data-idpartido="248789">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">18:00h</span>
-</time>
+<span class="tiempo">FINALIZADO</span>
 </div>
 <span class="item-content">
-<div class="equipo  team1">
-<img alt="Athletic Club Femenino"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4703.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4703.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4703.png 2x"
-width="22">
-<span class="equipo-nom large">Athletic Club Femenino</span>
-<abbr title="Athletic Club Femenino" class="equipo-nom">ATHF</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-<div class="equipo  team2">
-<img alt="EDF Logroño"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4709.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4709.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4709.png 2x"
-width="22">
-<span class="equipo-nom large">EDF Logroño</span>
-<abbr title="EDF Logroño" class="equipo-nom">LOGF</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-</span>
-</div>
-<div class="csel-item                                     previo
-" data-idpartido="248777">
-<div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">20:00h</span>
-</time>
-</div>
-<span class="item-content">
-<div class="equipo  team1">
-<img alt="Madrid CFF"
-                class="equipo-escudo"
-                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4712.png"
-                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4712.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4712.png 2x"
-width="22">
-<span class="equipo-nom large">Madrid CFF</span>
-<abbr title="Madrid CFF" class="equipo-nom">MADF</abbr>
-<p class="dato">                                    -
-</p>
-</div>
-<div class="equipo  team2">
+<div class="equipo ganador team1">
 <img alt="Espanyol Femenino"
                 class="equipo-escudo"
                 src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4710.png"
@@ -1400,21 +3204,40 @@ width="22">
 width="22">
 <span class="equipo-nom large">Espanyol Femenino</span>
 <abbr title="Espanyol Femenino" class="equipo-nom">ESPF</abbr>
-<p class="dato">                                    -
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Sevilla Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4711.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4711.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4711.png 2x"
+width="22">
+<span class="equipo-nom large">Sevilla Femenino</span>
+<abbr title="Sevilla Femenino" class="equipo-nom">SEVF</abbr>
+<p class="dato">                                    0
 </p>
 </div>
 </span>
 </div>
-<div class="csel-item                                     previo
-" data-idpartido="248774">
+<div class="csel-item                                     finalizado
+" data-idpartido="248783">
 <div class="item-info">
-<time datetime="2019-03-13T15:30:25+01:00">
-<span class="fecha">MIÉ 13/03</span>
-<span class="hora">20:30h</span>
-</time>
+<span class="tiempo">FINALIZADO</span>
 </div>
 <span class="item-content">
-<div class="equipo  team1">
+<div class="equipo ganador team1">
+<img alt="Real Sociedad Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4701.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4701.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4701.png 2x"
+width="22">
+<span class="equipo-nom large">Real Sociedad Femenino</span>
+<abbr title="Real Sociedad Femenino" class="equipo-nom">RSOF</abbr>
+<p class="dato">                                    2
+</p>
+</div>
+<div class="equipo  team2">
 <img alt="Rayo Vallecano Femenino"
                 class="equipo-escudo"
                 src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4704.png"
@@ -1422,10 +3245,108 @@ width="22">
 width="22">
 <span class="equipo-nom large">Rayo Vallecano Femenino</span>
 <abbr title="Rayo Vallecano Femenino" class="equipo-nom">RAYF</abbr>
-<p class="dato">                                    -
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="248788">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img alt="EDF Logroño"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4709.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4709.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4709.png 2x"
+width="22">
+<span class="equipo-nom large">EDF Logroño</span>
+<abbr title="EDF Logroño" class="equipo-nom">LOGF</abbr>
+<p class="dato">                                    2
 </p>
 </div>
 <div class="equipo  team2">
+<img alt="Madrid CFF"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4712.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4712.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4712.png 2x"
+width="22">
+<span class="equipo-nom large">Madrid CFF</span>
+<abbr title="Madrid CFF" class="equipo-nom">MADF</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="248784">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img alt="Valencia CF Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4707.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4707.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4707.png 2x"
+width="22">
+<span class="equipo-nom large">Valencia CF Femenino</span>
+<abbr title="Valencia CF Femenino" class="equipo-nom">VALF</abbr>
+<p class="dato">                                    6
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Sporting Huelva Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4713.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4713.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4713.png 2x"
+width="22">
+<span class="equipo-nom large">Sporting Huelva Femenino</span>
+<abbr title="Sporting Huelva Femenino" class="equipo-nom">SHUF</abbr>
+<p class="dato">                                    0
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="248786">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo ganador team1">
+<img alt="UD Granadilla Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4700.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4700.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4700.png 2x"
+width="22">
+<span class="equipo-nom large">UD Granadilla Femenino</span>
+<abbr title="UD Granadilla Femenino" class="equipo-nom">GRAF</abbr>
+<p class="dato">                                    3
+</p>
+</div>
+<div class="equipo  team2">
+<img alt="Athletic Club Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4703.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4703.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4703.png 2x"
+width="22">
+<span class="equipo-nom large">Athletic Club Femenino</span>
+<abbr title="Athletic Club Femenino" class="equipo-nom">ATHF</abbr>
+<p class="dato">                                    1
+</p>
+</div>
+</span>
+</div>
+<div class="csel-item                                     finalizado
+" data-idpartido="248787">
+<div class="item-info">
+<span class="tiempo">FINALIZADO</span>
+</div>
+<span class="item-content">
+<div class="equipo  team1">
 <img alt="Atlético de Madrid Femenino"
                 class="equipo-escudo"
                 src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4697.png"
@@ -1433,7 +3354,18 @@ width="22">
 width="22">
 <span class="equipo-nom large">Atlético de Madrid Femenino</span>
 <abbr title="Atlético de Madrid Femenino" class="equipo-nom">ATMF</abbr>
-<p class="dato">                                    -
+<p class="dato">                                    0
+</p>
+</div>
+<div class="equipo ganador team2">
+<img alt="FC Barcelona Femenino"
+                class="equipo-escudo"
+                src="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4698.png"
+                srcset="//as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/4698.png 1x, //as01.epimg.net/img/comunes/fotos/fichas/equipos/x-small/2x/4698.png 2x"
+width="22">
+<span class="equipo-nom large">FC Barcelona Femenino</span>
+<abbr title="FC Barcelona Femenino" class="equipo-nom">FCBF</abbr>
+<p class="dato">                                    2
 </p>
 </div>
 </span>
@@ -1443,12 +3375,13 @@ width="22">
 <div class="csel-item title" id="comp-actualidad"> 
 <span class="title">Hoy en As</span>                                           
 </div>
-<div class="csel-item                                     previo
+<div class="csel-item                                     finalizado
 " data-idpartido="">
 <div class="item-info">
+<span class="tiempo">FINALIZADO</span>
 </div>
-<a href="https://as.com/futbol/2019/03/12/champions/1552404970_491084.html" class="item-content">
-<p class="txt">Juventus - Atlético: Champions en directo</p>       
+<a href="https://as.com/futbol/2019/03/15/champions/1552645166_910071.html" class="item-content">
+<p class="txt">Sorteo de Champions y Europa League</p>       
 </a>
 </div>
 </div>
@@ -1740,23 +3673,26 @@ v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,
 <div class="temas-dia cf">
 <a id="menu-temasdia" class="tit-sec" href="//as.com/tag/listado/">Temas del día</a>
 <ul>
-<li><a href="https://as.com/futbol/2019/03/12/champions/1552429332_843277.html">Gesto Cristiano</a></li>
-<li><a href="https://as.com/futbol/2019/03/12/champions/1552406852_970852.html">Cristiano Atleti</a></li>
-<li><a href="https://as.com/futbol/2019/03/12/champions/1552426866_411929.html">Cristiano goles</a></li>
-<li><a href="https://as.com/ciclismo/2019/03/13/mas_ciclismo/1552472950_678381.html">Paris - Niza etapa 4</a></li>
-<li><a href="https://as.com/futbol/2019/03/13/champions/1552460877_411649.html">Barcelona - Lyon TV</a></li>
-<li><a href="https://as.com/futbol/2019/03/13/champions/1552463623_025393.html">Bayern - Liverpool TV</a></li>
-<li><a href="https://as.com/tenis/2019/03/13/masters_1000/1552464649_493775.html">Nadal - Krajinovic TV</a></li>
-<li><a href="https://as.com/futbol/2019/03/13/champions/1552472334_709181.html">Partidos de Champions hoy</a></li>
+<li><a href="https://as.com/futbol/2019/03/17/primera/1552839909_550867.html">Valencia - Getafe</a></li>
+<li><a href="https://as.com/futbol/2019/03/17/primera/1552839952_065275.html">Villarreal - Rayo</a></li>
+<li><a href="https://colombia.as.com/colombia/2019/03/17/futbol/1552837918_690451.html">Bayern - Mainz</a></li>
+<li><a href="https://chile.as.com/chile/2019/03/17/futbol/1552831044_402415.html">Colo Colo - U Catolica</a></li>
+<li><a href="https://as.com/futbol/2019/03/17/primera/1552833116_262855.html">Espanyol - Sevilla</a></li>
+<li><a href="https://colombia.as.com/colombia/2019/03/17/futbol/1552836001_274163.html">Napoles - Udinese</a></li>
+<li><a href="https://argentina.as.com/argentina/2019/03/17/futbol/1552836147_905737.html">Talleres - Tigre</a></li>
+<li><a href="https://as.com/ciclismo/2019/03/17/mas_ciclismo/1552826514_695678.html">Paris - Niza</a></li>
+<li><a href="https://as.com/futbol/2019/03/16/mas_futbol/1552772543_736496.html">Atletico - Barcelona Horario</a></li>
+<li><a href="https://as.com/futbol/2019/03/17/primera/1552814134_426052.html">Betis - Barcelona Horario</a></li>
+<li><a href="https://as.com/futbol/2019/03/15/primera/1552668656_764789.html">Espanyol - Sevilla Horario</a></li>
+<li><a href="https://as.com/futbol/2019/03/15/primera/1552674645_096142.html">Villarreal - Rayo TV</a></li>
+<li><a href="https://as.com/futbol/2019/03/15/primera/1552674645_096142.html">Valencia - Getafe Horario</a></li>
 <li><a href="https://as.com/ciclismo/2019/03/09/mas_ciclismo/1552124184_603421.html">París-Niza TV</a></li>
 <li><a href="https://as.com/tenis/2019/03/09/mas_tenis/1552130424_677852.html">Indian Wells TV</a></li>
-<li><a href="https://as.com/futbol/2019/03/05/internacional/1551795840_065597.html">Libertadores 2019 TV</a></li>
-<li><a href="https://as.com/tenis/2019/03/13/masters_1000/1552464796_991456.html">Indian Wells hoy</a></li>
+<li><a href="https://as.com/masdeporte/2019/03/14/golf/1552589711_671088.html">The Players TV</a></li>
+<li><a href="https://as.com/tenis/2019/03/15/masters_1000/1552635422_908615.html">Indian Wells hoy</a></li>
 <li><a href="https://as.com/motor/2019/03/13/formula_1/1552454674_970151.html">F1 coches</a></li>
-<li><a href="https://as.com/futbol/2019/03/04/reportajes/1551720525_380328.html">Copa Libertadores 2019 Equipos</a></li>
-<li><a href="https://as.com/futbol/2019/03/04/internacional/1551721572_170402.html">Copa Libertadores fechas</a></li>
-<li><a href="https://as.com/futbol/2019/03/04/internacional/1551733427_905955.html">Copa Libertadores formato</a></li>
-<li><a href="https://as.com/futbol/2019/03/04/internacional/1551720098_155617.html">Libertadores 2019 cambios</a></li>
+<li><a href="https://as.com/motor/2019/03/13/formula_1/1552453042_667861.html">Novedades F1</a></li>
+<li><a href="https://as.com/motor/2019/03/14/mas_motor/1552583251_830184.html">Sebring 12 horas</a></li>
 <li><a href="https://as.com/meristation/juegos/fortnite/">Fortnite</a></li>
 <li><a href="https://resultados.as.com/resultados/motor/motogp/2019/calendario/">Calendario Moto GP 2019</a></li>
 <li><a href="https://resultados.as.com/resultados/motor/formula_1/2019/calendario/">Calendario F1 2019</a></li>
@@ -1785,17 +3721,21 @@ v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,
 <li><a href="https://as.com/meristation/guias/">Guia</a></li>
 <li><a href="https://as.com/meristation/reportajes/">Reportaje</a></li>
 <li><a href="https://as.com/showroom/">Showroom</a></li>
-<li><a href="https://as.com/meristation/2019/03/07/guia_pagina/1551966017_229902.html">Desafios Fortnite</a></li>
-<li><a href="https://as.com/meristation/2019/02/28/noticias/1551349035_839551.html">Fortnite Temporada 8</a></li>
-<li><a href="https://as.com/baloncesto/2019/03/13/nba/1552457330_403913.html">LeBron</a></li>
-<li><a href="https://as.com/baloncesto/2019/03/13/nba/1552453152_133833.html">Doncic</a></li>
-<li><a href="https://as.com/futbol/2019/03/06/primera/1551891813_944302.html">Real Madrid</a></li>
-<li><a href="https://as.com/futbol/2019/03/12/internacional/1552418319_872629.html">Zidane</a></li>
-<li><a href="https://as.com/futbol/2019/03/13/champions/1552432770_714390.html">Cristiano Champions</a></li>
-<li><a href="https://as.com/tikitakas/2019/03/13/portada/1552456148_239602.html">Georgina</a></li>
-<li><a href="https://as.com/futbol/2019/03/13/videos/1552456986_564964.html">Roncero</a></li>
-<li><a href="https://as.com/futbol/2019/03/12/internacional/1552424831_755316.html">Mbappe</a></li>
-<li><a href="https://as.com/futbol/2019/03/13/primera/1552467317_785898.html">Zidane sueldo</a></li>
+<li><a href="https://as.com/showroom/tag/fallas/a/">Fallas 2019</a></li>
+<li><a href="https://as.com/showroom/tag/dia_del_padre/">Regalos día del padre</a></li>
+<li><a href="https://as.com/meristation/2019/03/14/guia_pagina/1552572986_393735.html">Desafíos Fortnite</a></li>
+<li><a href="https://as.com/meristation/2019/03/14/guia_pagina/1552566728_993485.html">Fortnite Caras Gigantes</a></li>
+<li><a href="https://as.com/meristation/2019/03/14/noticias/1552573218_686818.html">Fortnite Juego y La Huida</a></li>
+<li><a href="https://as.com/baloncesto/2019/03/16/mundial_baloncesto/1552733323_444228.html">Rivales España Mundial</a></li>
+<li><a href="https://as.com/baloncesto/2019/03/16/mundial_baloncesto/1552738593_454711.html">Grupos Mundial 2019</a></li>
+<li><a href="https://as.com/baloncesto/2019/03/15/mas_baloncesto/1552671300_346266.html">Jugadores Mundial China España</a></li>
+<li><a href="https://en.as.com/en/2019/03/16/football/1552742723_447516.html">Real Madrid - Celta live</a></li>
+<li><a href="https://as.com/futbol/2019/03/16/segunda/1552759079_886411.html">Cordoba - Sporting</a></li>
+<li><a href="https://as.com/futbol/2019/03/16/segunda/1552756354_035326.html">Las Palmas - Mallorca</a></li>
+<li><a href="https://as.com/tikitakas/2019/03/16/portada/1552756951_258030.html">Mia Khalifa</a></li>
+<li><a href="https://as.com/futbol/2019/03/16/segunda/1552762099_327651.html">Almeria - Granada</a></li>
+<li><a href="https://as.com/futbol/2019/03/16/segunda/1552763711_566710.html">Oviedo - Nastic</a></li>
+<li><a href="https://us.as.com/us/2019/03/16/futbol/1552761043_936322.html">New York Red Bulls vs San José Earthquakes</a></li>
 </ul><a href="javascript:void(0);" class="mas-temas">Más temas</a>                    
 </div>
 <div class="nav-sab cf">
