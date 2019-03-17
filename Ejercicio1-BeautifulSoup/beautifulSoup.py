@@ -28,6 +28,12 @@ def insertDataBase(jornadas):
     conn.commit()
     conn.close()   
 
+def selectDataBaseCount():
+    conn = sqlite3.connect('diario.db')
+    num = conn.execute("""SELECT COUNT(*) FROM DIARIO""")
+    return num.fetchone()[0]
+
+
 def selectDataBaseJornadas():
     conn = sqlite3.connect('diario.db')
     rows = conn.execute("""SELECT JORNADA,LOCAL,VISITANTE,GOLES_LOCALES,GOLES_VISITANTES,LINK FROM DIARIO""")
