@@ -76,7 +76,7 @@ def selectTiposGeneros():
     for genero in rows.fetchall():
         res.append(genero[0])
     conn.close()
-    return set(res)
+    return list(set(res))
     
 def selectPeliculaPorGenero(genero):
     conn = sqlite3.connect('cine.db')
