@@ -69,40 +69,19 @@ def selectPeliculaPorGenero(genero):
     conn.close()
     return res
 
-def selectDataBaseMarca(marca):
+def selectPorTitulo(titulo):
     conn = sqlite3.connect('cine.db')
-    rows = conn.execute("""
-    SELECT NOMBRE,
-        CASE PRECIO_OFERTA
-            WHEN PRECIO_OFERTA is not NULL 
-                THEN 
-                    PRECIO_OFERTA 
-            ELSE 
-                    PRECIO 
-        END PRECIO_FINAL 
-    FROM 
-        PRODUCTO
-    WHERE
-        MARCA = '{0}'""".format(marca))
+    rows = conn.execute("""SELECT TITULO,PAIS,DIRECTOR FROM PELICULAS WHERE TITULO LIKE '%{0}%'""".format(titulo))
     res = []
-    for producto in rows.fetchall():
-        print(producto) ##### print
-        res.append(producto)
+    for pelicula in rows.fetchall():
+        res.append(pelicula)
     conn.close()
     return res
     
-def selectDataBaseOfertas():
-    conn = sqlite3.connect('cine.db')
-    rows = conn.execute("""SELECT NOMBRE,PRECIO,PRECIO_OFERTA FROM PRODUCTO WHERE PRECIO_OFERTA is not null""")
-    res = []
-    for producto in rows.fetchall():
-        res.append(producto)
-    conn.close()
-    return res
-
 startDataBase()
-pelicula1 = ["p1","p1_vo","españita",'22/07/2019',"DIR1",["MIEDO","INTRIGA"]]
+pelicula1 = ["p1 p2","p1_vo","españita",'22/07/2019',"DIR1",["MIEDO","INTRIGA"]]
 insertPeliculas([pelicula1])
 print(selectCount())
 print(selectTiposGeneros())
 print(selectPeliculaPorGenero("MIEDO"))
+print(selectPorTitulo("p1"))

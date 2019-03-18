@@ -1,6 +1,6 @@
 #encoding:utf-8
 
-import dataBase
+#import dataBase
 import urllib.request, re
 from bs4 import BeautifulSoup
 from idlelib.iomenu import encoding
@@ -44,14 +44,27 @@ def lecturaWeb():
             for p in range(len(paises)):
                 pais = pais + ", " + paises[p].lstrip()   
         fecha = ""
-        director = ""
+        director = ""   
+       
+        acc = 0
+        for dt in soup2.find(attrs={"class":"highlight"}).find_all("dt"):
+                if(dt.get_text() == "Director"):
+                    director = soup2.find(attrs={"class":"highlight"}).find_all("dd")[acc].get_text().lstrip()
+                acc = acc + 1
         
-        if "España" in pais:
-            fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[3].get_text().lstrip().lstrip()
-            director = director = soup2.find(attrs={"class":"highlight"}).find_all("dd")[5].get_text().lstrip()
-        else:
-            fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[4].get_text().lstrip().lstrip()
-            director = director = soup2.find(attrs={"class":"highlight"}).find_all("dd")[8].get_text().lstrip()
+        
+        acc = 0
+        for dt in soup2.find(attrs={"class":"highlight"}).find_all("dt"):
+                if(dt.get_text() == "Estreno en España"):
+                    fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[acc].get_text().lstrip()
+                acc = acc + 1
+                
+        
+#         if "España" in pais:
+#             fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[3].get_text().lstrip().lstrip() 
+#         else:
+#             fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[4].get_text().lstrip().lstrip()
+            
         generos = []
         for gen in soup2.find(attrs={"class":"categorias"}).find_all('a'):
             generos.append(gen.get_text().lstrip())
