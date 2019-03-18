@@ -58,15 +58,7 @@ if (!document.getElementById('adpulse_gumgum')){
                 <button title="Accede y participa">Acceder</button>
 
 
-<<<<<<< HEAD
-				<input type="hidden" name="e2aa9e9001" value="566a1a8d46db5712c3e18929c20c3036" />
-=======
-<<<<<<< HEAD
-				<input type="hidden" name="e51ae990cca5" value="ca1c1afd652f4019a5c0da241ec773e5" />
-=======
-				<input type="hidden" name="df63c028d" value="4b469885418c0392d2ad9fa392c29c5d" />
->>>>>>> master
->>>>>>> b9764b1a6ff4f12e4501f019e81745cb28589cd1
+				<input type="hidden" name="e95fb72bba1" value="8526255107fa8daa670a530ead6a7aec" />
             </fieldset>
         </form>
 

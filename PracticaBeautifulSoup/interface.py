@@ -86,6 +86,23 @@ def selectPeliculaPorGenero(genero):
     conn.close()
     return res
 
+def selectPorTitulo(titulo):
+    conn = sqlite3.connect('cine.db')
+    rows = conn.execute("""SELECT TITULO,PAIS,DIRECTOR FROM PELICULAS WHERE TITULO LIKE '%{0}%'""".format(titulo))
+    res = []
+    for pelicula in rows.fetchall():
+        res.append(pelicula)
+    conn.close()
+    return res
+    
+def selectPorFecha(fecha):
+    conn = sqlite3.connect('cine.db')
+    rows = conn.execute("""SELECT TITULO,PAIS,DIRECTOR FROM PELICULAS WHERE TITULO LIKE '%{0}%'""".format(fecha))
+    res = []
+    for pelicula in rows.fetchall():
+        res.append(pelicula)
+    conn.close()
+    return res
 
 ## --------------------------------------------------------------
 
@@ -242,10 +259,10 @@ def showFilmsByTitle(title,win):
     filmsByTitleScroll = Scrollbar(searchFilmsByTitleWin, orient="vertical")
     filmsByTitleScroll.pack(side=RIGHT, fill=Y)
     filmsByTitleSearched = Listbox(searchFilmsByTitleWin, yscrollcommand=filmsByTitleScroll.set)
-    filmsByTitleSelect = searchFilmsByTitle(title)
+    filmsByTitleSelect = selectPorTitulo(title)
     filmsByTitleList = []
     for s in filmsByTitleSelect:
-        filmsByTitleList.append("Pelicula de género A") ### Modificar de acuerdo a la estructura del string
+        filmsByTitleList.append(s[0] + " " + s[1] + " " + s[2]) ### Modificar de acuerdo a la estructura del string
     for l in filmsByTitleList:
         filmsByTitleSearched.insert(END, l)
     filmsByTitleSearched.pack(fill=BOTH)
