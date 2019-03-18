@@ -51,17 +51,24 @@ def selectCount():
     num = conn.execute("""SELECT COUNT(*) FROM PELICULAS""")
     return num.fetchone()[0]
 
-def selectDataBaseMarcas():
+def selectTiposGeneros():
     conn = sqlite3.connect('cine.db')
-    ##rows = conn.execute("""SELECT MARCA FROM PRODUCTO""")
-    ##res = []
-    ##for producto in rows.fetchall():
-    ##    res.append(producto[0])
-    rows = conn.execute("""SELECT * FROM GENEROS""")
-    print(rows.fetchone())
+    rows = conn.execute("""SELECT GENERO FROM GENEROS""")
+    res = []
+    for genero in rows.fetchall():
+        res.append(genero[0])
     conn.close()
+    return set(res)
     
-    
+def selectPeliculaPorGenero(genero):
+    conn = sqlite3.connect('cine.db')
+    rows = conn.execute("""SELECT TITULO,strftime('%d-%m-%Y',FECHA_ESTRENO) FROM PELICULAS WHERE PELICULA_ID IN (SELECT PELICULA_ID FROM GENEROS WHERE GENERO=(?))""",(genero,))
+    res = []
+    for pelicula in rows.fetchall():
+        res.append(pelicula)
+    conn.close()
+    return res
+
 def selectDataBaseMarca(marca):
     conn = sqlite3.connect('cine.db')
     rows = conn.execute("""
@@ -97,3 +104,5 @@ startDataBase()
 pelicula1 = ["p1","p1_vo","españita",'22/07/2019',"DIR1",["MIEDO","INTRIGA"]]
 insertPeliculas([pelicula1])
 print(selectCount())
+print(selectTiposGeneros())
+print(selectPeliculaPorGenero("MIEDO"))
