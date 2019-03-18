@@ -51,6 +51,7 @@ def insertPeliculas(peliculas):
     for i,pelicula in enumerate(peliculas,1):
         pelicula[3] = pelicula[3].replace("/","-")
         pelicula[3] = datetime.strptime(pelicula[3], '%d-%m-%Y')
+        #print(pelicula[3].strftime('%d-%m-%Y'))
         
         conn.execute("""INSERT INTO PELICULAS 
             (TITULO,TITULO_ORIGINAL,PAIS,FECHA_ESTRENO,DIRECTOR) VALUES (?,?,?,?,?)""",(pelicula[0],pelicula[1],pelicula[2],pelicula[3],pelicula[4]))
@@ -65,6 +66,24 @@ def selectCount():
     conn = sqlite3.connect('cine.db')
     num = conn.execute("""SELECT COUNT(*) FROM PELICULAS""")
     return num.fetchone()[0]
+
+def selectTiposGeneros():
+    conn = sqlite3.connect('cine.db')
+    rows = conn.execute("""SELECT GENERO FROM GENEROS""")
+    res = []
+    for genero in rows.fetchall():
+        res.append(genero[0])
+    conn.close()
+    return set(res)
+    
+def selectPeliculaPorGenero(genero):
+    conn = sqlite3.connect('cine.db')
+    rows = conn.execute("""SELECT TITULO,strftime('%d-%m-%Y',FECHA_ESTRENO) FROM PELICULAS WHERE PELICULA_ID IN (SELECT PELICULA_ID FROM GENEROS WHERE GENERO=(?))""",(genero,))
+    res = []
+    for pelicula in rows.fetchall():
+        res.append(pelicula)
+    conn.close()
+    return res
 
 
 ## --------------------------------------------------------------
@@ -121,17 +140,6 @@ def importAndClose(win):
     importFilms()
     win.destroy()
 
-    
-def getGenres():
-    genres = dataBase.selectDataBaseGenres()
-    return genres
-
-
-def searchFilmsByGenre(genre):
-    films = dataBase.selectFilmByGenre(genre)
-    return films
-
-
 
 def filmsByGenre():
     genreWin = Toplevel(root)
@@ -139,7 +147,7 @@ def filmsByGenre():
     if almacenado:
         genreLabel = Label(genreWin, text="Seleccione un género")
         genreLabel.grid(row=0, columnspan=2)
-        genreSpin = Spinbox(genreWin, values=getGenres(),wrap=True)
+        genreSpin = Spinbox(genreWin, values=selectTiposGeneros(),wrap=True)
         genreSpin.grid(row=1, columnspan=2)
         genreButton = Button(genreWin, text="Buscar", command=lambda: filmsByGenreListed(genreSpin.get(),genreWin))
         genreButton.grid(row=2, columnspan=2)
@@ -157,7 +165,7 @@ def filmsByGenreListed(genre,win):
     filmsByGenreScroll = Scrollbar(genreListWin, orient="vertical")
     filmsByGenreScroll.pack(side=RIGHT, fill=Y)
     filmsByGenreSearched = Listbox(genreListWin, yscrollcommand=filmsByGenreScroll.set)
-    filmsByGenreSelect = searchFilmsByGenre(genre)
+    filmsByGenreSelect = selectPeliculaPorGenero(genre)
     filmsByGenreList = []
     for s in filmsByGenreSelect:
         filmsByGenreList.append("Pelicula de género A") ### Modificar de acuerdo a la estructura del string
@@ -205,7 +213,7 @@ def searchByDate():
     searchDateWin = Toplevel(root)
 
     if almacenado:
-        searchDateLabel = Label(searchDateWin, text="Introduzca una palabra a buscar:")
+        searchDateLabel = Label(searchDateWin, text="Introduzca una fecha a buscar:")
         searchDateLabel.grid(row=0, columnspan=2)
         searchDateEntry = Entry(searchDateWin)
         searchDateEntry.grid(row=1, columnspan=2)
