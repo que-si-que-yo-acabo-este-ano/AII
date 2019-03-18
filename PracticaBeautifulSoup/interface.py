@@ -215,9 +215,21 @@ def searchByDate():
     if almacenado:
         searchDateLabel = Label(searchDateWin, text="Introduzca una fecha a buscar:")
         searchDateLabel.grid(row=0, columnspan=2)
-        searchDateEntry = Entry(searchDateWin)
-        searchDateEntry.grid(row=1, columnspan=2)
-        searchDateButton = Button(searchDateWin, text="Buscar", command=lambda: showFilmsByTitle(searchTitleEntry.get(),searchTitleWin))
+
+        searchDateEntry1 = Entry(searchDateWin, width=2)
+        searchDateEntry1.grid(row=1, column=0)
+        separador1 = Label(searchDateWin, text="-")
+        separador1.grid(row=1, column=1)
+        searchDateEntry2 = Entry(searchDateWin, width=2)
+        searchDateEntry2.grid(row=1, column=2)
+        separador2 = Label(searchDateWin, text="-")
+        separador2.grid(row=1, column=3)
+        searchDateEntry3 = Entry(searchDateWin, width=4)
+        searchDateEntry3.grid(row=1, column=4)
+
+        date = searchDateEntry1.get() + "-" + searchDateEntry2.get() + "-" + searchDateEntry3.get()
+
+        searchDateButton = Button(searchDateWin, text="Buscar", command=lambda: showFilmsByDate(searchTitleEntry.get(),searchTitleWin))
         searchDateButton.grid(row=2, columnspan=2)
 
     else:
