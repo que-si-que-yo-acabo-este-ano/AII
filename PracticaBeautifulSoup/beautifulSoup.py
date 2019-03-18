@@ -4,6 +4,7 @@ import dataBase
 import urllib.request, re
 from bs4 import BeautifulSoup
 from idlelib.iomenu import encoding
+from test.test_importlib.namespace_pkgs.both_portions.foo.one import attr
 
 
 def open_url(url,file):
@@ -19,50 +20,48 @@ def beautifulRead(html):
 
 
 def lecturaWeb():
-    file="singluten"
-    open_url("https://www.ulabox.com/campaign/productos-sin-gluten#gref",file)
-    html_doc = open(file,"r",encoding="utf-8")
+    file="peliculas"
+    open_url("https://www.elseptimoarte.net/estrenos/",file)
+    html_doc = open(file,"r")
     soup = beautifulRead(html_doc)
+    head = "https://www.elseptimoarte.net"
     listaFinal = []
-    for li in soup.find_all("div",attrs={"class": "grid__item m-one-whole t-one-third d-one-third dw-one-quarter | js-product-grid-grid"}):
-        #print(li)
-        url = li.find(attrs={"class": "product-item__main"}).find(attrs={"class": "product-item__image nauru js-pjax js-article-link"}).get("href")
-        marca = li.find(attrs={"class": "product-item__main"}).find(attrs={"class": "product-item__title"}).find(attrs="product-item__brand micro | push-half--bottom").get_text().lstrip()
-        marca = marca.rstrip(' ')
-        marca = marca.rstrip("\n")  
-        nombre = li.find(attrs={"class": "product-item__main"}).find(attrs={"class": "product-item__title"}).find(attrs="product-item__name zeta face-normal | flush--bottom").find("a").get_text().lstrip()
-        nombre = nombre.rstrip(' ')
-        nombre = nombre.rstrip("\n")
-        # print(marca)
+    for li in soup.find(attrs={"class":"elements"}).find_all("li"):
+        pel = li.find('a',href=True).get("href")
+        link = head + pel
         
-        precio = li.find(attrs={"class": "delta"}).get_text()
-        precio2 = li.find(attrs={"class": "milli"}).get_text()
-        precioFinal = (precio + precio2[:-2]).replace(",",".")
-        precioFinal = float(precioFinal)
-#         print(precio)
-#         print(precio2)
-        lista=[]
-        oferta = li.find(attrs={"class": "product-item__price product-item__price--old product-grid-footer__price--old nano | flush--bottom"})
-        if(oferta!=None):
-            oferta = str(oferta).replace("<del class=\"product-item__price product-item__price--old product-grid-footer__price--old nano | flush--bottom\">","")[:-8]   
-            lista.append(marca)
-            lista.append(nombre)
-            lista.append(url)
-            lista.append(oferta)
-            lista.append(precioFinal)
+        file2="peliculasAux"
+        open_url(link,file2)
+        html_doc = open(file2,"r")
+        soup2 = beautifulRead(html_doc)
+        
+        titulo = soup2.find(attrs={"class":"highlight"}).find_all("dd")[0].get_text().lstrip()
+        titulo_original = soup2.find(attrs={"class":"highlight"}).find_all("dd")[1].get_text().lstrip()
+        pais = soup2.find(attrs={"class":"highlight"}).find_all("dd")[2].get_text().lstrip().strip()
+        if "," in pais:
+            paises = pais.split(",")
+            pais= ""
+            for p in range(len(paises)):
+                pais = pais + ", " + paises[p].lstrip()   
+        fecha = ""
+        director = ""
+        
+        if "España" in pais:
+            fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[3].get_text().lstrip().lstrip()
+            director = director = soup2.find(attrs={"class":"highlight"}).find_all("dd")[5].get_text().lstrip()
         else:
-            lista.append(marca)
-            lista.append(nombre)
-            lista.append(url)
-            lista.append(precioFinal)
-            lista.append(None)
-            
+            fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[4].get_text().lstrip().lstrip()
+            director = director = soup2.find(attrs={"class":"highlight"}).find_all("dd")[8].get_text().lstrip()
+        generos = []
+        for gen in soup2.find(attrs={"class":"categorias"}).find_all('a'):
+            generos.append(gen.get_text().lstrip())
+        lista = [titulo,titulo_original,pais,fecha,director,generos]
         listaFinal.append(lista)
+        
     return listaFinal
 
-# for x in lecturaWeb():
-#     print(x)
-# print(lecturaWeb())
+
+print(lecturaWeb())
         
     #dataBase.startDataBase()
         
