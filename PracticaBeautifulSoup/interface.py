@@ -53,7 +53,6 @@ def insertPeliculas(peliculas):
     for i,pelicula in enumerate(peliculas,1):
         pelicula[3] = pelicula[3].replace("/","-")
         pelicula[3] = datetime.strptime(pelicula[3], '%d-%m-%Y')
-        #print(pelicula[3].strftime('%d-%m-%Y'))
         
         conn.execute("""INSERT INTO PELICULAS 
             (TITULO,TITULO_ORIGINAL,PAIS,FECHA_ESTRENO,DIRECTOR) VALUES (?,?,?,?,?)""",(pelicula[0],pelicula[1],pelicula[2],pelicula[3],pelicula[4]))
@@ -76,7 +75,7 @@ def selectTiposGeneros():
     for genero in rows.fetchall():
         res.append(genero[0])
     conn.close()
-    return set(res)
+    return list(set(res))
     
 def selectPeliculaPorGenero(genero):
     conn = sqlite3.connect('cine.db')
@@ -142,13 +141,7 @@ def lecturaWeb():
                 if(dt.get_text() == "Estreno en España"):
                     fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[acc].get_text().lstrip()
                 acc = acc + 1
-                
-        
-#         if "España" in pais:
-#             fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[3].get_text().lstrip().lstrip() 
-#         else:
-#             fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[4].get_text().lstrip().lstrip()
-            
+                     
         generos = []
         for gen in soup2.find(attrs={"class":"categorias"}).find_all('a'):
             generos.append(gen.get_text().lstrip())
@@ -168,7 +161,7 @@ def lecturaWeb():
 
 ## ------------------------- Interfaz ---------------------------
 
-almacenado = True ### Cambiar a False cuando pueda importar
+almacenado = False
 root = Tk()
 
 #### Main
@@ -183,8 +176,8 @@ def mainWindow():
     menubar.add_cascade(label="Datos", menu=dataMenu)
 
     searchMenu = Menu(menubar, tearoff=0)
-    searchMenu.add_command(label="Título", command=donothing)
-    searchMenu.add_command(label="Fecha", command=donothing)
+    searchMenu.add_command(label="Título", command=searchByTitle)
+    searchMenu.add_command(label="Fecha", command=searchByDate)
     menubar.add_cascade(label="Buscar", menu=searchMenu)
 
     menubar.add_command(label="Películas por género", command=filmsByGenre)
@@ -236,7 +229,7 @@ def filmsByGenreListed(genre,win):
     filmsByGenreSelect = selectPeliculaPorGenero(genre)
     filmsByGenreList = []
     for s in filmsByGenreSelect:
-        filmsByGenreList.append("Pelicula de género A") ### Modificar de acuerdo a la estructura del string
+        filmsByGenreList.append(s[0] + " "+ s[1]) ### Modificar de acuerdo a la estructura del string
     for l in filmsByGenreList:
         filmsByGenreSearched.insert(END, l)
     filmsByGenreSearched.pack(fill=BOTH)
