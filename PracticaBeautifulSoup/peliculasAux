@@ -58,7 +58,11 @@ if (!document.getElementById('adpulse_gumgum')){
                 <button title="Accede y participa">Acceder</button>
 
 
+<<<<<<< HEAD
 				<input type="hidden" name="ab21eac0" value="c4705ebbe8e68f9f3f81b915c05ecc3e" />
+=======
+				<input type="hidden" name="da2844986" value="43617698c9da0495ef9a4fc506478ca1" />
+>>>>>>> master
             </fieldset>
         </form>
 
@@ -433,7 +437,11 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
                 </li>
 
                 <li class="  ">
+<<<<<<< HEAD
                     <a href="https://www.elseptimoarte.net/foro/index.php?PHPSESSID=r80t2b8t34jcd18c3dd9s6a842&amp;/topic,37418.0.html" title="Foro de ">Comentarios</a>
+=======
+                    <a href="https://www.elseptimoarte.net/foro/index.php?PHPSESSID=gijdq6anllfd7gt9aaqg3g24v1&amp;/topic,37418.0.html" title="Foro de ">Comentarios</a>
+>>>>>>> master
                 </li>
 
                 <li class="   ">
@@ -486,7 +494,11 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
                     <li  itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/escape-room-18623.html" title="Escape Room" itemprop="url" ><span  itemprop="name">Escape Room</span></a></li>
                     <li  itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/taxi-a-gibraltar-18507.html" title="Taxi a Gibraltar" itemprop="url" ><span  itemprop="name">Taxi a Gibraltar</span></a></li>
         
+<<<<<<< HEAD
         <li><a href="https://www.elseptimoarte.net/foro/index.php?PHPSESSID=r80t2b8t34jcd18c3dd9s6a842&amp;/topic,42808.0.html">Ver más</a></li>
+=======
+        <li><a href="https://www.elseptimoarte.net/foro/index.php?PHPSESSID=gijdq6anllfd7gt9aaqg3g24v1&amp;/topic,42808.0.html">Ver más</a></li>
+>>>>>>> master
     </ul>
 </article>
 
@@ -705,7 +717,11 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
 
     <ul>
             <li class="first" data-puntuacion="4"                >
+<<<<<<< HEAD
                         <a href="/foro/index.php/?action=profile;u=441"><img width="68" height="66" src="https://www.elseptimoarte.net/foro/index.php?PHPSESSID=r80t2b8t34jcd18c3dd9s6a842&amp;action=dlattach;attach=4017;type=avatar" alt="Avatar de angel_negrete" /></a>
+=======
+                        <a href="/foro/index.php/?action=profile;u=441"><img width="68" height="66" src="https://www.elseptimoarte.net/foro/index.php?PHPSESSID=gijdq6anllfd7gt9aaqg3g24v1&amp;action=dlattach;attach=4017;type=avatar" alt="Avatar de angel_negrete" /></a>
+>>>>>>> master
             <a href="/foro/index.php/?action=profile;u=441" target="_blank">angel_negrete</a>
         </li>
     
