@@ -44,7 +44,12 @@ def insertPeliculas(peliculas):
             conn.execute("""INSERT INTO GENEROS (GENERO,PELICULA_ID) VALUES (?,?)""",(genero,i))
     
     conn.commit()
-    conn.close()    
+    conn.close()
+
+def selectCount():
+    conn = sqlite3.connect('cine.db')
+    num = conn.execute("""SELECT COUNT(*) FROM PELICULAS""")
+    return num.fetchone()[0]
 
 def selectDataBaseMarcas():
     conn = sqlite3.connect('cine.db')
@@ -91,3 +96,4 @@ def selectDataBaseOfertas():
 startDataBase()
 pelicula1 = ["p1","p1_vo","españita",'22/07/2019',"DIR1",["MIEDO","INTRIGA"]]
 insertPeliculas([pelicula1])
+print(selectCount())
