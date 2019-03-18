@@ -6,107 +6,107 @@ from tkinter import messagebox
 import dataBase
 import beautifulSoup
 
+### Borrar donothing ###########
 
-def importProducts():
-    dataBase.removeTable()
+def donothing():
+   filewin = Toplevel(root)
+   button = Button(filewin, text="Do nothing button")
+   button.pack()
+################################
+
+
+almacenado = True ### Cambiar a False cuando pueda importar
+root = Tk()
+
+#### Main
+
+def mainWindow():
+    menubar = Menu(root)
+
+    dataMenu = Menu(menubar, tearoff=0)
+    dataMenu.add_command(label="Cargar", command=donothing)
+    dataMenu.add_separator()
+    dataMenu.add_command(label="Salir", command=root.destroy)
+    menubar.add_cascade(label="Datos", menu=dataMenu)
+
+    searchMenu = Menu(menubar, tearoff=0)
+    searchMenu.add_command(label="Título", command=donothing)
+    searchMenu.add_command(label="Fecha", command=donothing)
+    menubar.add_cascade(label="Buscar", menu=searchMenu)
+
+    menubar.add_command(label="Películas por género", command=filmsByGenre)
+
+    root.config(menu=menubar)
+    root.mainloop()
+
+
+def importFilms():
     dataBase.startDataBase()
     dataBase.insertDataBase(beautifulSoup.lecturaWeb())
     global almacenado
     almacenado = True
-
-
-def getBrands():
-    brands = dataBase.selectDataBaseMarcas()
-    return brands
-
-
-def selectProductsFromBrand(win,brand):
-    productsWin = Toplevel(root)
-    productsWin.geometry("300x150")
-    prodScroll = Scrollbar(productsWin, orient="vertical")
-    prodScroll.pack(side=RIGHT, fill=Y)
-
-    products = Listbox(productsWin, yscrollcommand=prodScroll.set)
-    blev = dataBase.selectDataBaseMarca(brand)
-    aux = [] ## Hacer esta parte (esta línea y los dos bucles) más fácil de entender
-    for x in blev:
-        aux.append(str(x[0]) + ". - Precio: " + str(x[1]))
-    for y in aux:
-        products.insert(END, y)
-    products.pack(fill=BOTH)
-    prodScroll.config(command=products.yview)
-    win.destroy()
+    countWin = Toplevel(root)
+    numFilms = beautifulSoup.selectDatabaseCount()
+    countLabel = Label(countWin, text="Hay " + str(numFilms) + " estrenos.")
+    countLabel.grid(row=0)
 
 
 def importAndClose(win):
-    dataBase.removeTable()
-    dataBase.startDataBase()
-    dataBase.insertDataBase(beautifulSoup.lecturaWeb())
-    global almacenado
-    almacenado = True
+    importFilms()
     win.destroy()
 
-
-def selectBrand():
-    brandWin = Toplevel(root)
-    if almacenado:
-        brandsSpin = Spinbox(brandWin, values=getBrands(), wrap=True)
-        brandsSpin.grid(row=0)
-        brandsButton = Button(brandWin, text="Elegir marca", command=lambda: selectProductsFromBrand(brandWin,brandsSpin.get()))
-        brandsButton.grid(row=1)
-
-    else:
-        alertLabel = Label(brandWin, text="No se han almacenado productos todavia")
-        alertLabel.grid(row=0)
-        alertButton = Button(brandWin, text="Almacenar productos", command=lambda: importAndClose(brandWin))
-        alertButton.grid(row=1)
-
-
-def selectProductsOnSale():
-    salesWin = Toplevel(root)
     
+def getGenres():
+    genres = dataBase.selectDataBaseGenres()
+    return genres
+
+
+def searchFilmsByGenre(genre):
+    films = dataBase.selectFilmByGenre(genre)
+    return films
+
+
+
+def filmsByGenre():
+    genreWin = Toplevel(root)
+
     if almacenado:
-        salesWin.geometry("400x150")
-        saleScroll = Scrollbar(salesWin, orient="vertical")
-        saleScroll.pack(side=RIGHT, fill=Y)
-        sales = Listbox(salesWin, yscrollcommand=saleScroll.set)
-        salesSelect = dataBase.selectDataBaseOfertas()
-        salesList = []
-        for s in salesSelect:
-            salesList.append(s[0] + ". - Precio: " + str(s[1]) + " - Oferta: " + str(s[2]))
-        for l  in salesList:
-            sales.insert(END, l)
-        sales.pack(fill=BOTH)
-        saleScroll.config(command=sales.yview)
+        genreLabel = Label(genreWin, text="Seleccione un género")
+        genreLabel.grid(row=0, columnspan=2)
+        genreSpin = Spinbox(genreWin, values=getGenres(),wrap=True)
+        genreSpin.grid(row=1, columnspan=2)
+        genreButton = Button(genreWin, text="Buscar", command=lambda: filmsByGenreListed(genreSpin.get(),genreWin))
+        genreButton.grid(row=2, columnspan=2)
 
     else:
-        alertLabel = Label(salesWin, text="No se han almacenado productos todavia")
+        alertLabel = Label(genreWin, text="No se han almacenado estrenos todavia")
         alertLabel.grid(row=0)
-        alertButton = Button(salesWin, text="Almacenar productos", command=lambda: importAndClose(salesWin))
+        alertButton = Button(genreWin, text="Almacenar estrenos", command=lambda: importAndClose(genreWin))
         alertButton.grid(row=1)
 
 
-
-almacenado = False
-
-dataBase.removeTable()
-
-root = Tk()
-menubar = Menu(root)
-
-almacenar = Button(root, text="Almacenar Productos", command=importProducts)
-almacenar.grid(row=0, column=0, columnspan=2, sticky=E + W, pady=5)
-
-marca = Button(root, text="Mostrar Marca", command=selectBrand)
-marca.grid(row=1, column=0, sticky=E + W, pady=5)
-
-ofertas = Button(root, text="Buscar Ofertas", command=selectProductsOnSale)
-ofertas.grid(row=2, column=0, columnspan=2, sticky=E + W, pady=5)
+def filmsByGenreListed(genre,win):
+    genreListWin = Toplevel(root)
+    win.destroy()
+    filmsByGenreScroll = Scrollbar(genreListWin, orient="vertical")
+    filmsByGenreScroll.pack(side=RIGHT, fill=Y)
+    filmsByGenreSearched = Listbox(genreListWin, yscrollcommand=filmsByGenreScroll.set)
+    filmsByGenreSelect = searchFilmsByGenre(genre)
+    filmsByGenreList = []
+    for s in filmsByGenreSelect:
+        filmsByGenreList.append("Pelicula de género A") ### Modificar de acuerdo a la estructura del string
+    for l in filmsByGenreList:
+        filmsByGenreSearched.insert(END, l)
+    filmsByGenreSearched.pack(fill=BOTH)
+    filmsByGenreScroll.config(command=filmsByGenreSearched.yview)
 
 
-root.config(menu=menubar)
-root.mainloop()
+
 
     
 if __name__ == "__main__":
-    pass
+    mainWindow()
+
+
+
+
