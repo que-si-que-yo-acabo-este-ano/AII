@@ -78,6 +78,15 @@ def selectPorTitulo(titulo):
     conn.close()
     return res
     
+def selectPorFecha(fecha):
+    conn = sqlite3.connect('cine.db')
+    rows = conn.execute("""SELECT TITULO,PAIS,DIRECTOR FROM PELICULAS WHERE TITULO LIKE '%{0}%'""".format(fecha))
+    res = []
+    for pelicula in rows.fetchall():
+        res.append(pelicula)
+    conn.close()
+    return res
+
 startDataBase()
 pelicula1 = ["p1 p2","p1_vo","españita",'22/07/2019',"DIR1",["MIEDO","INTRIGA"]]
 insertPeliculas([pelicula1])
