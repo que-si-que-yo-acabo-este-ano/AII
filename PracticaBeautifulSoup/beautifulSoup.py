@@ -35,9 +35,26 @@ def lecturaWeb():
         html_doc = open(file2,"r")
         soup2 = beautifulRead(html_doc)
         
-        titulo = soup2.find(attrs={"class":"highlight"}).find_all("dd")[0].get_text().lstrip()
-        titulo_original = soup2.find(attrs={"class":"highlight"}).find_all("dd")[1].get_text().lstrip()
-        pais = soup2.find(attrs={"class":"highlight"}).find_all("dd")[2].get_text().lstrip().strip()
+        titulo = ""
+        acc = 0
+        for dt in soup2.find(attrs={"class":"highlight"}).find_all("dt"):
+                if(dt.get_text() == "Título"):
+                    titulo = soup2.find(attrs={"class":"highlight"}).find_all("dd")[acc].get_text().lstrip()
+                acc = acc + 1
+       
+        titulo_original = ""
+        acc = 0
+        for dt in soup2.find(attrs={"class":"highlight"}).find_all("dt"):
+                if(dt.get_text() == "Título original"):
+                    titulo_original = soup2.find(attrs={"class":"highlight"}).find_all("dd")[acc].get_text().lstrip()
+                acc = acc + 1
+                
+        pais = ""
+        acc = 0
+        for dt in soup2.find(attrs={"class":"highlight"}).find_all("dt"):
+                if(dt.get_text() == "País"):
+                    pais = soup2.find(attrs={"class":"highlight"}).find_all("dd")[acc].get_text().lstrip()
+                acc = acc + 1
         if "," in pais:
             paises = pais.split(",")
             pais= ""
