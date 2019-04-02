@@ -76,12 +76,6 @@ def lecturaWeb():
                 if(dt.get_text() == "Estreno en España"):
                     fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[acc].get_text().lstrip()
                 acc = acc + 1
-                
-        
-#         if "España" in pais:
-#             fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[3].get_text().lstrip().lstrip() 
-#         else:
-#             fecha = soup2.find(attrs={"class":"highlight"}).find_all("dd")[4].get_text().lstrip().lstrip()
             
         generos = []
         for gen in soup2.find(attrs={"class":"categorias"}).find_all('a'):

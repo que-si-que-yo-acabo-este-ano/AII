@@ -58,11 +58,15 @@ if (!document.getElementById('adpulse_gumgum')){
                 <button title="Accede y participa">Acceder</button>
 
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 				<input type="hidden" name="ecd7137" value="70439c683c8ec4ea3a64dcf00d11bc26" />
 =======
 				<input type="hidden" name="e95fb72bba1" value="8526255107fa8daa670a530ead6a7aec" />
 >>>>>>> master
+=======
+				<input type="hidden" name="c35a48b3a5" value="c5f1adfb7f32d450f04b597468204bfc" />
+>>>>>>> Stashed changes
             </fieldset>
         </form>
 
@@ -465,62 +469,17 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
 </section>
 <section id="collections">
                     <ul class="elements">
-                                        <li class="first"    data-lazy-image="/carteles/255/bel_canto,_la_ultima_funcion_74405.jpg"  data-puntuacion="6,6">
-                            <h3><a href="/peliculas/bel-canto-15608.html" title="Bel Canto. La última función">Bel Canto. La última función</a></h3>
-                            <p class="generos">Drama, thriller</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li     data-lazy-image="/carteles/255/nosotros_75134.jpg"  >
-                            <h3><a href="/peliculas/us-18244.html" title="Nosotros">Nosotros</a></h3>
-                            <p class="generos">Terror, thriller</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li     data-lazy-image="/carteles/255/donde_caen_las_sombras_72234.jpg"  >
-                            <h3><a href="/peliculas/dove-cadono-le-ombre-18415.html" title="Donde caen las sombras">Donde caen las sombras</a></h3>
-                            <p class="generos">Drama</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li     data-lazy-image="/carteles/255/dolor_y_gloria_75206.jpg"  >
-                            <h3><a href="/peliculas/dolor-y-gloria-18870.html" title="Dolor y gloria">Dolor y gloria</a></h3>
-                            <p class="generos">Drama</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li     data-lazy-image="/carteles/255/onyx_los_reyes_del_grial_75709.jpg"  >
-                            <h3><a href="/peliculas/onyx-kings-of-the-grail-18937.html" title="Onyx, los reyes del grial">Onyx, los reyes del grial</a></h3>
-                            <p class="generos">Historia</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li class="first"    data-lazy-image="/carteles/255/funan_75066.jpg"  >
-                            <h3><a href="/peliculas/funan-18939.html" title="Funan">Funan</a></h3>
-                            <p class="generos">Animación</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li     data-lazy-image="/carteles/255/wheely_75914.jpg"  >
-                            <h3><a href="/peliculas/wheely-19486.html" title="Wheely">Wheely</a></h3>
-                            <p class="generos">Animación, aventu...</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li     data-lazy-image="/carteles/255/winter_flies_75904.jpg"  >
-                            <h3><a href="/peliculas/vsechno-bude-19487.html" title="Winter Flies">Winter Flies</a></h3>
-                            <p class="generos">Comedia, drama</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li     data-lazy-image="/carteles/255/zaniki_75905.jpg"  >
-                            <h3><a href="/peliculas/zaniki-19488.html" title="Zaniki">Zaniki</a></h3>
-                            <p class="generos">Documental, drama...</p>
-                            <p>Marzo 22, 2019</p>
-                        </li>
-                                        <li     data-lazy-image="/carteles/255/dumbo_73862.jpg"  >
+                                        <li class="first"    data-lazy-image="/carteles/255/dumbo_73862.jpg"  >
                             <h3><a href="/peliculas/dumbo-9879.html" title="Dumbo">Dumbo</a></h3>
                             <p class="generos">Aventuras, comedi...</p>
                             <p>Marzo 29, 2019</p>
                         </li>
-                                        <li class="first"    data-lazy-image="/carteles/255/que_te_juegas_75504.jpg"  >
+                                        <li     data-lazy-image="/carteles/255/que_te_juegas_75504.jpg"  >
                             <h3><a href="/peliculas/que-te-juegas-18444.html" title="¿Qué te juegas?">¿Qué te juegas?</a></h3>
                             <p class="generos">Comedia</p>
                             <p>Marzo 29, 2019</p>
                         </li>
-                                        <li     data-lazy-image="/carteles/255/nacion_salvaje_75897.jpg"  data-puntuacion="7,0">
+                                        <li     data-lazy-image="/carteles/255/nacion_salvaje_76081.jpg"  data-puntuacion="3,7">
                             <h3><a href="/peliculas/assassination-nation-18453.html" title="Nación salvaje">Nación salvaje</a></h3>
                             <p class="generos">Thriller</p>
                             <p>Marzo 29, 2019</p>
@@ -535,12 +494,12 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
                             <p class="generos">Comedia</p>
                             <p>Marzo 29, 2019</p>
                         </li>
-                                        <li     data-lazy-image="/carteles/255/boi_75776.jpg"  >
+                                        <li class="first"    data-lazy-image="/carteles/255/boi_75776.jpg"  >
                             <h3><a href="/peliculas/boi-19412.html" title="Boi">Boi</a></h3>
                             <p class="generos">Thriller</p>
                             <p>Marzo 29, 2019</p>
                         </li>
-                                        <li class="first"    data-lazy-image="/carteles/255/las_invisibles_75869.jpg"  >
+                                        <li     data-lazy-image="/carteles/255/las_invisibles_75869.jpg"  >
                             <h3><a href="/peliculas/les-invisibles-19482.html" title="Las invisibles">Las invisibles</a></h3>
                             <p class="generos">Comedia</p>
                             <p>Marzo 29, 2019</p>
@@ -560,17 +519,17 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
                             <p class="generos">Drama</p>
                             <p>Marzo 29, 2019</p>
                         </li>
-                                        <li     data-lazy-image="/carteles/255/en_busca_del_oscar_75909.jpg"  >
+                                        <li class="first"    data-lazy-image="/carteles/255/en_busca_del_oscar_75909.jpg"  >
                             <h3><a href="/peliculas/en-busca-del-oscar-19492.html" title="En busca del Óscar">En busca del Óscar</a></h3>
                             <p class="generos">Documental, biogr...</p>
                             <p>Marzo 29, 2019</p>
                         </li>
-                                        <li class="first"    data-lazy-image="/carteles/255/shazam_74162.jpg"  >
+                                        <li     data-lazy-image="/carteles/255/shazam_74162.jpg"  >
                             <h3><a href="/peliculas/shazam-1072.html" title="¡Shazam!">¡Shazam!</a></h3>
                             <p class="generos">Acción, aventuras...</p>
                             <p>Abril 05, 2019</p>
                         </li>
-                                        <li     data-lazy-image="/carteles/255/cementerio_de_animales_75121.jpg"  >
+                                        <li     data-lazy-image="/carteles/255/cementerio_de_animales_76059.jpg"  >
                             <h3><a href="/peliculas/cementerio-de-animales-4423.html" title="Cementerio de animales">Cementerio de animales</a></h3>
                             <p class="generos">Terror</p>
                             <p>Abril 05, 2019</p>
@@ -581,14 +540,59 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
                             <p>Abril 05, 2019</p>
                         </li>
                                         <li     data-lazy-image="/carteles/255/si_pudiera_imaginar_74155.jpg"  data-puntuacion="9,0">
-                            <h3><a href="/peliculas/i-can-only-imagine-17977.html" title="Si pudiera imaginar">Si pudiera imaginar</a></h3>
+                            <h3><a href="/peliculas/i-can-only-imagine-17977.html" title="La canción de mi padre">La canción de mi padre</a></h3>
                             <p class="generos">Drama, familiar</p>
                             <p>Abril 05, 2019</p>
                         </li>
-                                        <li     data-lazy-image="/carteles/255/destination_wedding_71780.jpg"  data-puntuacion="4,7">
+                                        <li class="first"    data-lazy-image="/carteles/255/la_boda_de_mi_ex_76067.jpg"  data-puntuacion="4,7">
                             <h3><a href="/peliculas/destination-wedding-18265.html" title="La boda de mi ex">La boda de mi ex</a></h3>
                             <p class="generos">Comedia, drama, r...</p>
                             <p>Abril 05, 2019</p>
+                        </li>
+                                        <li     data-lazy-image="/carteles/255/un_pueblo_y_su_rey_75100.jpg"  >
+                            <h3><a href="/peliculas/un-peuple-et-son-roi-18563.html" title="Un pueblo y su rey">Un pueblo y su rey</a></h3>
+                            <p class="generos">Drama</p>
+                            <p>Abril 05, 2019</p>
+                        </li>
+                                        <li     data-lazy-image="/carteles/255/la_sombra_del_pasado_74502.jpg"  data-puntuacion="2,0">
+                            <h3><a href="/peliculas/werk-ohne-autor-18585.html" title="La sombra del pasado">La sombra del pasado</a></h3>
+                            <p class="generos">Drama</p>
+                            <p>Abril 05, 2019</p>
+                        </li>
+                                        <li     data-lazy-image="/carteles/255/asher_75724.jpg"  data-puntuacion="6,0">
+                            <h3><a href="/peliculas/asher-18938.html" title="Asher">Asher</a></h3>
+                            <p class="generos">Drama, thriller</p>
+                            <p>Abril 05, 2019</p>
+                        </li>
+                                        <li     data-lazy-image="/carteles/255/mentes_brillantes_75494.jpg"  >
+                            <h3><a href="/peliculas/premiere-annee-18940.html" title="Mentes brillantes">Mentes brillantes</a></h3>
+                            <p class="generos">Drama</p>
+                            <p>Abril 05, 2019</p>
+                        </li>
+                                        <li class="first"    data-lazy-image="/carteles/255/7_razones_para_huir_75865.jpg"  >
+                            <h3><a href="/peliculas/7-razones-para-huir-19421.html" title="7 razones para huir">7 razones para huir</a></h3>
+                            <p class="generos">Comedia negra</p>
+                            <p>Abril 05, 2019</p>
+                        </li>
+                                        <li     data-lazy-image="/carteles/255/la_alfombra_magica_76120.jpg"  >
+                            <h3><a href="/peliculas/hodja-fra-pjort-19493.html" title="La alfombra mágica">La alfombra mágica</a></h3>
+                            <p class="generos">Animación, familiar</p>
+                            <p>Abril 05, 2019</p>
+                        </li>
+                                        <li     data-lazy-image="/carteles/255/gordon_y_paddy_75919.jpg"  >
+                            <h3><a href="/peliculas/gordon-och-paddy-19494.html" title="Gordon y Paddy">Gordon y Paddy</a></h3>
+                            <p class="generos">Animación, fantasía</p>
+                            <p>Abril 05, 2019</p>
+                        </li>
+                                        <li     data-lazy-image="/carteles/255/after_74734.jpg"  >
+                            <h3><a href="/peliculas/after-18874.html" title="After. Aquí empieza todo">After. Aquí empieza todo</a></h3>
+                            <p class="generos">Drama, romance</p>
+                            <p>Abril 12, 2019</p>
+                        </li>
+                                        <li     data-lazy-image="/carteles/255/el_parque_magico_73863.jpg"  data-puntuacion="10,0">
+                            <h3><a href="/peliculas/amusement-park-13224.html" title="El parque mágico">El parque mágico</a></h3>
+                            <p class="generos">Animación, aventu...</p>
+                            <p>Abril 12, 2019</p>
                         </li>
                 
             </ul>
@@ -604,7 +608,8 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
             <li class="page-5 pos5"><a href="/estrenos/5/">5</a></li>
             <li class="page-6 pos6"><a href="/estrenos/6/">6</a></li>
             <li class="page-7 pos7"><a href="/estrenos/7/">7</a></li>
-            <li class="last  page-8 pos8"><a href="/estrenos/8/">8</a></li>
+            <li class="page-8 pos8"><a href="/estrenos/8/">8</a></li>
+            <li class="last  page-9 pos9"><a href="/estrenos/9/">9</a></li>
     
     </ol>
 
@@ -633,20 +638,6 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
         <div class="superestrenos_list">
                 
                     <article  class="dragend-page">
-                        <a href="/peliculas/dolor-y-gloria-18870.html" title="Dolor y gloria"><img width="172" height="258" src="/commons/images/loading_fijo.gif" data-lazy-image="/carteles/255/dolor_y_gloria_75206.jpg" alt="Cartel de Dolor y gloria"/></a>
-                        <h3><a href="/peliculas/dolor-y-gloria-18870.html" title="Dolor y gloria">Dolor y gloria</a></h3>
-                        <strong>Marzo 22, 2019</strong>
-                    </article>
-
-                
-                    <article  class="dragend-page">
-                        <a href="/peliculas/us-18244.html" title="Nosotros"><img width="172" height="258" src="/commons/images/loading_fijo.gif" data-lazy-image="/carteles/255/nosotros_75134.jpg" alt="Cartel de Nosotros"/></a>
-                        <h3><a href="/peliculas/us-18244.html" title="Nosotros">Nosotros</a></h3>
-                        <strong>Marzo 22, 2019</strong>
-                    </article>
-
-                
-                    <article  class="dragend-page">
                         <a href="/peliculas/dumbo-9879.html" title="Dumbo"><img width="172" height="258" src="/commons/images/loading_fijo.gif" data-lazy-image="/carteles/255/dumbo_73862.jpg" alt="Cartel de Dumbo"/></a>
                         <h3><a href="/peliculas/dumbo-9879.html" title="Dumbo">Dumbo</a></h3>
                         <strong>Marzo 29, 2019</strong>
@@ -667,6 +658,20 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
                     </article>
 
                 
+                    <article  class="dragend-page">
+                        <a href="/peliculas/amusement-park-13224.html" title="El parque mágico"><img width="172" height="258" src="/commons/images/loading_fijo.gif" data-lazy-image="/carteles/255/el_parque_magico_73863.jpg" alt="Cartel de El parque mágico"/></a>
+                        <h3><a href="/peliculas/amusement-park-13224.html" title="El parque mágico">El parque mágico</a></h3>
+                        <strong>Abril 12, 2019</strong>
+                    </article>
+
+                
+                    <article  class="dragend-page">
+                        <a href="/peliculas/lo-dejo-cuando-quiera-18567.html" title="Lo dejo cuando quiera"><img width="172" height="258" src="/commons/images/loading_fijo.gif" data-lazy-image="/carteles/255/lo_dejo_cuando_quiera_72529.jpg" alt="Cartel de Lo dejo cuando quiera"/></a>
+                        <h3><a href="/peliculas/lo-dejo-cuando-quiera-18567.html" title="Lo dejo cuando quiera">Lo dejo cuando quiera</a></h3>
+                        <strong>Abril 12, 2019</strong>
+                    </article>
+
+                
         </div>
         </div>
 
@@ -679,12 +684,12 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
 <section>
     <article  class="widget_destacado informativo" >
 
-     <a href="/noticias/tv-series/starz-renueva-america-gods-para-una-tercera-temporada-35256.html"><img data-lazy-image="/commons/data/portada/3231.jpg" src="/commons/images/loading_fijo.gif" width="650" height="401" alt="imagen de destacado" /></a>
-    <a href="/noticias/tv-series/" class="image-tag">TV | Series</a>
+     <a href="/noticias/actualidad/primer-trailer-de-dora-y-la-ciudad-perdida-35304.html"><img data-lazy-image="/commons/data/portada/3262.jpg" src="/commons/images/loading_fijo.gif" width="650" height="401" alt="imagen de destacado" /></a>
+    <a href="/noticias/actualidad/" class="image-tag">Actualidad</a>
 
-    <h2><a href="/noticias/tv-series/starz-renueva-america-gods-para-una-tercera-temporada-35256.html">Starz renueva 'America Gods' para una tercera temporada</a></h2>
+    <h2><a href="/noticias/actualidad/primer-trailer-de-dora-y-la-ciudad-perdida-35304.html">Primer tráiler de 'Dora y la ciudad perdida'</a></h2>
     <div class="content">
-        <p>No hay dos sin tres.</p>
+        <p>Ver para creer.</p>
     </div>
     <footer>
            <p><a href="/foro/index.php/?action=profile;u=2413" rel="author" itemprop="author" >wanchope</a> Hace 1 d&iacute;a</p>
@@ -707,11 +712,11 @@ googletag.cmd.push(function() { googletag.display('smartclip-nautilus-desktop');
     </header>
     <meta itemprop="itemListOrder" content="Ascending" />
     <ol>
-                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/capitan-marvel-10337.html"  itemprop="url" title="Capitana Marvel"><strong  itemprop="name">Capitana Marvel</strong></a><span>&euro;4,13M</span><span>&nbsp;1</span></li>
-                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/the-sinaloa-cartels-90-year-old-drug-mule-10704.html"  itemprop="url" title="Mula"><strong  itemprop="name">Mula</strong></a><span>&euro;1,18M</span><span>&nbsp;1</span></li>
-                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/how-to-train-your-dragon-3-8109.html"  itemprop="url" title="Cómo entrenar a tu dragón 3"><strong  itemprop="name">Cómo entrenar a tu dragón 3</strong></a><span>&euro;0,98M</span><span>&nbsp;3</span></li>
-                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/green-book-18579.html"  itemprop="url" title="Green Book"><strong  itemprop="name">Green Book</strong></a><span>&euro;0,61M</span><span>&nbsp;6</span></li>
-                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/battle-angel-2028.html"  itemprop="url" title="Alita: Ángel de combate"><strong  itemprop="name">Alita: Ángel de combate</strong></a><span>&euro;0,29M</span><span>&nbsp;4</span></li>
+                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/capitan-marvel-10337.html"  itemprop="url" title="Capitana Marvel"><strong  itemprop="name">Capitana Marvel</strong></a><span>&euro;2,03M</span><span>&nbsp;2</span></li>
+                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/the-sinaloa-cartels-90-year-old-drug-mule-10704.html"  itemprop="url" title="Mula"><strong  itemprop="name">Mula</strong></a><span>&euro;0,88M</span><span>&nbsp;2</span></li>
+                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/escape-room-18623.html"  itemprop="url" title="Escape Room"><strong  itemprop="name">Escape Room</strong></a><span>&euro;0,87M</span><span>&nbsp;1</span></li>
+                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/how-to-train-your-dragon-3-8109.html"  itemprop="url" title="Cómo entrenar a tu dragón 3"><strong  itemprop="name">Cómo entrenar a tu dragón 3</strong></a><span>&euro;0,62M</span><span>&nbsp;4</span></li>
+                    <li  itemprop="itemListElement"  itemscope itemtype="http://schema.org/ListItem"><a href="/peliculas/green-book-18579.html"  itemprop="url" title="Green Book"><strong  itemprop="name">Green Book</strong></a><span>&euro;0,41M</span><span>&nbsp;7</span></li>
         
     </ol>
 </article>
