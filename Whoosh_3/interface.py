@@ -33,23 +33,32 @@ def mainWindow():
 
 
 def load():
+    global almacenado
+    almacenado = True
     donothing()
 
 
 def loadAndClose(win):
-    donothing()
+    load()
+    win.destroy()
 
 
 
 def searchNews():
     searchNewsWin = Toplevel(root)
 
-    searchNewsLabel = Label(searchNewsWin, text="Introduzca su consulta sobre noticias:")
-    searchNewsLabel.grid(row=0, columnspan=2)
-    searchNewsEntry = Entry(searchNewsWin)
-    searchNewsEntry.grid(row=1, column=0)
-    searchNewsButton = Button(searchNewsWin, text="Buscar", command=lambda: findNews(searchNewsEntry.get(),searchNewsWin))
-    searchNewsButton.grid(row=1, column=1)
+    if almacenado:
+        searchNewsLabel = Label(searchNewsWin, text="Introduzca su consulta sobre noticias:")
+        searchNewsLabel.grid(row=0, columnspan=2)
+        searchNewsEntry = Entry(searchNewsWin)
+        searchNewsEntry.grid(row=1, column=0)
+        searchNewsButton = Button(searchNewsWin, text="Buscar", command=lambda: findNews(searchNewsEntry.get(),searchNewsWin))
+        searchNewsButton.grid(row=1, column=1)
+    else:
+        alertLabel = Label(searchNewsWin, text="No se han almacenado partidos todavia")
+        alertLabel.grid(row=0)
+        alertButton = Button(searchNewsWin, text="Almacenar partidos", command=lambda: loadAndClose(searchNewsWin))
+        alertButton.grid(row=1)
 
 
 def findNews(consulta, win):
@@ -66,12 +75,18 @@ def findNews(consulta, win):
 def searchTeam():
     searchTeamWin = Toplevel(root)
 
-    searchTeamLabel = Label(searchTeamWin, text="Introduzca su consulta sobre un equipo:")
-    searchTeamLabel.grid(row=0, columnspan=2)
-    searchTeamEntry = Entry(searchTeamWin)
-    searchTeamEntry.grid(row=1, column=0)
-    searchTeamButton = Button(searchTeamWin, text="Buscar", command=lambda: findTeam(searchTeamEntry.get(),searchTeamWin))
-    searchTeamButton.grid(row=1, column=1)
+    if almacenado:
+        searchTeamLabel = Label(searchTeamWin, text="Introduzca su consulta sobre un equipo:")
+        searchTeamLabel.grid(row=0, columnspan=2)
+        searchTeamEntry = Entry(searchTeamWin)
+        searchTeamEntry.grid(row=1, column=0)
+        searchTeamButton = Button(searchTeamWin, text="Buscar", command=lambda: findTeam(searchTeamEntry.get(),searchTeamWin))
+        searchTeamButton.grid(row=1, column=1)
+    else:
+        alertLabel = Label(searchTeamWin, text="No se han almacenado partidos todavia")
+        alertLabel.grid(row=0)
+        alertButton = Button(searchTeamWin, text="Almacenar partidos", command=lambda: loadAndClose(searchTeamWin))
+        alertButton.grid(row=1)
 
 
 def findTeam(consulta, win):
@@ -88,12 +103,18 @@ def findTeam(consulta, win):
 def searchDate():
     searchDateWin = Toplevel(root)
 
-    searchDateLabel = Label(searchDateWin, text="Introduzca su consulta sobre un rango de fechas:")
-    searchDateLabel.grid(row=0, columnspan=2)
-    searchDateEntry = Entry(searchDateWin)
-    searchDateEntry.grid(row=1, column=0)
-    searchDateButton = Button(searchDateWin, text="Buscar", command=lambda: findDate(searchDateEntry.get(),searchDateWin))
-    searchDateButton.grid(row=1, column=1)
+    if almacenado:
+        searchDateLabel = Label(searchDateWin, text="Introduzca su consulta sobre un rango de fechas:")
+        searchDateLabel.grid(row=0, columnspan=2)
+        searchDateEntry = Entry(searchDateWin)
+        searchDateEntry.grid(row=1, column=0)
+        searchDateButton = Button(searchDateWin, text="Buscar", command=lambda: findDate(searchDateEntry.get(),searchDateWin))
+        searchDateButton.grid(row=1, column=1)
+    else:
+        alertLabel = Label(searchDateWin, text="No se han almacenado partidos todavia")
+        alertLabel.grid(row=0)
+        alertButton = Button(searchDateWin, text="Almacenar partidos", command=lambda: loadAndClose(searchDateWin))
+        alertButton.grid(row=1)
 
 
 def findDate(consulta, win):
