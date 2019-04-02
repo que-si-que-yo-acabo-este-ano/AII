@@ -26,6 +26,7 @@ def lecturaWeb():
     soup = beautifulRead(html_doc)
     head = "https://www.elseptimoarte.net"
     listaFinal = []
+    
     for li in soup.find(attrs={"class":"elements"}).find_all("li"):
         pel = li.find('a',href=True).get("href")
         link = head + pel
