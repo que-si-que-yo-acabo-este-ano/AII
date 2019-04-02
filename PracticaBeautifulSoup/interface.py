@@ -94,6 +94,18 @@ def selectPorTitulo(titulo):
         res.append(pelicula)
     conn.close()
     return res
+<<<<<<< HEAD
+=======
+    
+def selectPorFecha(fecha):
+    conn = sqlite3.connect('cine.db')
+    rows = conn.execute("""SELECT TITULO,PAIS,DIRECTOR FROM PELICULAS WHERE TITULO LIKE '%{0}%'""".format(fecha))
+    res = []
+    for pelicula in rows.fetchall():
+        res.append(pelicula)
+    conn.close()
+    return res
+>>>>>>> master
 
 ## --------------------------------------------------------------
 
@@ -253,7 +265,7 @@ def showFilmsByTitle(title,win):
     filmsByTitleSelect = selectPorTitulo(title)
     filmsByTitleList = []
     for s in filmsByTitleSelect:
-        filmsByTitleList.append("Pelicula de género A") ### Modificar de acuerdo a la estructura del string
+        filmsByTitleList.append(s[0] + " " + s[1] + " " + s[2]) ### Modificar de acuerdo a la estructura del string
     for l in filmsByTitleList:
         filmsByTitleSearched.insert(END, l)
     filmsByTitleSearched.pack(fill=BOTH)
