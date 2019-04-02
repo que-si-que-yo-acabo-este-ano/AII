@@ -94,8 +94,6 @@ def selectPorTitulo(titulo):
         res.append(pelicula)
     conn.close()
     return res
-<<<<<<< HEAD
-=======
     
 def selectPorFecha(fecha):
     conn = sqlite3.connect('cine.db')
@@ -105,7 +103,6 @@ def selectPorFecha(fecha):
         res.append(pelicula)
     conn.close()
     return res
->>>>>>> master
 
 ## --------------------------------------------------------------
 
