@@ -38,7 +38,7 @@ def load():
     donothing()
 
 
-def loadAndClose():
+def loadAndClose(win):
     donothing()
 
 
@@ -95,7 +95,7 @@ def searchDate():
     searchDateLabel.grid(row=0, columnspan=2)
     searchDateEntry = Entry(searchDateWin)
     searchDateEntry.grid(row=1, column=0)
-    searchDateButton = Button(searchDateWin, text="Buscar", command=lambda: findSource(searchDateEntry.get(),searchDateWin))
+    searchDateButton = Button(searchDateWin, text="Buscar", command=lambda: findDate(searchDateEntry.get(),searchDateWin))
     searchDateButton.grid(row=1, column=1)
 
 
