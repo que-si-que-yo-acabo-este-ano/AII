@@ -5,6 +5,13 @@ import sqlite3
 from bs4 import BeautifulSoup
 from idlelib.iomenu import encoding
 from numpy import insert
+from datetime import datetime
+from whoosh.index import create_in,open_dir
+from whoosh.fields import Schema, TEXT, DATETIME, ID, KEYWORD
+from whoosh.qparser import QueryParser
+from whoosh import qparser
+import os
+from pip._vendor.distlib.version import get_scheme
 
 
 def startDataBase():
@@ -120,8 +127,60 @@ print(selectDataBaseJornadas())
 #a 2º ejer
 print(selectDataBasePartidosPorJornada(3))"""
 
-lecturaWebGoles(1,"Sevilla","Espanyol")
+#ecturaWebGoles(1,"Sevilla","Espanyol")
+def lecturaWebWhoosh():
+    file="DiarioDeportivoWhoosh"
+    open_url("http://resultados.as.com/resultados/futbol/primera/2017_2018/calendario/",file)
+    html_doc = open(file,"r",encoding="utf-8")
+    soup = beautifulRead(html_doc)
+    jornadas = []
+    i = 1
+    for jornada in soup.find_all("tbody"): #jornadas
+        for partido in jornada.find_all("tr"):
+            #equipos print(partido.find("span",attrs={"class","nombre-equipo"}).get_text())
+            local = partido.find("td",attrs={"class","col-equipo-local"}).find("span",attrs={"class","nombre-equipo"}).get_text()
+            visitante = partido.find("td",attrs={"class","col-equipo-visitante"}).find("span",attrs={"class","nombre-equipo"}).get_text()
+            resultado = partido.find("td",attrs={"class","col-resultado"}).find("a").get_text().split()
+            golesLocales = resultado[0]
+            golesVisitantes = resultado[2]
+            link = partido.find("td",attrs={"class","col-resultado"}).find("a").get("href")
+            titulo,autor,fecha,cronica = lecturaPartidoJornada(i, local, visitante, link)
+            jornadas.append([i,local,visitante,int(golesLocales),int(golesVisitantes),fecha,autor,titulo,cronica])
+        i+=1
+        print(jornadas)
+        if i>=4:
+            break
+    return jornadas   
         
+def lecturaPartidoJornada(jornada,local,visitante,path):
+    raiz = "https://resultados.as.com"
+    link = raiz + path
+    file = str(jornada)+"-"+local+"vs"+visitante
+    open_url(link,file)
+    html_doc = open(file,"r",encoding="utf-8")
+    soup = beautifulRead(html_doc)
+    titulo = soup.find("h2",attrs={"class","live-title"}).find("a").get_text()
+    autor = soup.find("p",attrs={"class","ntc-autor s-inb"}).find("a").get_text()
+    fecha = soup.find("span",attrs={"class","s-inb-sm"}).find("a").get_text()
+    cronica = soup.find("div",attrs={"class","cont-cuerpo-noticia principal"}).find("div",attrs={"class","cf"}).find("p").get_text()
+    return titulo,autor,fecha,cronica  
         
-       
+def crea_index(dirindex):
+#     os.mkdir("Datos")
+    if not os.path.exists(dirindex):
+        os.mkdir(dirindex)
+    if not len(os.listdir(dirindex)) == 0:
+        sn = input("Indice no vacío. Desea reindexar? (s/n)")
+    else:
+        sn="s"
+    if sn == "s":
+        ix = create_in(dirindex,schema=get_schema())
+        
+
+def get_schema():
+    return Schema()
+
+##lecturaWebWhoosh()
+# [i,local,visitante,int(golesLocales),int(golesVisitantes),fecha,autor,titulo,cronica]
+crea_index()
         
