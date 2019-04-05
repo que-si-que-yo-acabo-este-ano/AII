@@ -7,12 +7,15 @@ from idlelib.iomenu import encoding
 from numpy import insert
 from datetime import datetime
 from whoosh.index import create_in,open_dir
-from whoosh.fields import Schema, TEXT, DATETIME, ID, KEYWORD
+from whoosh.fields import Schema, TEXT, DATETIME, ID, KEYWORD, STORED, NUMERIC
 from whoosh.qparser import QueryParser
 from whoosh import qparser
 import os
 from pip._vendor.distlib.version import get_scheme
-
+from datetime import datetime
+from whoosh.searching import Searcher
+from whoosh.query import *
+from whoosh.qparser.dateparse import DateParserPlugin
 
 def startDataBase():
     conn = sqlite3.connect('diario.db')
@@ -164,23 +167,72 @@ def lecturaPartidoJornada(jornada,local,visitante,path):
     fecha = soup.find("span",attrs={"class","s-inb-sm"}).find("a").get_text()
     cronica = soup.find("div",attrs={"class","cont-cuerpo-noticia principal"}).find("div",attrs={"class","cf"}).find("p").get_text()
     return titulo,autor,fecha,cronica  
-        
+    
 def crea_index(dirindex):
 #     os.mkdir("Datos")
     if not os.path.exists(dirindex):
         os.mkdir(dirindex)
+    ## ESTO SE QUITA SI SE HACE EL POP-UP
     if not len(os.listdir(dirindex)) == 0:
         sn = input("Indice no vacío. Desea reindexar? (s/n)")
     else:
         sn="s"
     if sn == "s":
         ix = create_in(dirindex,schema=get_schema())
+        writer = ix.writer()
+        for jornada in lecturaWebWhoosh():
+            add_doc(writer,jornada) ## Método propio 
+        writer.commit()
         
 
 def get_schema():
-    return Schema()
+    return Schema(numeroJornada=NUMERIC(stored=True),local=TEXT(stored=True),visitante=TEXT(stored=True),
+                  golesLocales=NUMERIC,golesVisitantes=NUMERIC,fecha=DATETIME(stored=True),autor=TEXT,titulo=TEXT(stored=True),cronica=TEXT)
 
+def add_doc(writer,jornada):
+    writer.add_document(numeroJornada=jornada[0],local=jornada[1],visitante=jornada[2],
+                                golesLocales=jornada[3],golesVisitantes=jornada[4],fecha=datetime.strptime(jornada[5],"%d/%m/%Y"),autor=jornada[6]
+                                ,titulo=jornada[7],cronica=jornada[8])
+
+def apartado_a(palabra):
+    ix = open_dir("Index")
+    query = palabra
+    with ix.searcher() as searcher:
+        parser = QueryParser("cronica",ix.schema)
+        query = parser.parse(query)
+        results = searcher.search(query)
+        for r in results:
+            print(r)
+    
+    
+def apartado_b(equipo):
+    ix = open_dir("Index")
+    query = equipo
+    with ix.searcher() as searcher:
+        parser = QueryParser("local",ix.schema)
+        query = query + " OR " + "visitante:" + query
+        query = parser.parse(query)
+        results = searcher.search(query)
+        for r in results:
+            print(r)
+            
+def apartado_c():
+    ix = open_dir("Index")
+    date1 = "2017-08-21"
+    date2 = "2017-08-22"
+    ##date1 = datetime.strptime(date1,"%Y/%m/%d")
+    ##date2 = datetime.strptime(date2,"%Y/%m/%d")
+    with ix.searcher() as searcher:
+        parser = QueryParser("fecha",ix.schema)
+        ##parser.add_plugin(DateParserPlugin())
+        query = "[" + date1 + " to " + date2 + "]"
+        print(query)
+        query = parser.parse(query)
+        results = searcher.search(query)
+        for r in results:
+            print(r)
 ##lecturaWebWhoosh()
 # [i,local,visitante,int(golesLocales),int(golesVisitantes),fecha,autor,titulo,cronica]
-crea_index()
+crea_index("Index")
+apartado_c()
         
