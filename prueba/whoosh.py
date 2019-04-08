@@ -5,7 +5,7 @@ import os
 from bs4 import BeautifulSoup
 from datetime import datetime
 from whoosh.index import create_in,open_dir
-from whoosh.fields import Schema, TEXT, DATETIME, ID, KEYWORD, STORED, NUMERIC
+from whoosh.fields import Schema, TEXT, DATETIME
 from whoosh.qparser import QueryParser,MultifieldParser
 from whoosh import qparser
 from whoosh.searching import Searcher
@@ -13,7 +13,6 @@ from whoosh.query import *
 from whoosh.qparser.dateparse import DateParserPlugin
 
 def crea_index(dirindex):
-#     os.mkdir("Datos")
     if not os.path.exists(dirindex):
         os.mkdir(dirindex)
     ## ESTO SE QUITA SI SE HACE EL POP-UP
@@ -24,9 +23,7 @@ def crea_index(dirindex):
     if sn == "s":
         ix = create_in(dirindex,schema=get_schema())
         writer = ix.writer()
-        ##TODO a�adir scraping aqu�
-        ##for jornada in lecturaWebWhoosh():
-        ##    add_doc(writer,jornada) ## M�todo propio 
+        
         writer.commit()
         
 def get_schema():
@@ -52,18 +49,6 @@ def apartado_a(palabras):
             print(r)
 
 
-def apartado_mentira(equipo):
-    ix = open_dir("Index")
-    query = equipo
-    with ix.searcher() as searcher:
-        parser = QueryParser("local",ix.schema)
-        query = query + " OR " + "visitante:" + query
-        query = parser.parse(query)
-        results = searcher.search(query)
-        for r in results:
-            print(r)
-
-#Falta probarlo
 def apartado_b(date1,date2):
     ix = open_dir("Index")
     ##date1 = datetime.strptime(date1,"%Y/%m/%d")
