@@ -15,7 +15,7 @@ from datetime import datetime
 from whoosh.searching import Searcher
 from whoosh.query import *
 from whoosh.qparser.dateparse import DateParserPlugin
-from whoosh.qparser.default import MultifieldParser
+# from whoosh.qparser.default import MultifieldParser
 
 def crea_index(dirindex):
 #     os.mkdir("Datos")
@@ -42,21 +42,21 @@ def add_doc(writer,pelicula):
     writer.add_document(titulo=pelicula[0],tituloOriginal=pelicula[1],fechaEstreno=pelicula[2],director=pelicula[3],reparto=pelicula[4],sinopsis=pelicula[5])
 
 #Terminar
-def apartado_a(palabras):
-    ix = open_dir("Index")
-    queryContent = []
-    for palabra in palabras:
-        queryContent.append(Term(""))
-    query = palabras
-    with ix.searcher() as searcher:
-        parser = MultifieldParser(["titulo","sinopsis"],ix.schema,group=qparser.OrGroup)
-        query = parser.parse(query)
-        print(query)
-        results = searcher.search(query)
-        for r in results:
-            print(r)
-crea_index()
-apartado_a()
+# def apartado_a(palabras):
+#     ix = open_dir("Index")
+#     queryContent = []
+#     for palabra in palabras:
+#         queryContent.append(Term(""))
+#     query = palabras
+#     with ix.searcher() as searcher:
+#         parser = MultifieldParser(["titulo","sinopsis"],ix.schema,group=qparser.OrGroup)
+#         query = parser.parse(query)
+#         print(query)
+#         results = searcher.search(query)
+#         for r in results:
+#             print(r)
+# crea_index()
+# apartado_a()
 def apartado_mentira(equipo):
     ix = open_dir("Index")
     query = equipo
