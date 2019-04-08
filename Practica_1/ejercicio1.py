@@ -20,12 +20,30 @@ def leerPagina(file_ulr):
     return pagina
 
 def lecturaWeb():
-    fichero="foros"
-    file_ulr = abrir_url("https://foros.derecho.com/foro/20-Derecho-Civil-General",fichero)
-    soup = leerPagina(file_ulr)
+    fichero1="foros1"
+    file_ulr = abrir_url("https://foros.derecho.com/foro/20-Derecho-Civil-General",fichero1)
+    soup1 = leerPagina(file_ulr)
     
+    fichero2="foros2"
+    file_ulr = abrir_url("https://foros.derecho.com/foro/20-Derecho-Civil-General/page2",fichero2)
+    soup2 = leerPagina(file_ulr)
+    
+    fichero3="foros3"
+    file_ulr = abrir_url("https://foros.derecho.com/foro/20-Derecho-Civil-General/page3",fichero3)
+    soup3 = leerPagina(file_ulr)
+    
+    res1 = procesar(soup1)
+    res2 = procesar(soup2)
+    res3 = procesar(soup3)
+    
+    res = res1 + res2 + res3
+    
+    return res
+
+def procesar(soup):    
     head = "https://foros.derecho.com/"
     listaFinal =[]
+
 
     for n in soup.find_all("li",attrs={"class":"threadbit"}):
         
