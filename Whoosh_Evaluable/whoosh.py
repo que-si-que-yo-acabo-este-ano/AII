@@ -11,6 +11,10 @@ from whoosh import qparser
 from whoosh.searching import Searcher
 from whoosh.query import *
 from whoosh.qparser.dateparse import DateParserPlugin
+<<<<<<< HEAD
+=======
+# from whoosh.qparser.default import MultifieldParser
+>>>>>>> master
 
 def crea_index(dirindex):
 #     os.mkdir("Datos")
@@ -36,6 +40,7 @@ def get_schema():
 def add_doc(writer,pelicula):
     writer.add_document(titulo=pelicula[0],tituloOriginal=pelicula[1],fechaEstreno=pelicula[2],director=pelicula[3],reparto=pelicula[4],sinopsis=pelicula[5])
 
+<<<<<<< HEAD
 
 def apartado_a(palabras):
     ix = open_dir("Index")
@@ -52,6 +57,24 @@ def apartado_a(palabras):
             print(r)
 
 
+=======
+#Terminar
+# def apartado_a(palabras):
+#     ix = open_dir("Index")
+#     queryContent = []
+#     for palabra in palabras:
+#         queryContent.append(Term(""))
+#     query = palabras
+#     with ix.searcher() as searcher:
+#         parser = MultifieldParser(["titulo","sinopsis"],ix.schema,group=qparser.OrGroup)
+#         query = parser.parse(query)
+#         print(query)
+#         results = searcher.search(query)
+#         for r in results:
+#             print(r)
+# crea_index()
+# apartado_a()
+>>>>>>> master
 def apartado_mentira(equipo):
     ix = open_dir("Index")
     query = equipo
