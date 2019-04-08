@@ -210,7 +210,7 @@ def apartado_b(equipo):
     query = equipo
     with ix.searcher() as searcher:
         parser = QueryParser("local",ix.schema)
-        query = query + " OR " + "visitante:" + query
+        query = query + " OR " + "visitante:" + query 
         query = parser.parse(query)
         results = searcher.search(query)
         for r in results:
@@ -233,6 +233,21 @@ def apartado_c():
             print(r)
 ##lecturaWebWhoosh()
 # [i,local,visitante,int(golesLocales),int(golesVisitantes),fecha,autor,titulo,cronica]
+def apartado_d(equipo):
+    ix = open_dir("Index")
+    query = equipo
+    with ix.searcher() as searcher:
+        parser = QueryParser("local",ix.schema)
+        query = query + " OR " + "visitante: " + query
+        query = parser.parse(query)
+        results = searcher.search(query)
+        for r in results:
+            print(r)
+
 crea_index("Index")
-apartado_c()
+apartado_d("Sevilla")
+
+
+
+
         
