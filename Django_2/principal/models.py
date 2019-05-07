@@ -21,16 +21,18 @@ class Receta(models.Model):
   
     def __str__(self):
         return self.titulo
-    
+ 
+   
 class Usuario(models.Model):
     usuarioID = models.IntegerField(primary_key=True)
 
 class Genero(models.Model):
     genero = models.TextField(primary_key=True)
-
+    
+# 
 class Pelicula(models.Model):
     peliculaID = models.IntegerField(primary_key = True)
-    titulo = models.CharField(max_lenght=100)    
+    titulo = models.CharField(max_length=100)    
     imbdID = models.IntegerField()
     thdbID = models.IntegerField()
     puntuaciones = models.ManyToManyField(
@@ -38,28 +40,28 @@ class Pelicula(models.Model):
         through="Puntuacion")
     etiquetas = models.ManyToManyField(
         Usuario,
-        through="Etiqueta")
+        through="Etiqueta",
+        related_name="etiquetas")
     generos = models.ManyToManyField(Genero)
     def __str__(self):
         return self.titulo
-    
+     
 class Etiqueta(models.Model):
     usuarioID = models.ForeignKey(Usuario,on_delete=models.CASCADE)
     peliculaID = models.ForeignKey(Pelicula,on_delete=models.CASCADE)
     etiqueta = models.TextField()
     fecha = models.DateTimeField()
-    
+     
     def __str__(self):
         return self.etiqueta
-    
+     
 class Puntuacion(models.Model):
     usuarioID = models.ForeignKey(Usuario,on_delete=models.CASCADE)
     peliculaID = models.ForeignKey(Pelicula,on_delete=models.CASCADE)
     puntuacion = models.DecimalField(max_digits=5,decimal_places=2)
     fecha = models.DateTimeField()
-    
+     
     def __str__(self):
         return self.puntuacion
     
-
     
