@@ -21,6 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('',views.inicio),
+    path('peliculas/',views.peliculas),
     path('admin/', admin.site.urls),
     re_path(r'media/(?P<path>.*)',static.serve,
             {'document_root': settings.MEDIA_ROOT}),
