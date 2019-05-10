@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <header>
+  	<nav>
+  		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/usuarios'>Usuarios registrados</a></li>
+			<li><a href='/recetas'>Peliculas</a></li>
+		</ul>
+	</nav>
+  </header>
+  <section>
+    <h1>Lista peliculas</h1>
+    <p>Actualmente tenemos registradas:</p>
+	<ul>
+		{% for dato in peliculas %}
+	  	<li>{{dato.titulo}}</li>
+		{% endfor %}
+	</ul>
+  </section>
+</html>

@@ -20,7 +20,7 @@ from django.views import static
 from django.conf import settings
 
 urlpatterns = [
-    path('',views.lista_bebidas),
+    path('',views.inicio),
     path('admin/', admin.site.urls),
     re_path(r'media/(?P<path>.*)',static.serve,
             {'document_root': settings.MEDIA_ROOT}),

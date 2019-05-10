@@ -28,13 +28,12 @@ class Usuario(models.Model):
 
 class Genero(models.Model):
     genero = models.TextField(primary_key=True)
-    
-# 
+
 class Pelicula(models.Model):
     peliculaID = models.IntegerField(primary_key = True)
     titulo = models.CharField(max_length=100)    
-    imbdID = models.IntegerField()
-    thdbID = models.IntegerField()
+    imdbID = models.IntegerField()
+    tmdbID = models.IntegerField()
     puntuaciones = models.ManyToManyField(
         Usuario,
         through="Puntuacion")
@@ -62,6 +61,6 @@ class Puntuacion(models.Model):
     fecha = models.DateTimeField()
      
     def __str__(self):
-        return self.puntuacion
+        return str(self.puntuacion)
     
     
