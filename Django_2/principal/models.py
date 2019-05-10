@@ -33,7 +33,7 @@ class Pelicula(models.Model):
     peliculaID = models.IntegerField(primary_key = True)
     titulo = models.CharField(max_length=100)    
     imdbID = models.IntegerField()
-    tmdbID = models.IntegerField()
+    tmdbID = models.IntegerField(null=True)
     puntuaciones = models.ManyToManyField(
         Usuario,
         through="Puntuacion")
