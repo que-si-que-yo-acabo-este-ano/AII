@@ -9,4 +9,5 @@ def inicio(request):
 
 def peliculas(request):
     peliculas = Pelicula.objects.all()
+    print(peliculas[0].generos.all())
     return render(request,'peliculas.html',{'peliculas':peliculas})

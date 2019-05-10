@@ -4,18 +4,20 @@ from principal.models import Usuario,Genero,Pelicula,Puntuacion,Etiqueta
 import os
 from django.core.management.base import BaseCommand, CommandError
 from datetime import datetime
+from django.contrib.auth.models import User
 
 class Command(BaseCommand):
     
     help = 'Populate from csv to database'
     
     def handle(self, *args, **options):
-        Etiqueta.objects.all().delete()
-        Puntuacion.objects.all().delete()
-        Pelicula.objects.all().delete()
-        Genero.objects.all().delete()
-        Usuario.objects.all().delete()
-        print("borrado")
+#         Etiqueta.objects.all().delete()
+#         Puntuacion.objects.all().delete()
+#         Pelicula.objects.all().delete()
+#         Genero.objects.all().delete()
+#         Usuario.objects.all().delete()
+#         print("borrado")
+        User.objects.create_superuser(username='admin', password='admin', email='admin@email.com')
         
         moviesPath = os.path.join(settings.STATIC_ROOT,"csv/movies.csv")
         linksPath = os.path.join(settings.STATIC_ROOT,"csv/links.csv")
@@ -40,17 +42,24 @@ class Command(BaseCommand):
             else:
                 pelicula = Pelicula(peliculaID = movie["movieId"], titulo = movie["title"],
                                 imdbID = link["imdbId"],tmdbID = tmdbId)
+
             genres = []
             for genre in movie["genres"]:
                 genero,generoCreated = Genero.objects.get_or_create(genero = genre)
                 if generoCreated:
                     genero.save()
                 genres.append(genero)
+            generos.append(genres)
 #                 pelicula.generos.add(genero)
-            print(i)
+            if i%1000==0:
+                print(i)
             peliculas.append(pelicula)
         Pelicula.objects.bulk_create(peliculas)
+        ig = 0
         for pelicula,generosPelicula in zip(peliculas,generos):
+            ig+=1
+            if ig%100==0:
+                print(ig)
             pelicula.generos.add(*generosPelicula)
             
         ir=0
@@ -64,7 +73,7 @@ class Command(BaseCommand):
             puntuacion = Puntuacion(usuarioID = Usuario.objects.get(usuarioID = rating["userId"]), peliculaID = Pelicula.objects.get(peliculaID = rating["movieId"])
                                     ,puntuacion = float(rating["rating"]), fecha = tiempo)
             puntuaciones.append(puntuacion)
-            if ir%1000:
+            if ir%1000==0:
                 print(ir)
         Puntuacion.objects.bulk_create(puntuaciones)
     
@@ -79,7 +88,7 @@ class Command(BaseCommand):
             etiqueta = Etiqueta(usuarioID = Usuario.objects.get(usuarioID = tag["userId"]), peliculaID = Pelicula.objects.get(peliculaID = tag["movieId"])
                                     ,etiqueta = tag["tag"], fecha = tiempo)
             etiquetas.append(etiqueta)
-            if it%100:
+            if it%100==0:
                 print(it)
         Etiqueta.objects.bulk_create(etiquetas)
             
