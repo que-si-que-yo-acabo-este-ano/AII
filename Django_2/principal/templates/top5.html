@@ -6,18 +6,16 @@
   		<ul>
 			<li><a href='/'>Inicio</a></li>
 			<li><a href='/peliculas'>Peliculas: datos</a></li>
-			<li><a href='/top5'>Top 5</a></li>
 			<li><a href='/genres'>Géneros</a></li>
 			<li><a href='/filmsByGenre'>Películas por género </a></li>
 		</ul>
 	</nav>
   </header>
   <section>
-    <h1>Lista peliculas</h1>
-    <p>Actualmente tenemos registradas:</p>
+    <h1>Top 5 films with highest scores</h1>
 	<ul>
-		{% for dato in peliculas %}
-	  	<li>{{dato.titulo}}</li>
+		{% for dato in top5 %}
+	  	<li>{{dato}}</li>
 		{% endfor %}
 	</ul>
   </section>

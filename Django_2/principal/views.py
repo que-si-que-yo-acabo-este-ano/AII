@@ -1,7 +1,9 @@
 #encoding:utf-8
 from django.shortcuts import render
-from principal.models import Pelicula, Genero
+from principal.models import Pelicula, Genero, Puntuacion
 from django.shortcuts import render_to_response
+from django.template.defaultfilters import length
+from _decimal import Decimal
 # Create your views here.
 
 def inicio(request):
@@ -9,15 +11,30 @@ def inicio(request):
     return render(request,'inicio.html',{'peliculas':peliculas})
 
 def genres(request):
-    genres = Genero.objects.all()
+    genres = Genero.objects.order_by('genero').all()
     return render(request,'genres.html',{'genres':genres})
 
 def films_by_genre(request):
-    genres = Genero.objects.all()
-    films = Pelicula.objects.all()
+    genres = Genero.objects.order_by('genero').all()
+    films = Pelicula.objects.order_by('titulo').all()
     return render(request,'filmsByGenre.html',{'genres':genres,'films':films})
     
 def peliculas(request):
     peliculas = Pelicula.objects.all()
     print(peliculas[0].generos.all())
     return render(request,'peliculas.html',{'peliculas':peliculas})
+
+def top5_films(request):
+    filmsWithRating = []
+    films = Pelicula.objects.all()
+    top5 = []
+    for film in films:
+        total = 0.0
+        ratings = Puntuacion.objects.filter(peliculaID=film.peliculaID)
+        for rating in ratings:
+            #top5.append(rating)
+            total += float(rating.puntuacion)
+        if length(ratings) != 0:
+            filmsWithRating.append((film.titulo,total/length(ratings)))
+    top5 = sorted(filmsWithRating, key=lambda x: -x[1])[:500]
+    return render(request, 'top5.html', {'top5':top5})
