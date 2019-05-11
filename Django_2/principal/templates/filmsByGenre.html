@@ -12,9 +12,12 @@
     <h1>Lista de generos</h1>
     <p>Actualmente tenemos registrados:</p>
 	<ul>
-		{% for film in films %}
-	  		{% for a in film.generos %}
-	  			<li>{{a.genero}}</li>
+		{% for dato in genres %}
+	  	<h1>{{dato.genero}}</h1>
+	  		{% for film in films %}
+	  			{% if dato in film.generos.all %}
+	  				<li>{{film.titulo}}</li>
+	  			{% endif %}
 	  		{% endfor %}
 		{% endfor %}
 	</ul>
