@@ -4,10 +4,6 @@ from principal.models import Bebida, Pelicula, Genero
 from django.shortcuts import render_to_response
 # Create your views here.
 
-def lista_bebidas(request):
-    bebidas = Bebida.objects.all()
-    return render_to_response('lista_bebidas.html',{'lista':bebidas})
-
 def inicio(request):
     peliculas = Pelicula.objects.all()
     return render(request,'inicio.html',{'peliculas':peliculas})
@@ -21,3 +17,8 @@ def films_by_genre(request):
     films = Pelicula.objects.all()
     return render(request,'filmsByGenre.html',{'genres':genres,'films':films})
     
+
+def peliculas(request):
+    peliculas = Pelicula.objects.all()
+    print(peliculas[0].generos.all())
+    return render(request,'peliculas.html',{'peliculas':peliculas})

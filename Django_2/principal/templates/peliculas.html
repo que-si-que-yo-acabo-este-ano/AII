@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <nav>
+  		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/peliculas'>Peliculas: datos</a></li>
+			<li><a href='/usuarios'>Usuarios registrados</a></li>
+			<li><a href='/recetas'>Peliculas</a></li>
+		</ul>
+	</nav>
+	<title>Lista de peliculas y sus datos</title>
+	<meta charset='utf-8'>
+  </head>
+  <body>
+    <h1>Peliculas</h1>
+	{% for pelicula in peliculas %}
+	<ul>
+	  <li><strong>Titulo: {{pelicula.titulo}}</strong></li>
+	  <ul>
+	  	<li>peliculaID: {{pelicula.peliculaID}}</li>
+	  	<li>imdbID: {{pelicula.imdbID}}</li>
+	  	{% if pelicula.tmdbID %}
+	  	<li>tmdbID: {{pelicula.tmdbID}}</li>
+	  	{% else %}
+	  	<li> No tiene tmdbID </li>
+	  	{% endif %}
+	  </ul>
+	</ul>
+	{% endfor %}
+  </body>
+</html>
