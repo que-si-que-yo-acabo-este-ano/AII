@@ -1,6 +1,6 @@
 from principal.readCsv import readFile
 from django.conf import settings
-from principal.models import Usuario,Genero,Pelicula,Puntuacion,Etiqueta
+from principal.models import Usuario,Genero,Pelicula,Puntuacion,Etiqueta,GeneroPelicula
 import os
 from django.core.management.base import BaseCommand, CommandError
 from datetime import datetime
@@ -31,7 +31,7 @@ class Command(BaseCommand):
             
         peliculas = []
         generos = []
-        
+        generosPeliculas = []
         i = 0
         for movie,link in zip(movies,links):
             i+=1
@@ -48,6 +48,7 @@ class Command(BaseCommand):
                 genero,generoCreated = Genero.objects.get_or_create(genero = genre)
                 if generoCreated:
                     genero.save()
+                generosPeliculas.append(GeneroPelicula(genero=genero,peliculaID=pelicula))
                 genres.append(genero)
             generos.append(genres)
 #                 pelicula.generos.add(genero)
@@ -55,13 +56,14 @@ class Command(BaseCommand):
                 print(i)
             peliculas.append(pelicula)
         Pelicula.objects.bulk_create(peliculas)
-        ig = 0
-        for pelicula,generosPelicula in zip(peliculas,generos):
-            ig+=1
-            if ig%100==0:
-                print(ig)
-            pelicula.generos.add(*generosPelicula)
-            
+        GeneroPelicula.objects.bulk_create(generosPeliculas)
+#         ig = 0
+#         for pelicula,generosPelicula in zip(peliculas,generos):
+#             ig+=1
+#             if ig%100==0:
+#                 print(ig)
+#             pelicula.generos.add(*generosPelicula)
+#             
         ir=0
         puntuaciones = []
         for rating in ratings:
