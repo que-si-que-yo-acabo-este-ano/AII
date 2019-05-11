@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <header>
+  	<nav>
+  		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/genres'>Géneros</a></li>
+		</ul>
+	</nav>
+  </header>
+  <section>
+    <h1>Lista de generos</h1>
+    <p>Actualmente tenemos registrados:</p>
+	<ul>
+		{% for dato in genres %}
+	  	<li>{{dato.genero}}</li>
+		{% endfor %}
+	</ul>
+  </section>
+</html>
