@@ -1,0 +1,9 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+    {{ showyear}}
+    {% for film in films %}
+    	{{ film.titulo }}
+    {% endfor %}
+</form>
