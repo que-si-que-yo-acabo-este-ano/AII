@@ -22,10 +22,14 @@ from django.conf import settings
 urlpatterns = [
     path('',views.inicio),
     path('top5/',views.top5_films),
+    path('filmsOfYear/',views.films_of_year),
     path('genres/',views.genres),
     path('filmsByGenre/',views.films_by_genre),
     path('peliculas/',views.peliculas),
     path('admin/', admin.site.urls),
+    path('generos/', views.generos),
+    path('generosPorPeliculas/', views.generosPorPeliculas),
+    path('nuevaPeli/', views.nuevaPeli),
     re_path(r'media/(?P<path>.*)',static.serve,
             {'document_root': settings.MEDIA_ROOT}),
 ]
