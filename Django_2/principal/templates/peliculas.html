@@ -25,6 +25,11 @@
 	  	{% else %}
 	  	<li> No tiene tmdbID </li>
 	  	{% endif %}
+	  	<ul>
+	  		{% for genero in pelicula.generos.all %}
+	  		<li> {{genero.genero}} </li>
+	  		{% endfor %}
+	  	</ul>
 	  </ul>
 	</ul>
 	{% endfor %}

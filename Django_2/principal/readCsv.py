@@ -10,3 +10,4 @@ def readFile(file):
                 row["genres"] = row["genres"].split("|")
             res.append(row)
     return res
+
