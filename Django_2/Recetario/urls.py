@@ -22,6 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('',views.inicio),
     path('top5/',views.top5_films),
+    path('filmsOfYear/',views.films_of_year),
     path('genres/',views.genres),
     path('filmsByGenre/',views.films_by_genre),
     path('peliculas/',views.peliculas),
