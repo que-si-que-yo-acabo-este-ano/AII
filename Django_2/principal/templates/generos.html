@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <nav>
+  		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/peliculas'>Peliculas: datos</a></li>
+			<li><a href='/usuarios'>Usuarios registrados</a></li>
+			<li><a href='/generos'>Generos</a></li>
+			<li><a href='/generosPorPeliculas'>Generos De Peliculas</a></li>
+		</ul>
+	</nav>
+	<title>Lista de peliculas y sus datos</title>
+	<meta charset='utf-8'>
+  </head>
+  <body>
+    <h1>Generos</h1>
+	{% for genero in generos %}
+	<ul>
+	  <li><strong>Genero: {{genero.genero}}</strong></li>
+	</ul>
+	{% endfor %}
+  </body>
+</html>

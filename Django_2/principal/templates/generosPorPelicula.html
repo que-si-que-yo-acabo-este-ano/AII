@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <nav>
+  		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/peliculas'>Peliculas: datos</a></li>
+			<li><a href='/usuarios'>Usuarios registrados</a></li>
+			<li><a href='/generos'>Generos</a></li>
+			<li><a href='/generosPorPeliculas'>Generos De Peliculas</a></li>
+		</ul>
+	</nav>
+	<title>Lista de peliculas y sus datos</title>
+	<meta charset='utf-8'>
+  </head>
+  <body>
+    <h1>Peliculas</h1>
+	{% for pelicula in peliculas%}
+	<ul>
+	  <li><strong>Pelicula: {{pelicula.titulo}}</strong></li>
+	  {% for genero in pelicula.generos.all %}
+	  <ul>
+	  	<li><strong> {{genero.genero}} </strong></li>
+	  </ul>
+	  {% endfor %}
+	</ul>
+	{% endfor %}
+  </body>
+</html>
