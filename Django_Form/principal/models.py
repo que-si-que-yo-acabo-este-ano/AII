@@ -7,7 +7,7 @@ class Usuario(models.Model):
     sexos = (('M','M'),('F','F'))
     sexo = models.CharField(max_length=1,choices=sexos)
     ocupacion = models.ForeignKey("Ocupacion",on_delete=models.CASCADE)
-    codigoPostal = models.IntegerField()
+    codigoPostal = models.CharField(max_length=10)
     
     def __str__(self):
         return str(self.idUsuario)
@@ -17,7 +17,9 @@ class Pelicula(models.Model):
     titulo = models.CharField(max_length=100)
     fechaDeEstreno = models.DateTimeField()
     imdbURL = models.URLField()
-    categorias = models.ManyToManyField("Categoria")
+    categorias = models.ManyToManyField(
+        "Categoria",
+        through="CategoriaPelicula")
     puntuaciones = models.ManyToManyField(
         "Usuario",
         through="Puntuacion")
@@ -32,6 +34,10 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nombre
     
+class CategoriaPelicula(models.Model):
+    idCategoria = models.ForeignKey("Categoria",on_delete=models.CASCADE)
+    idPelicula = models.ForeignKey("Pelicula",on_delete=models.CASCADE)    
+    
 class Ocupacion(models.Model):
     nombre = models.CharField(max_length = 100, primary_key=True)
     
@@ -39,9 +45,9 @@ class Ocupacion(models.Model):
         return self.nombre
 
 class Puntuacion(models.Model):
-    puntuacion = models.IntegerField()
     idUsuario = models.ForeignKey("Usuario",on_delete=models.CASCADE)
     idPelicula = models.ForeignKey("Pelicula",on_delete=models.CASCADE)
-    
+    puntuacion = models.IntegerField()
+    fecha = models.DateTimeField()
     def __str__(self):
         return str(self.puntuacion)
