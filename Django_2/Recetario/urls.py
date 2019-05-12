@@ -27,6 +27,9 @@ urlpatterns = [
     path('filmsByGenre/',views.films_by_genre),
     path('peliculas/',views.peliculas),
     path('admin/', admin.site.urls),
+    path('generos/', views.generos),
+    path('generosPorPeliculas/', views.generosPorPeliculas),
+    path('nuevaPeli/', views.nuevaPeli),
     re_path(r'media/(?P<path>.*)',static.serve,
             {'document_root': settings.MEDIA_ROOT}),
 ]

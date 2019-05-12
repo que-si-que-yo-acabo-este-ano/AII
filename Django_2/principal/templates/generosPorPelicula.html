@@ -15,23 +15,14 @@
   </head>
   <body>
     <h1>Peliculas</h1>
-	{% for pelicula in peliculas %}
+	{% for pelicula in peliculas%}
 	<ul>
-	  <li><strong>Titulo: {{pelicula.titulo}}</strong></li>
+	  <li><strong>Pelicula: {{pelicula.titulo}}</strong></li>
+	  {% for genero in pelicula.generos.all %}
 	  <ul>
-	  	<li>peliculaID: {{pelicula.peliculaID}}</li>
-	  	<li>imdbID: {{pelicula.imdbID}}</li>
-	  	{% if pelicula.tmdbID %}
-	  	<li>tmdbID: {{pelicula.tmdbID}}</li>
-	  	{% else %}
-	  	<li> No tiene tmdbID </li>
-	  	{% endif %}
-	  	<ul>
-	  		{% for genero in pelicula.generos.all %}
-	  		<li> {{genero.genero}} </li>
-	  		{% endfor %}
-	  	</ul>
+	  	<li><strong> {{genero.genero}} </strong></li>
 	  </ul>
+	  {% endfor %}
 	</ul>
 	{% endfor %}
   </body>

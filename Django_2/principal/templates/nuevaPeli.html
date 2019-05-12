@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang='es'>
+{% block content %}
+<form method='post'>
+	{% csrf_token %}
+	{{form.as_p}}
+	<button type="submit" id="csrf_token" value='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'> Guardar </button> 
+</form>
+
+{% endblock %}
+</html>
