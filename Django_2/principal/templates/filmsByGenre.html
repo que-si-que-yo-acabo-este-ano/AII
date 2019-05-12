@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <header>
+  	<nav>
+  		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/genres'>Géneros</a></li>
+		</ul>
+	</nav>
+  </header>
+  <section>
+    <h1>Lista de generos</h1>
+    <p>Actualmente tenemos registrados:</p>
+	<ul>
+		{% for dato in genres %}
+	  	<h1>{{dato.genero}}</h1>
+	  		{% for film in films %}
+	  			{% if dato in film.generos.all %}
+	  				<li>{{film.titulo}}</li>
+	  			{% endif %}
+	  		{% endfor %}
+		{% endfor %}
+	</ul>
+  </section>
+</html>
