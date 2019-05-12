@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html lang='es'>
+  <header>
+  	<nav>
+  		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/peliculas'>Peliculas: datos</a></li>
+			<li><a href='/genres'>Géneros</a></li>
+			<li><a href='/filmsByGenre'>Películas por género </a></li>
+		</ul>
+	</nav>
+  </header>
+  <section>
+    <h1>Top 5 films with highest scores</h1>
+	<ul>
+		{% for dato in top5 %}
+	  	<li>{{dato}}</li>
+		{% endfor %}
+	</ul>
+  </section>
+</html>
