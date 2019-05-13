@@ -25,5 +25,6 @@ urlpatterns = [
     path('nuevoUsuario/',views.nuevoUsuario),
     path('nuevoAutor/',views.nuevoAutor),
     path('nuevaNoticia/',views.nuevaNoticia),
-    path('nuevoTipoNoticia/',views.nuevoTipoNoticia)
+    path('nuevoTipoNoticia/',views.nuevoTipoNoticia),
+    path('noticiasPorDiario/',views.noticiasPorDiario)
 ]

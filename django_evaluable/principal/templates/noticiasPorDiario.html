@@ -1,0 +1,11 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+    {{ nombre}}
+    <ul>
+    {% for noticia in noticias %}
+    	<li>{{ noticia }}</li>
+    {% endfor %}
+    </ul>
+</form>

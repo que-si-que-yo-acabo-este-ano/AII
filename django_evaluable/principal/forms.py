@@ -2,6 +2,7 @@ from django import forms
 from principal import models
 from django.contrib.contenttypes import fields
 from principal.models import TipoNoticia
+from unittest.util import _MAX_LENGTH
 
 class nuevoDiario(forms.ModelForm):
     class Meta:
@@ -27,3 +28,6 @@ class nuevoTipoNoticia(forms.ModelForm):
     class Meta:
         model = models.TipoNoticia
         fields = ['tipo']    
+        
+class noticiaPorDiario(forms.Form):
+    nombreDiario = forms.CharField(max_length=100)
