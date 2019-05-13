@@ -1,4 +1,4 @@
-"""Recetario URL Configuration
+"""django_evaluable URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -14,22 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path
-from principal import views
-from django.views import static
-from django.conf import settings
+from django.urls import path
 
 urlpatterns = [
-    path('',views.inicio),
-    path('top5/',views.top5_films),
-    path('filmsOfYear/',views.films_of_year),
-    path('genres/',views.genres),
-    path('filmsByGenre/',views.films_by_genre),
-    path('peliculas/',views.peliculas),
     path('admin/', admin.site.urls),
-    path('generos/', views.generos),
-    path('generosPorPeliculas/', views.generosPorPeliculas),
-    path('nuevaPeli/', views.nuevaPeli),
-    re_path(r'media/(?P<path>.*)',static.serve,
-            {'document_root': settings.MEDIA_ROOT}),
 ]

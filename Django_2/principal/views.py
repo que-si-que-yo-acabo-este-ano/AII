@@ -5,10 +5,10 @@ from principal.models import Pelicula, Genero
 from django.shortcuts import render_to_response
 from django.template.defaultfilters import length
 from _decimal import Decimal
+from django.http import HttpResponseRedirect
+from .forms import FilmsOfYearForm
 from django.template.context_processors import request
 from principal import forms
-from django.http.response import HttpResponseRedirect
-
 # Create your views here.
 
 def inicio(request):
@@ -43,6 +43,26 @@ def top5_films(request):
             filmsWithRating.append((film.titulo,total/length(ratings)))
     top5 = sorted(filmsWithRating, key=lambda x: -x[1])[:500]
     return render(request, 'top5.html', {'top5':top5})
+
+def films_of_year(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = FilmsOfYearForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            showyear = form.cleaned_data['year']
+            title = form.cleaned_data['title']
+            films = Pelicula.objects.filter(titulo__icontains=title)
+            return render(request, 'filmsOfYear.html', {'form': form, 'showyear':showyear,'films':films})
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = FilmsOfYearForm()
+    return render(request, 'filmsOfYear.html', {'form': form})
 
 def generos(request):
     generos = Genero.objects.all()
