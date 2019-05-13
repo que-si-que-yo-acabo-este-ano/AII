@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang='es'>
+<header>
+  	<nav>
+  		<ul>
+			<li><a href='/inicio'>Inicio</a></li>
+		</ul>
+	</nav>
+ </header>
+{% block content %}
 <form method="post">
     {% csrf_token %}
     {{ form }}
@@ -9,3 +19,5 @@
     {% endfor %}
     </ul>
 </form>
+{% endblock %}
+</html>

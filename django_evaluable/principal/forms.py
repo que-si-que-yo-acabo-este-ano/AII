@@ -28,3 +28,5 @@ class nuevoTipoNoticia(forms.ModelForm):
         model = models.TipoNoticia
         fields = ['tipo']    
         
+class noticiaPorDiario(forms.Form):
+    nombreDiario = forms.CharField(max_length=100)

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template.context_processors import request
-from principal import forms
+from principal import forms,models
 from principal.models import Noticia, Diario
 from django.http import HttpResponseRedirect
 
@@ -77,3 +77,22 @@ def journals_by_country(request):
     journals = Diario.objects.all()
     countries = [c[0] for c in set(journals.values_list('pais'))]
     return render(request,'journalByCountry.html', {'journals':journals, 'countries':countries})
+
+def noticiasPorDiario(request):
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = forms.noticiaPorDiario(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            nombreDiario = form.cleaned_data['nombreDiario']
+            noticias = models.Noticia.objects.filter(diario__nombre = nombreDiario)
+            print(noticias)
+            return render(request, 'noticiasPorDiario.html', {'form': form,'noticias':noticias})
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = forms.noticiaPorDiario()
+    return render(request, 'noticiasPorDiario.html', {'form': form})

@@ -19,6 +19,7 @@ from principal import views
 
 urlpatterns = [
     path('',views.inicio),
+    path('inicio/',views.inicio),
     path('formularios/', views.formularios),
     path('journalByCountry/', views.journals_by_country),
     path('topNews/',views.top_news),
@@ -28,5 +29,5 @@ urlpatterns = [
     path('nuevoAutor/',views.nuevoAutor),
     path('nuevaNoticia/',views.nuevaNoticia),
     path('nuevoTipoNoticia/',views.nuevoTipoNoticia),
-    path('noticiasPorDiario/',views.noticiasPorDiario)
+    path('noticiaPorDiario/',views.noticiasPorDiario)
 ]
