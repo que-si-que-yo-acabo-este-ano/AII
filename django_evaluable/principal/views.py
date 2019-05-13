@@ -35,3 +35,25 @@ def nuevoAutor(request):
         form = forms.nuevoAutor()
         
     return render(request,'nuevoAutor.html',{'form':form})
+
+def nuevaNoticia(request):
+    if request.method == 'POST':
+        form = forms.nuevaNoticia(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('../')
+    else:
+        form = forms.nuevaNoticia()
+        
+    return render(request,'nuevaNoticia.html',{'form':form})
+
+def nuevoTipoNoticia(request):
+    if request.method == 'POST':
+        form = forms.nuevoTipoNoticia(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('../')
+    else:
+        form = forms.nuevoTipoNoticia()
+        
+    return render(request,'nuevoTipoNoticia.html',{'form':form})
