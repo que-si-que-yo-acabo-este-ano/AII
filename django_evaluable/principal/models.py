@@ -31,11 +31,20 @@ class Noticia(models.Model):
     titular = models.CharField(max_length=100,primary_key=True)
     fechaNoticia = models.DateField()
     resumen = models.TextField()
-    tipos = (('Deportes','Deportes'),('Cultura','Cultura'),('Politica','Politica'),('Economia','Economia'),('Actualidad','Actualidad'))
-    tipoNoticia = models.CharField(max_length=15,choices=tipos)
+#     tipos = (('Deportes','Deportes'),('Cultura','Cultura'),('Politica','Politica'),('Economia','Economia'),('Actualidad','Actualidad'))
+#     tipoNoticia = models.CharField(max_length=15,choices=tipos)
+    tipoNoticia = models.ForeignKey("TipoNoticia",on_delete=models.CASCADE)
     diario = models.ForeignKey("Diario",on_delete=models.CASCADE)
     autores = models.ManyToManyField("Autor")
     usuarios = models.ManyToManyField("Usuario")
     
+    def __str__(self):
+        return self.titular
+    
+class TipoNoticia(models.Model):
+    tipo = models.CharField(max_length=15,primary_key=True)
+    
+    def __str__(self):
+        return self.tipo
     
     
