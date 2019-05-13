@@ -27,3 +27,4 @@ class nuevoTipoNoticia(forms.ModelForm):
     class Meta:
         model = models.TipoNoticia
         fields = ['tipo']    
+        

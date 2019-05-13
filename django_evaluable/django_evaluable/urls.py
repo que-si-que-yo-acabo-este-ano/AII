@@ -20,6 +20,8 @@ from principal import views
 urlpatterns = [
     path('',views.inicio),
     path('formularios/', views.formularios),
+    path('journalByCountry/', views.journals_by_country),
+    path('topNews/',views.top_news),
     path('admin/', admin.site.urls),
     path('nuevoDiario/', views.nuevoDiario),
     path('nuevoUsuario/',views.nuevoUsuario),
