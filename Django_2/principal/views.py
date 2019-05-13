@@ -64,3 +64,4 @@ def nuevaPeli(request):
         form = forms.PeliculaForm()
         
     return render(request,'nuevaPeli.html',{'form':form})
+
