@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <header>
+    <nav>
+      <ul>
+      <li><a href='/'>Inicio</a></li>
+    </ul>
+  </nav>
+  </header>
+  <section>
+    <h1>Top 2 noticias por usuarios</h1>
+  <ul>
+    {% for noticia,i in top %}
+      <h1>{{noticia.titular}} - {{noticia.fechaNoticia}}</h1>
+    {% endfor %}
+  </ul>
+  </section>
+</html>

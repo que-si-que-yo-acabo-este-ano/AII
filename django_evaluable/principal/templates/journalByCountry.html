@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <header>
+    <nav>
+      <ul>
+      <li><a href='/'>Inicio</a></li>
+    </ul>
+  </nav>
+  </header>
+  <section>
+    <h1>Lista de periódicos por país</h1>
+    <p>Actualmente tenemos registrados:</p>
+  <ul>
+    {% for dato in countries %}
+      <h1>{{dato}}</h1>
+        {% for journal in journals %}
+          {% if dato == journal.pais %}
+            <li>{{journal.nombre}}</li>
+          {% endif %}
+        {% endfor %}
+    {% endfor %}
+  </ul>
+  </section>
+</html>
