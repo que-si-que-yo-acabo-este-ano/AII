@@ -3,6 +3,12 @@ from django.template.context_processors import request
 from principal import forms
 from django.http import HttpResponseRedirect
 
+def inicio(request):
+    return render(request,'inicio.html')
+
+def formularios(request):
+    return render(request,'formularios.html')
+
 def nuevoDiario(request):
     if request.method == 'POST':
         form = forms.nuevoDiario(request.POST)

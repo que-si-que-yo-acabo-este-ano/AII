@@ -18,6 +18,8 @@ from django.urls import path
 from principal import views
 
 urlpatterns = [
+    path('',views.inicio),
+    path('formularios/', views.formularios),
     path('admin/', admin.site.urls),
     path('nuevoDiario/', views.nuevoDiario),
     path('nuevoUsuario/',views.nuevoUsuario),
