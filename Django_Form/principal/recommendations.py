@@ -23,7 +23,7 @@ from math import sqrt
 
 # Returns a distance-based similarity score for person1 and person2
 def sim_distance(prefs,person1,person2):
-  # Get the list of shared_items
+    # Get the list of shared_items
   si={}
   for item in prefs[person1]: 
     if item in prefs[person2]: si[item]=1
