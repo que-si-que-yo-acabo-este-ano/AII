@@ -131,7 +131,7 @@ def artistTags(request):
 
 
 
-def artistasUsiario(request):
+def artistasUsuario(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = forms.artistasMasEscuchados(request.POST)
@@ -141,10 +141,11 @@ def artistasUsiario(request):
             # ...
             # redirect to a new URL:
             id = form.cleaned_data['id']
-            artistas = models.UsuarioArtista.objects.filter(usuario__idUsuario = id)
-            return render(request, 'artistasUsiario.html', {'form': form,'artistas':artistas,'id':id})
+            artistasUsuarios = models.UsuarioArtista.objects.filter(usuario__idUsuario = id)
+            print(artistasUsuarios)
+            return render(request, 'artistasUsuario.html', {'form': form,'artistasUsuarios':artistasUsuarios,'id':id})
 
     # if a GET (or any other method) we'll create a blank form
     else:
         form = forms.artistasMasEscuchados()
-    return render(request, 'artistasUsiario.html', {'form': form})
+    return render(request, 'artistasUsuario.html', {'form': form})

@@ -14,10 +14,10 @@
     <input type="submit" value="Submit">
     {{ id}}
     <ul>
-    {% for artista in artistas %}
-    	<li>{{ artista.artista.nombre }}
+    {% for artistasUsuario in artistasUsuarios %}
+    	<li>{{ artistasUsuario.artista.nombre }}
     	--
-    	{{artista.tiempoEscucha }}</li>
+    	{{artistasUsuario.tiempoEscucha }}</li>
     {% endfor %}
     </ul>
 </form>
