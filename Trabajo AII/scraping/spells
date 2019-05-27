@@ -1,0 +1,1831 @@
+<!doctype html>
+<html       lang="en">
+  <head>
+          
+<title>How to Retrain an Image Classifier for New Categories &nbsp;|&nbsp; TensorFlow Hub &nbsp;|&nbsp; TensorFlow</title>
+
+<meta property="og:title" content="How to Retrain an Image Classifier for New Categories &nbsp;|&nbsp; TensorFlow Hub &nbsp;|&nbsp; TensorFlow">
+
+  <meta property="og:url" content="https://www.tensorflow.org/hub/tutorials/image_retraining">
+
+  <meta property="og:locale" content="en">
+
+
+
+  
+
+  
+
+        <meta property="og:site_name" content="TensorFlow">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#ff6f00">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/tensorflow/manifest.json">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow/css/ce_bundle.css">
+    </noscript><link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow/images/apple-touch-icon-180x180.png"><link rel="canonical" href="https://www.tensorflow.org/hub/tutorials/image_retraining"><link rel="search" type="application/opensearchdescription+xml"
+            title="TensorFlow" href="https://www.tensorflow.org/s/opensearch.xml"></head>
+  <body type="article"
+        theme="tensorflow-theme"
+        class=""
+        
+        layout="docs"
+                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <div class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Close menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo">
+  <img src="https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow/images/lockup.svg" class="devsite-site-logo" alt="TensorFlow">
+</a>
+            <span class="devsite-product-name">
+            <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item">
+                              </li>
+  </ul>
+          </span>
+        
+</div>        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                          <devsite-tabs class="upper-tabs">
+  <div class="devsite-tabs-wrapper">
+                  <tab >
+          <a href="/install"
+   class="gc-analytics-event"
+   title="Install"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Install"
+   >
+  Install
+</a>
+
+        </tab>
+                        <tab dropdown
+        >
+  <a href="/learn"
+   class="gc-analytics-event"
+   title="Learn"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Learn"
+   >
+  Learn
+</a>
+  <a href="#" aria-haspopup="true" aria-expanded="false" role="button"
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-hidden="true" aria-label="submenu">
+    <div class="devsite-tabs-dropdown-content">
+              <div class="devsite-tabs-dropdown-column">
+                      <ul class="devsite-tabs-dropdown-section
+                       ">
+                                            <li class="devsite-nav-item">
+                  <a title="Introduction"
+                     href="/learn"
+                  >Introduction
+                                        <div class="devsite-nav-item-description">
+                      New to TensorFlow?
+                    </div>
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="TensorFlow"
+                     href="/overview"
+                  >TensorFlow
+                                        <div class="devsite-nav-item-description">
+                      The core open source ML library
+                    </div>
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="For JavaScript"
+                     href="/js"
+                  >For JavaScript
+                                        <div class="devsite-nav-item-description">
+                      TensorFlow.js for ML using JavaScript
+                    </div>
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="For Mobile &amp; IoT"
+                     href="/lite"
+                  >For Mobile &amp; IoT
+                                        <div class="devsite-nav-item-description">
+                      TensorFlow Lite for mobile and embedded devices
+                    </div>
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="For Production"
+                     href="/tfx"
+                  >For Production
+                                        <div class="devsite-nav-item-description">
+                      TensorFlow Extended for end-to-end ML components
+                    </div>
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="Swift for TensorFlow (in beta)"
+                     href="/swift"
+                  >Swift for TensorFlow (in beta)
+                                      </a>
+                </li>
+                          </ul>
+                  </div>
+          </div>
+  </div>
+</tab>
+                        <tab dropdown
+        >
+  <a href="/api_docs/python/tf"
+   class="gc-analytics-event"
+   title="API"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: API"
+   >
+  API
+</a>
+  <a href="#" aria-haspopup="true" aria-expanded="false" role="button"
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-hidden="true" aria-label="submenu">
+    <div class="devsite-tabs-dropdown-content">
+              <div class="devsite-tabs-dropdown-column">
+                      <ul class="devsite-tabs-dropdown-section
+                       ">
+                              <li class="devsite-nav-title">API r1</li>
+                                            <li class="devsite-nav-item">
+                  <a title="r1.13 (stable)"
+                     href="/api_docs/python/tf"
+                  >r1.13 (stable)
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="r1.12"
+                     href="/versions/r1.12/api_docs/python/tf"
+                  >r1.12
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="r1.11"
+                     href="/versions/r1.11/api_docs/python/tf"
+                  >r1.11
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="r1.10"
+                     href="/versions/r1.10/api_docs/python/tf"
+                  >r1.10
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="r1.9"
+                     href="/versions/r1.9/api_docs/python/tf"
+                  >r1.9
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="More…"
+                     href="/versions"
+                  >More…
+                                      </a>
+                </li>
+                          </ul>
+                  </div>
+              <div class="devsite-tabs-dropdown-column">
+                      <ul class="devsite-tabs-dropdown-section
+                       ">
+                              <li class="devsite-nav-title">API r2</li>
+                                            <li class="devsite-nav-item">
+                  <a title="r2.0 (preview)"
+                     href="/versions/r2.0/api_docs/python/tf"
+                  >r2.0 (preview)
+                                      </a>
+                </li>
+                          </ul>
+                  </div>
+          </div>
+  </div>
+</tab>
+                        <tab dropdown
+        active>
+  <a href="/resources"
+   class="gc-analytics-event"
+   title="Resources"
+   aria-label="Resources, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Resources"
+   >
+  Resources
+</a>
+  <a href="#" aria-haspopup="true" aria-expanded="false" role="button"
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-hidden="true" aria-label="submenu">
+    <div class="devsite-tabs-dropdown-content">
+              <div class="devsite-tabs-dropdown-column">
+                      <ul class="devsite-tabs-dropdown-section
+                       ">
+                                            <li class="devsite-nav-item">
+                  <a title="Models &amp; datasets"
+                     href="/resources/models-datasets"
+                  >Models &amp; datasets
+                                        <div class="devsite-nav-item-description">
+                      Pre-trained models and datasets built by Google and the community
+                    </div>
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="Tools"
+                     href="/resources/tools"
+                  >Tools
+                                        <div class="devsite-nav-item-description">
+                      Ecosystem of tools to help you use TensorFlow
+                    </div>
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="Libraries &amp; extensions"
+                     href="/resources/libraries-extensions"
+                  >Libraries &amp; extensions
+                                        <div class="devsite-nav-item-description">
+                      Libraries and extensions built on TensorFlow
+                    </div>
+                                      </a>
+                </li>
+                          </ul>
+                  </div>
+          </div>
+  </div>
+</tab>
+                        <tab >
+          <a href="/community"
+   class="gc-analytics-event"
+   title="Community"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Community"
+   >
+  Community
+</a>
+
+        </tab>
+                        <tab dropdown
+        >
+  <a href="/about"
+   class="gc-analytics-event"
+   title="Why TensorFlow"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Why TensorFlow"
+   >
+  Why TensorFlow
+</a>
+  <a href="#" aria-haspopup="true" aria-expanded="false" role="button"
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-hidden="true" aria-label="submenu">
+    <div class="devsite-tabs-dropdown-content">
+              <div class="devsite-tabs-dropdown-column">
+                      <ul class="devsite-tabs-dropdown-section
+                       ">
+                                            <li class="devsite-nav-item">
+                  <a title="About"
+                     href="/about"
+                  >About
+                                      </a>
+                </li>
+                              <li class="devsite-nav-item">
+                  <a title="Case studies"
+                     href="/about/case-studies"
+                  >Case studies
+                                      </a>
+                </li>
+                          </ul>
+                  </div>
+          </div>
+  </div>
+</tab>
+            </div>
+</devsite-tabs>
+
+                       </div>
+          <devsite-search
+    enable-search    enable-signin    enable-suggestions
+      enable-query-completion            project-path="">
+  <form class="devsite-search-form" action="https://www.tensorflow.org/s/results/" method="GET">
+    <div class="devsite-search-container">
+      <div id="searchbox" class="devsite-searchbox">
+                <input placeholder="Search"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="Search box">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="en"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+                <a class="devsite-header-link devsite-top-button button gc-analytics-event"
+           href="//github.com/tensorflow"
+           data-category="Site-Wide Custom Events"
+           data-label="Site header link">
+          GitHub
+        </a>
+        
+                  <devsite-user ></devsite-user>
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                        <div class="devsite-product-id-row">
+            <div class="devsite-product-description-row">
+                              <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item">
+                    <a href="/hub"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Lower Header"
+              data-value="1"
+          >
+            Hub 0.4
+      
+  </a>
+        </li>
+  </ul>
+                                        </div>
+                                                                                    </div>
+                                      <div class="devsite-doc-set-nav-row">
+                              <devsite-tabs class="lower-tabs">
+  <div class="devsite-tabs-wrapper">
+                  <tab >
+          <a href="/hub"
+   class="gc-analytics-event"
+   title="Overview"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Overview"
+   >
+  Overview
+</a>
+
+        </tab>
+                        <tab active>
+          <a href="/hub/overview"
+   class="gc-analytics-event"
+   title="Guide"
+   aria-label="Guide, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Guide"
+   >
+  Guide
+</a>
+
+        </tab>
+                        <tab >
+          <a href="/hub/api_docs/python/hub"
+   class="gc-analytics-event"
+   title="API"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: API"
+   >
+  API
+</a>
+
+        </tab>
+                        <tab >
+          <a href="https://tfhub.dev"
+   class="gc-analytics-event"
+   title="Modules"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Modules"
+   >
+  Modules
+</a>
+
+        </tab>
+            </div>
+</devsite-tabs>
+
+        </div>
+          </div>  </div></div>
+  
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+                                <a href="/install"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Install">
+      <span class="devsite-nav-text" >Install</span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                                <a href="/learn"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Learn">
+      <span class="devsite-nav-text" >Learn</span>
+        </a>
+  
+                              <ul class="devsite-nav-responsive-tabs">
+                  <li class="devsite-nav-item">
+    <span class="devsite-nav-title">
+      <span class="devsite-nav-text" menu="Learn">More</span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward" aria-hidden="true"
+          menu="Learn">
+    </span>
+        </span>
+  </li>
+
+                </ul>
+                                        </li>
+                      <li class="devsite-nav-item">
+                                <a href="/api_docs/python/tf"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: API">
+      <span class="devsite-nav-text" >API</span>
+        </a>
+  
+                              <ul class="devsite-nav-responsive-tabs">
+                  <li class="devsite-nav-item">
+    <span class="devsite-nav-title">
+      <span class="devsite-nav-text" menu="API">More</span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward" aria-hidden="true"
+          menu="API">
+    </span>
+        </span>
+  </li>
+
+                </ul>
+                                        </li>
+                      <li class="devsite-nav-item">
+                                <a href="/resources"
+          class="devsite-nav-title gc-analytics-event
+            devsite-nav-active"
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Resources">
+      <span class="devsite-nav-text" >Resources</span>
+        </a>
+  
+                              <ul class="devsite-nav-responsive-tabs">
+                  <li class="devsite-nav-item">
+    <span class="devsite-nav-title">
+      <span class="devsite-nav-text" menu="Resources">More</span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward" aria-hidden="true"
+          menu="Resources">
+    </span>
+        </span>
+  </li>
+
+                </ul>
+                                            <ul class="devsite-nav-responsive-tabs">
+                                                                                                                      <li class="devsite-nav-item">
+    <a href="/hub"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview">
+      <span class="devsite-nav-text" >Overview</span>
+        </a>
+  </li>
+
+                                                                                                                      <li class="devsite-nav-item">
+    <a href="/hub/overview"
+     id="devsite-nav-forward"     class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Guide">
+      <span class="devsite-nav-text" menu="_book">Guide</span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward" aria-hidden="true"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                                      <li class="devsite-nav-item">
+    <a href="/hub/api_docs/python/hub"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: API">
+      <span class="devsite-nav-text" >API</span>
+        </a>
+  </li>
+
+                                                                                                                      <li class="devsite-nav-item">
+    <a href="https://tfhub.dev"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Modules">
+      <span class="devsite-nav-text" >Modules</span>
+        </a>
+  </li>
+
+                                  </ul>
+                          </li>
+                      <li class="devsite-nav-item">
+                                <a href="/community"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Community">
+      <span class="devsite-nav-text" >Community</span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                                <a href="/about"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Why TensorFlow">
+      <span class="devsite-nav-text" >Why TensorFlow</span>
+        </a>
+  
+                              <ul class="devsite-nav-responsive-tabs">
+                  <li class="devsite-nav-item">
+    <span class="devsite-nav-title">
+      <span class="devsite-nav-text" menu="Why TensorFlow">More</span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward" aria-hidden="true"
+          menu="Why TensorFlow">
+    </span>
+        </span>
+  </li>
+
+                </ul>
+                                        </li>
+                                <li class="devsite-nav-item">
+    <a href="//github.com/tensorflow"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: GitHub">
+      <span class="devsite-nav-text" >GitHub</span>
+        </a>
+  </li>
+
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/hub/overview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Overview">Overview</span></a></li>
+  <li class="devsite-nav-item"><a href="/hub/installation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Installation">Installation</span></a></li>
+  <li class="devsite-nav-item"><a href="/hub/common_issues"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Common issues">Common issues</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" title="Key Concepts">Key Concepts</span></div></li>
+  <li class="devsite-nav-item"><a href="/hub/basics"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Using a Module">Using a Module</span></a></li>
+  <li class="devsite-nav-item"><a href="/hub/creating"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Creating a new Module">Creating a new Module</span></a></li>
+  <li class="devsite-nav-item"><a href="/hub/fine_tuning"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Fine-Tuning">Fine-Tuning</span></a></li>
+  <li class="devsite-nav-item"><a href="/hub/hosting"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Hosting a Module">Hosting a Module</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" title="Tutorials">Tutorials</span></div></li>
+  <li class="devsite-nav-item"><a href="/hub/tutorials/image_retraining"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Image retraining">Image retraining</span></a></li>
+  <li class="devsite-nav-item"><a href="/hub/tutorials/text_classification_with_tf_hub"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Text classification">Text classification</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/action_recognition_with_tf_hub.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Action recognition">Action recognition</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/biggan_generation_with_tf_hub.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="BigGAN image generation">BigGAN image generation</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/cross_lingual_similarity_with_tf_hub_multilingual_universal_encoder.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Multilingual universal sentence encoder">Multilingual universal sentence encoder</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/image_feature_vector.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Image transfer learning">Image transfer learning</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/object_detection.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Object detection">Object detection</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/semantic_similarity_with_tf_hub_universal_encoder.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Semantic similarity">Semantic similarity</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/semantic_similarity_with_tf_hub_universal_encoder_lite.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Semantic similarity lite">Semantic similarity lite</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/text_classification_with_tf_hub.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Text classification">Text classification</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/text_classification_with_tf_hub_on_kaggle.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Text classification - kaggle">Text classification - kaggle</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/tf2_image_retraining.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Image transfer learning - TF2">Image transfer learning - TF2</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/tf2_text_classification.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Text classification - TF2">Text classification - TF2</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/tf_hub_delf_module.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Image feature matching">Image feature matching</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="https://github.com/tensorflow/hub/blob/master/examples/colab/tf_hub_generative_image_module.ipynb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Image generation">Image generation</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          title="External"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" title="Common Signatures">Common Signatures</span></div></li>
+  <li class="devsite-nav-item"><a href="/hub/common_signatures"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Overview">Overview</span></a></li>
+  <li class="devsite-nav-item"><a href="/hub/common_signatures/images"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Common Signatures for Images">Common Signatures for Images</span></a></li>
+  <li class="devsite-nav-item"><a href="/hub/common_signatures/text"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" title="Common Signatures for Text">Common Signatures for Text</span></a></li>
+          </ul>
+                                                                          <ul class="devsite-nav-list" menu="Learn" hidden>
+                                                                                                <li class="devsite-nav-item">
+    <a href="/learn"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Introduction">
+      <span class="devsite-nav-text" >Introduction</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/overview"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: TensorFlow">
+      <span class="devsite-nav-text" >TensorFlow</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/js"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: For JavaScript">
+      <span class="devsite-nav-text" >For JavaScript</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/lite"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: For Mobile &amp; IoT">
+      <span class="devsite-nav-text" >For Mobile &amp; IoT</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/tfx"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: For Production">
+      <span class="devsite-nav-text" >For Production</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/swift"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Swift for TensorFlow (in beta)">
+      <span class="devsite-nav-text" >Swift for TensorFlow (in beta)</span>
+        </a>
+  </li>
+
+                                                                    </ul>
+                                                <ul class="devsite-nav-list" menu="API" hidden>
+                                                                            <li class="devsite-nav-item devsite-nav-heading">
+    <span class="devsite-nav-title">
+      <span class="devsite-nav-text" >API r1</span>
+        </span>
+  </li>
+
+                                                              <li class="devsite-nav-item">
+    <a href="/api_docs/python/tf"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: r1.13 (stable)">
+      <span class="devsite-nav-text" >r1.13 (stable)</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/versions/r1.12/api_docs/python/tf"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: r1.12">
+      <span class="devsite-nav-text" >r1.12</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/versions/r1.11/api_docs/python/tf"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: r1.11">
+      <span class="devsite-nav-text" >r1.11</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/versions/r1.10/api_docs/python/tf"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: r1.10">
+      <span class="devsite-nav-text" >r1.10</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/versions/r1.9/api_docs/python/tf"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: r1.9">
+      <span class="devsite-nav-text" >r1.9</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/versions"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: More…">
+      <span class="devsite-nav-text" >More…</span>
+        </a>
+  </li>
+
+                                                                                                                  <li class="devsite-nav-item devsite-nav-heading">
+    <span class="devsite-nav-title">
+      <span class="devsite-nav-text" >API r2</span>
+        </span>
+  </li>
+
+                                                              <li class="devsite-nav-item">
+    <a href="/versions/r2.0/api_docs/python/tf"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: r2.0 (preview)">
+      <span class="devsite-nav-text" >r2.0 (preview)</span>
+        </a>
+  </li>
+
+                                                                    </ul>
+                                                <ul class="devsite-nav-list" menu="Resources" hidden>
+                                                                                                <li class="devsite-nav-item">
+    <a href="/resources/models-datasets"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Models &amp; datasets">
+      <span class="devsite-nav-text" >Models &amp; datasets</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/resources/tools"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Tools">
+      <span class="devsite-nav-text" >Tools</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/resources/libraries-extensions"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Libraries &amp; extensions">
+      <span class="devsite-nav-text" >Libraries &amp; extensions</span>
+        </a>
+  </li>
+
+                                                                    </ul>
+                                                                      <ul class="devsite-nav-list" menu="Why TensorFlow" hidden>
+                                                                                                <li class="devsite-nav-item">
+    <a href="/about"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: About">
+      <span class="devsite-nav-text" >About</span>
+        </a>
+  </li>
+
+                                          <li class="devsite-nav-item">
+    <a href="/about/case-studies"
+          class="devsite-nav-title gc-analytics-event
+            "
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Case studies">
+      <span class="devsite-nav-text" >Case studies</span>
+        </a>
+  </li>
+
+                                                                    </ul>
+                                    </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <div id="gc-wrapper">
+        <div class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">    
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            TensorFlow
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/resources"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            Resources
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/hub"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            Hub 0.4
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/hub/overview"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="4"
+          >
+            Guide
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">How to Retrain an Image Classifier for New Categories</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+<style>/* override theme */
+table img {
+  max-width: 100%;
+}
+
+/* override var element to differentiate color from comment */
+var, var code, var span, .prettyprint var span {
+  color: #039be5;
+}
+
+/* .devsite-terminal virtualenv prompt */
+.tfo-terminal-venv::before {
+  content: "(venv) $ " !important;
+}
+
+/* .devsite-terminal root prompt */
+.tfo-terminal-root::before {
+  content: "# " !important;
+}
+
+/* .devsite-terminal Windows prompt */
+.tfo-terminal-windows::before {
+  content: "C:\\> " !important;
+}
+
+/* .devsite-terminal Windows prompt w/ virtualenv */
+.tfo-terminal-windows-venv::before {
+  content: "(venv) C:\\> " !important;
+}
+
+devsite-code .tfo-notebook-code-cell-output {
+  max-height: 300px;
+  overflow: auto;
+  background: rgba(255, 247, 237, 1);  /* orange bg to distinguish from input code cells */
+}
+
+devsite-code .tfo-notebook-code-cell-output + .devsite-code-buttons-container button {
+  background: rgba(255, 247, 237, .7);  /* orange bg to distinguish from input code cells */
+}
+
+devsite-code[dark-code] .tfo-notebook-code-cell-output {
+  background: rgba(64, 78, 103, 1);  /* medium slate */
+}
+
+devsite-code[dark-code] .tfo-notebook-code-cell-output + .devsite-code-buttons-container button {
+  background: rgba(64, 78, 103, .7);  /* medium slate */
+}
+
+/* override default table styles for notebook buttons */
+.devsite-table-wrapper .tfo-notebook-buttons {
+  display: inline-block;
+  margin-left: 3px;
+  width: auto;
+}
+
+.tfo-notebook-buttons td {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.tfo-notebook-buttons a,
+.tfo-notebook-buttons :link,
+.tfo-notebook-buttons :visited {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+  color: #202124;
+  padding: 12px 24px;
+  transition: box-shadow 0.2s;
+}
+
+.tfo-notebook-buttons a:hover,
+.tfo-notebook-buttons a:focus {
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+}
+
+.tfo-notebook-buttons tr {
+  background: 0;
+  border: 0;
+}
+
+/* on rendered notebook page,
+   remove link to webpage since we're already here */
+.tfo-notebook-buttons td:first-child {
+  display: none;
+}
+
+.tfo-notebook-buttons td > a {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tfo-notebook-buttons td > a > img {
+  margin-right: 8px;
+}
+
+/* landing pages */
+
+.tfo-landing-row-item-inset-white {
+  background-color: #fff;
+  padding: 32px;
+}
+
+.tfo-landing-row-item-inset-white ol,
+.tfo-landing-row-item-inset-white ul {
+  padding-left: 20px;
+}
+
+/* colab callout button */
+.colab-callout-row devsite-code {
+  border-radius: 8px 8px 0 0;
+  box-shadow: none;
+}
+
+.colab-callout-footer {
+  background: #e3e4e7;
+  border-radius: 0 0 8px 8px;
+  color: #37474f;
+  padding: 20px;
+}
+
+.colab-callout-row devsite-code[dark-code] + .colab-callout-footer {
+  background: #3f4f66;
+}
+
+
+.colab-callout-footer > .button {
+  margin-top: 4px;
+  color: #ff5c00;
+}
+
+.colab-callout-footer > a > span {
+  padding-top: 10px;
+  vertical-align: middle;
+  color: #37474f;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.colab-callout-row devsite-code[dark-code] + .colab-callout-footer > a > span {
+  color: #fff;
+}
+
+a.colab-button {
+  background: rgba(255, 255, 255, .75);
+  border: solid 1px rgba(0, 0, 0, .08);
+  border-bottom-color: rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  color: #aaa;
+  display: inline-block;
+  font-size: 11px !important;
+  font-weight: 300;
+  line-height: 16px;
+  padding: 4px 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.colab-button:hover {
+  background: white;
+  border-color: rgba(0, 0, 0, .2);
+  color: #666;
+}
+
+a.colab-button span {
+  background: url(/images/colab_logo_button.svg) no-repeat 1px 1px / 20px;
+  border-radius: 4px;
+  display: inline-block;
+  padding-left: 24px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .tfo-notebook-buttons td {
+    display: block;
+  }
+}
+</style>
+
+<!-- DO NOT EDIT! Automatically generated file. -->
+
+
+<aside class="note"><strong>Note:</strong><span> For a modern, simplified, Keras-based approach to this task see
+<a href="https://tensorflow.org/tutorials/images/hub_with_keras">Hub with Keras</a></span></aside>
+<p>Modern image recognition models have millions of parameters. Training them from
+scratch requires a lot of labeled training data and a lot of computing power
+(hundreds of GPU-hours or more). Transfer learning is a technique that shortcuts
+much of this by taking a piece of a model that has already been trained on a
+related task and reusing it in a new model. In this tutorial, we will reuse the
+feature extraction capabilities from powerful image classifiers trained on
+ImageNet and simply train a new classification layer on top.  For more
+information on the approach you can see <a href="https://arxiv.org/abs/1310.1531">this paper on
+Decaf</a>.</p>
+
+<p>Though it&#39;s not as good as training the full model, this is surprisingly
+effective for many applications, works with moderate amounts of training data
+(thousands, not millions of labeled images), and can be run in as little as
+thirty minutes on a laptop without a GPU. This tutorial will show you how to run
+the example script on your own images, and will explain some of the options you
+have to help control the training process.</p>
+
+<p>This tutorial uses <a href="https://www.tensorflow.org/hub/index">TensorFlow Hub</a> to ingest
+pre-trained pieces of models, or <em>modules</em> as they are called. For starters,
+we will use the <a href="https://tfhub.dev/google/imagenet/inception_v3/feature_vector/1">image feature extraction
+module</a>
+with the Inception V3 architecture trained on ImageNet,
+and <a href="#other_architectures">come back later</a> to further options, including
+<a href="https://research.googleblog.com/2017/11/automl-for-large-scale-image.html">NASNet</a>/PNASNet, as well as
+<a href="https://research.googleblog.com/2017/06/mobilenets-open-source-models-for.html">MobileNet V1</a> and
+<a href="https://research.googleblog.com/2018/04/mobilenetv2-next-generation-of-on.html">V2</a>.</p>
+
+<p>Before you start, you need to install the PIP package <code translate="no">tensorflow-hub</code>,
+along with a sufficiently recent version of TensorFlow. See
+TensorFlow Hub&#39;s <a href="https://www.tensorflow.org/hub/installation">installation instructions</a> for details.</p>
+
+<h2 id="training_on_flowers">Training on Flowers</h2>
+
+<p><img src="https://www.tensorflow.org/images/daisies.jpg" alt="Daisies by Kelly Sikkema"></p>
+
+<p><a href="https://www.flickr.com/photos/95072945@N05/9922116524/">Image by Kelly Sikkema</a></p>
+
+<p>Before you start any training, you&#39;ll need a set of images to teach the network
+about the new classes you want to recognize. There&#39;s a later section that
+explains how to prepare your own images, but to make it easy we&#39;ve created an
+archive of creative-commons licensed flower photos to use initially. To get the
+set of flower photos, run these commands:</p>
+<pre class="prettyprint lang-sh" translate="no"><code translate="no">cd ~
+curl -LO http://download.tensorflow.org/example_images/flower_photos.tgz
+tar xzf flower_photos.tgz
+</code></pre>
+<p>Once you have the images, you can download the example code from GitHub
+(it is not part of the library installation):</p>
+<pre class="prettyprint lang-sh" translate="no"><code translate="no">mkdir ~/example_code
+cd ~/example_code
+curl -LO https://github.com/tensorflow/hub/raw/master/examples/image_retraining/retrain.py
+</code></pre>
+<p>In the simplest cases the retrainer can then be run like this
+(takes about half an hour):</p>
+<pre class="prettyprint lang-sh" translate="no"><code translate="no">python retrain.py --image_dir ~/flower_photos
+</code></pre>
+<p>The script has many other options. You can get a full listing with:</p>
+<pre class="prettyprint lang-sh" translate="no"><code translate="no">python retrain.py -h
+</code></pre>
+<p>This script loads the pre-trained module and trains a new classifier on top
+for the flower photos you&#39;ve downloaded. None of the flower
+species were in the original ImageNet classes the full network was trained on.
+The magic of transfer learning is that lower layers that have been trained to
+distinguish between some objects can be reused for many recognition tasks
+without any alteration.</p>
+
+<h2 id="bottlenecks">Bottlenecks</h2>
+
+<p>The script can take thirty minutes or more to complete, depending on the speed
+of your machine. The first phase analyzes all the images on disk and calculates
+and caches the bottleneck values for each of them. &#39;Bottleneck&#39; is an informal
+term we often use for the layer just before the final output layer that
+actually does the classification. (TensorFlow Hub calls this an &quot;image feature
+vector&quot;.) This penultimate layer has been trained to output a set of
+values that&#39;s good enough for the classifier to use to distinguish between all
+the classes it&#39;s been asked to recognize. That means it has to be a meaningful
+and compact summary of the images, since it has to contain enough information
+for the classifier to make a good choice in a very small set of values. The
+reason our final layer retraining can work on new classes is that it turns out
+the kind of information needed to distinguish between all the 1,000 classes in
+ImageNet is often also useful to distinguish between new kinds of objects.</p>
+
+<p>Because every image is reused multiple times during training and calculating
+each bottleneck takes a significant amount of time, it speeds things up to
+cache these bottleneck values on disk so they don&#39;t have to be repeatedly
+recalculated. By default they&#39;re stored in the <code translate="no">/tmp/bottleneck</code> directory, and
+if you rerun the script they&#39;ll be reused so you don&#39;t have to wait for this
+part again.</p>
+
+<h2 id="training">Training</h2>
+
+<p>Once the bottlenecks are complete, the actual training of the top layer of the
+network begins. You&#39;ll see a series of step outputs, each one showing training
+accuracy, validation accuracy, and the cross entropy. The training accuracy
+shows what percent of the images used in the current training batch were
+labeled with the correct class. The validation accuracy is the precision on a
+randomly-selected group of images from a different set. The key difference is
+that the training accuracy is based on images that the network has been able
+to learn from so the network can overfit to the noise in the training data. A
+true measure of the performance of the network is to measure its performance on
+a data set not contained in the training data -- this is measured by the
+validation accuracy. If the train accuracy is high but the validation accuracy
+remains low, that means the network is overfitting and memorizing particular
+features in the training images that aren&#39;t helpful more generally. Cross
+entropy is a loss function which gives a glimpse into how well the learning
+process is progressing. The training&#39;s objective is to make the loss as small as
+possible, so you can tell if the learning is working by keeping an eye on
+whether the loss keeps trending downwards, ignoring the short-term noise.</p>
+
+<p>By default this script will run 4,000 training steps. Each step chooses ten
+images at random from the training set, finds their bottlenecks from the cache,
+and feeds them into the final layer to get predictions. Those predictions are
+then compared against the actual labels to update the final layer&#39;s weights
+through the back-propagation process. As the process continues you should see
+the reported accuracy improve, and after all the steps are done, a final test
+accuracy evaluation is run on a set of images kept separate from the training
+and validation pictures. This test evaluation is the best estimate of how the
+trained model will perform on the classification task. You should see an
+accuracy value of between 90% and 95%, though the exact value will vary from run
+to run since there&#39;s randomness in the training process. This number is based on
+the percent of the images in the test set that are given the correct label
+after the model is fully trained.</p>
+
+<h2 id="visualizing_the_retraining_with_tensorboard">Visualizing the Retraining with TensorBoard</h2>
+
+<p>The script includes TensorBoard summaries that make it easier to understand, debug, and optimize the retraining. For example, you can visualize the graph and statistics, such as how the weights or accuracy varied during training.</p>
+
+<p>To launch TensorBoard, run this command during or after retraining:</p>
+<pre class="prettyprint lang-sh" translate="no"><code translate="no">tensorboard --logdir /tmp/retrain_logs
+</code></pre>
+<p>Once TensorBoard is running, navigate your web browser to
+<a href="http://localhost:6006"><code translate="no">localhost:6006</code></a> to view the TensorBoard.</p>
+
+<p>The <code translate="no">retrain.py</code> script will log TensorBoard summaries to <code translate="no">/tmp/retrain_logs</code>
+by default. You can change the directory with the <code translate="no">--summaries_dir</code> flag.</p>
+
+<p><a href="https://github.com/tensorflow/tensorboard">TensorBoard&#39;s GitHub repository</a>
+has a lot more information on TensorBoard usage, including tips &amp; tricks,
+and debugging information.</p>
+
+<h2 id="using_the_retrained_model">Using the Retrained Model</h2>
+
+<p>The script will write out the new model trained on your categories to
+<code translate="no">/tmp/output_graph.pb</code>, and a text file containing the labels to
+<code translate="no">/tmp/output_labels.txt</code>. The new model contains both the TF-Hub module
+inlined into it, and the new classificiation layer.
+The two files are both in a format that
+the <a href="https://www.tensorflow.org/tutorials/image_recognition">C++ and Python image classification examples</a>
+can read in, so you can start using your new model immediately. Since you&#39;ve
+replaced the top layer, you will need to specify the new name in the script, for
+example with the flag <code translate="no">--output_layer=final_result</code> if you&#39;re using label_image.</p>
+
+<p>Here&#39;s an example of how to run the label_image example with your
+retrained graphs. By convention, all TensorFlow Hub modules accept image inputs
+with color values in the fixed range [0,1], so you do not need to set the
+<code translate="no">--input_mean</code> or <code translate="no">--input_std</code> flags.</p>
+<pre class="prettyprint lang-sh" translate="no"><code translate="no">curl -LO https://github.com/tensorflow/tensorflow/raw/master/tensorflow/examples/label_image/label_image.py
+python label_image.py \
+--graph=/tmp/output_graph.pb --labels=/tmp/output_labels.txt \
+--input_layer=Placeholder \
+--output_layer=final_result \
+--image=$HOME/flower_photos/daisy/21652746_cc379e0eea_m.jpg
+</code></pre>
+<p>You should see a list of flower labels, in most cases with daisy on top
+(though each retrained model may be slightly different). You can replace the
+<code translate="no">--image</code> parameter with your own images to try those out.</p>
+
+<p>If you&#39;d like to use the retrained model in your own Python program, then the
+above <code translate="no">label_image</code> script is a reasonable starting point. The <code translate="no">label_image</code>
+directory also contains C++ code which you can use as a template to integrate
+tensorflow with your own applications.</p>
+
+<p>If you find the default Inception V3 module is too large or slow for your
+application, take a look at the
+<a href="#other_architectures">Other Model Architectures section</a>
+below for options to speed up and slim down your network.</p>
+
+<h2 id="training_on_your_own_categories">Training on Your Own Categories</h2>
+
+<p>If you&#39;ve managed to get the script working on the flower example images, you
+can start looking at teaching it to recognize categories you care about instead.
+In theory all you&#39;ll need to do is point it at a set of sub-folders, each named
+after one of your categories and containing only images from that category. If
+you do that and pass the root folder of the subdirectories as the argument to
+<code translate="no">--image_dir</code>, the script should train just like it did for the flowers.</p>
+
+<p>Here&#39;s what the folder structure of the flowers archive looks like, to give you
+and example of the kind of layout the script is looking for:</p>
+
+<p><img src="https://www.tensorflow.org/images/folder_structure.png" alt="Folder Structure"></p>
+
+<p>In practice it may take some work to get the accuracy you want. I&#39;ll try to
+guide you through some of the common problems you might encounter below.</p>
+
+<h2 id="creating_a_set_of_training_images">Creating a Set of Training Images</h2>
+
+<p>The first place to start is by looking at the images you&#39;ve gathered, since the
+most common issues we see with training come from the data that&#39;s being fed in.</p>
+
+<p>For training to work well, you should gather at least a hundred photos of each
+kind of object you want to recognize. The more you can gather, the better the
+accuracy of your trained model is likely to be. You also need to make sure that
+the photos are a good representation of what your application will actually
+encounter. For example, if you take all your photos indoors against a blank wall
+and your users are trying to recognize objects outdoors, you probably won&#39;t see
+good results when you deploy.</p>
+
+<p>Another pitfall to avoid is that the learning process will pick up on anything
+that the labeled images have in common with each other, and if you&#39;re not
+careful that might be something that&#39;s not useful. For example if you photograph
+one kind of object in a blue room, and another in a green one, then the model
+will end up basing its prediction on the background color, not the features of
+the object you actually care about. To avoid this, try to take pictures in as
+wide a variety of situations as you can, at different times, and with different
+devices.</p>
+
+<p>You may also want to think about the categories you use. It might be worth
+splitting big categories that cover a lot of different physical forms into
+smaller ones that are more visually distinct. For example instead of &#39;vehicle&#39;
+you might use &#39;car&#39;, &#39;motorbike&#39;, and &#39;truck&#39;. It&#39;s also worth thinking about
+whether you have a &#39;closed world&#39; or an &#39;open world&#39; problem. In a closed world,
+the only things you&#39;ll ever be asked to categorize are the classes of object you
+know about. This might apply to a plant recognition app where you know the user
+is likely to be taking a picture of a flower, so all you have to do is decide
+which species. By contrast a roaming robot might see all sorts of different
+things through its camera as it wanders around the world. In that case you&#39;d
+want the classifier to report if it wasn&#39;t sure what it was seeing. This can be
+hard to do well, but often if you collect a large number of typical &#39;background&#39;
+photos with no relevant objects in them, you can add them to an extra &#39;unknown&#39;
+class in your image folders.</p>
+
+<p>It&#39;s also worth checking to make sure that all of your images are labeled
+correctly. Often user-generated tags are unreliable for our purposes.
+For example: pictures tagged <code translate="no">#daisy</code> might also include people and characters
+named Daisy. If you go through
+your images and weed out any mistakes it can do wonders for your overall
+accuracy.</p>
+
+<h2 id="training_steps">Training Steps</h2>
+
+<p>If you&#39;re happy with your images, you can take a look at improving your results
+by altering the details of the learning process. The simplest one to try is
+<code translate="no">--how_many_training_steps</code>. This defaults to 4,000, but if you increase it to
+8,000 it will train for twice as long. The rate of improvement in the accuracy
+slows the longer you train for, and at some point will stop altogether (or even
+go down due to overfitting), but you can experiment to see what works best
+for your model.</p>
+
+<h2 id="distortions">Distortions</h2>
+
+<p>A common way of improving the results of image training is by deforming,
+cropping, or brightening the training inputs in random ways. This has the
+advantage of expanding the effective size of the training data thanks to all the
+possible variations of the same images, and tends to help the network learn to
+cope with all the distortions that will occur in real-life uses of the
+classifier. The biggest disadvantage of enabling these distortions in our script
+is that the bottleneck caching is no longer useful, since input images are never
+reused exactly. This means the training process takes a lot longer (many hours),
+so it&#39;s recommended you try this as a way of polishing your model only after
+you have one that you&#39;re reasonably happy with.</p>
+
+<p>You enable these distortions by passing <code translate="no">--random_crop</code>, <code translate="no">--random_scale</code> and
+<code translate="no">--random_brightness</code> to the script. These are all percentage values that
+control how much of each of the distortions is applied to each image. It&#39;s
+reasonable to start with values of 5 or 10 for each of them and then experiment
+to see which of them help with your application. <code translate="no">--flip_left_right</code> will
+randomly mirror half of the images horizontally, which makes sense as long as
+those inversions are likely to happen in your application. For example it
+wouldn&#39;t be a good idea if you were trying to recognize letters, since flipping
+them destroys their meaning.</p>
+
+<h2 id="hyper-parameters">Hyper-parameters</h2>
+
+<p>There are several other parameters you can try adjusting to see if they help
+your results. The <code translate="no">--learning_rate</code> controls the magnitude of the updates to the
+final layer during training. Intuitively if this is smaller than the learning
+will take longer, but it can end up helping the overall precision. That&#39;s not
+always the case though, so you need to experiment carefully to see what works
+for your case. The <code translate="no">--train_batch_size</code> controls how many images are examined
+during each training step to estimate the updates to the final layer.</p>
+
+<h2 id="training_validation_and_testing_sets">Training, Validation, and Testing Sets</h2>
+
+<p>One of the things the script does under the hood when you point it at a folder
+of images is divide them up into three different sets. The largest is usually
+the training set, which are all the images fed into the network during training,
+with the results used to update the model&#39;s weights. You might wonder why we
+don&#39;t use all the images for training? A big potential problem when we&#39;re doing
+machine learning is that our model may just be memorizing irrelevant details of
+the training images to come up with the right answers. For example, you could
+imagine a network remembering a pattern in the background of each photo it was
+shown, and using that to match labels with objects. It could produce good
+results on all the images it&#39;s seen before during training, but then fail on new
+images because it&#39;s not learned general characteristics of the objects, just
+memorized unimportant details of the training images.</p>
+
+<p>This problem is known as overfitting, and to avoid it we keep some of our data
+out of the training process, so that the model can&#39;t memorize them. We then use
+those images as a check to make sure that overfitting isn&#39;t occurring, since if
+we see good accuracy on them it&#39;s a good sign the network isn&#39;t overfitting. The
+usual split is to put 80% of the images into the main training set, keep 10%
+aside to run as validation frequently during training, and then have a final 10%
+that are used less often as a testing set to predict the real-world performance
+of the classifier. These ratios can be controlled using the
+<code translate="no">--testing_percentage</code> and <code translate="no">--validation_percentage</code> flags. In general
+you should be able to leave these values at their defaults, since you won&#39;t
+usually find any advantage to training to adjusting them.</p>
+
+<p>Note that the script uses the image filenames (rather than a completely random
+function) to divide the images among the training, validation, and test sets.
+This is done to ensure that images don&#39;t get moved between training and testing
+sets on different runs, since that could be a problem if images that had been
+used for training a model were subsequently used in a validation set.</p>
+
+<p>You might notice that the validation accuracy fluctuates among iterations. Much
+of this fluctuation arises from the fact that a random subset of the validation
+set is chosen for each validation accuracy measurement. The fluctuations can be
+greatly reduced, at the cost of some increase in training time, by choosing
+<code translate="no">--validation_batch_size=-1</code>, which uses the entire validation set for each
+accuracy computation.</p>
+
+<p>Once training is complete, you may find it insightful to examine misclassified
+images in the test set. This can be done by adding the flag
+<code translate="no">--print_misclassified_test_images</code>. This may help you get a feeling for which
+types of images were most confusing for the model, and which categories were
+most difficult to distinguish. For instance, you might discover that some
+subtype of a particular category, or some unusual photo angle, is particularly
+difficult to identify, which may encourage you to add more training images of
+that subtype. Oftentimes, examining misclassified images can also point to
+errors in the input data set, such as mislabeled, low-quality, or ambiguous
+images. However, one should generally avoid point-fixing individual errors in
+the test set, since they are likely to merely reflect more general problems in
+the (much larger) training set.</p>
+
+<p><a name="other_architectures"></a></p>
+
+<h2 id="other_model_architectures">Other Model Architectures</h2>
+
+<p>By default the script uses an image feature extraction module with a pretrained
+instance of the Inception V3 architecture. This was a good place to start
+because it provides high accuracy results with moderate running time for the
+retraining script. But now let&#39;s take a look at <a href="https://tfhub.dev/s?module-type=image-feature-vector">further options of a
+TensorFlow Hub module</a>.</p>
+
+<p>On the one hand, that list shows more recent, powerful architectures, such as
+<a href="https://research.googleblog.com/2017/11/automl-for-large-scale-image.html">NASNet</a>
+(notably
+<a href="https://tfhub.dev/google/imagenet/nasnet_large/feature_vector/1"><code translate="no">nasnet_large</code></a>
+and
+<a href="https://tfhub.dev/google/imagenet/pnasnet_large/feature_vector/2"><code translate="no">pnasnet_large</code></a>),
+which could give you some extra precision.</p>
+
+<p>On the other hand, if you intend to deploy your model on mobile devices or other
+resource-constrained environments, you may want to trade a little accuracy
+for much smaller file sizes or faster speeds (also in training). For that, try
+the different
+<a href="https://tfhub.dev/s?keywords=mobilenet">modules</a>
+implementing the <a href="https://research.googleblog.com/2017/06/mobilenets-open-source-models-for.html">MobileNet
+V1</a>
+or
+<a href="https://research.googleblog.com/2018/04/mobilenetv2-next-generation-of-on.html">V2</a>
+architectures, or also
+<a href="https://tfhub.dev/google/imagenet/nasnet_mobile/feature_vector/1"><code translate="no">nasnet_mobile</code></a>.</p>
+
+<p>Training with a different module is easy: Just pass the <code translate="no">--tfhub_module</code>
+flag with the module URL, for example:</p>
+<pre class="prettyprint lang-sh" translate="no"><code translate="no">python retrain.py \
+    --image_dir ~/flower_photos \
+    --tfhub_module https://tfhub.dev/google/imagenet/mobilenet_v2_100_224/feature_vector/2
+</code></pre>
+<p>This will create a 9 MB model file in <code translate="no">/tmp/output_graph.pb</code> with a model that
+uses the baseline version of MobileNet V2. Opening the module URL in a browser
+will take you to the module documentation.</p>
+
+<p>If you just want to make it a little faster, you can reduce the size of input
+images (the second number) from &#39;224&#39; down to &#39;192&#39;, &#39;160&#39;, or &#39;128&#39; pixels
+squared, or even &#39;96&#39; (for V2 only). For more aggressive savings, you can choose
+percentages (the first number) &#39;100&#39;, &#39;075&#39;, &#39;050&#39;, or &#39;035&#39; (that&#39;s &#39;025&#39; for
+V1) to control the &quot;feature depth&quot; or number of neurons per position.
+The number of weights (and hence the file size and speed) shrinks with the
+square of that fraction. The <a href="https://research.googleblog.com/2017/06/mobilenets-open-source-models-for.html">MobileNet V1
+blogpost</a>
+and <a href="https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet">MobileNet V2 page on
+GitHub</a>
+report on the respective tradeoffs for Imagenet classification.</p>
+
+<p>Mobilenet V2 does not apply the feature depth percentage to the bottleneck
+layer. Mobilenet V1 did, which made the job of the classification layer harder
+for small depths.
+Would it help to cheat and use the scores for the original 1001 ImageNet classes
+instead of tight bottleneck? You can simply try by replacing
+<code translate="no">mobilenet_v1.../feature_vector</code> with <code translate="no">mobilenet_v1.../classification</code>
+in the module name.</p>
+
+<p>As before, you can use all of the retrained models with <code translate="no">label_image.py</code>.
+You will need to specify the image size that your model expects, for example:</p>
+<pre class="prettyprint lang-sh" translate="no"><code translate="no">python label_image.py \
+--graph=/tmp/output_graph.pb --labels=/tmp/output_labels.txt \
+--input_layer=Placeholder \
+--output_layer=final_result \
+--input_height=224 --input_width=224 \
+--image=$HOME/flower_photos/daisy/21652746_cc379e0eea_m.jpg
+</code></pre>
+<p>For more information on deploying the retrained model to a mobile device, see
+the <a href="https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0">codelab version</a>
+of this tutorial, especially <a href="https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2-tflite/#0">part 2</a>, which describes
+<a href="https://www.tensorflow.org/mobile/tflite/">TensorFlow Lite</a> and the additional
+optimizations it offers (including quantization of model weights).</p>
+
+          </div>
+
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+</devsite-content-footer>
+
+
+                      </devsite-content>
+        </div>
+        <devsite-footer-promos class="devsite-footer">
+                      
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+  <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Stay connected</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//medium.com/tensorflow"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Blog
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//github.com/tensorflow/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            GitHub
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//twitter.com/tensorflow"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Twitter
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//youtube.com/tensorflow"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            YouTube
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Support</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//github.com/tensorflow/tensorflow/issues"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Issue tracker
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//github.com/tensorflow/tensorflow/blob/master/RELEASE.md"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Release notes
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//stackoverflow.com/questions/tagged/tensorflow"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Stack Overflow
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/extras/tensorflow_brand_guidelines.pdf"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            Brand guidelines
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+</nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility">
+  
+  <nav class="devsite-nav">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link
+                  gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link">
+          Terms
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link
+                  gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link">
+          Privacy
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="en"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="en"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </div></div>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar type="cookie-notification"                  ></devsite-snackbar>    <devsite-tooltip ></devsite-tooltip>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "en", "dimension4": "TensorFlow Hub", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-69864048-1"}]</script>
+<script type="application/json" gtm>[]</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,E,l,o,p,r,s,_,__){d['GoogleDevelopersObject']=[!0,l,o,p,r,s];
+    _=e.createElement(v);_.async=1;_.src=E;__=e.getElementsByTagName(v)[0];
+    __.parentNode.insertBefore(_,__);})(window, document, 'script',
+      'https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/js/app_loader.js',
+      'en',
+      'https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow/js/devsite_app.js',
+      'https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143',
+      'https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow',
+      !1,
+      ['/_pwa/tensorflow/manifest.json',
+       '/_static/images/video-placeholder.svg',
+       'https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow/images/favicon.png','https://www.gstatic.com/devrel-devsite/v0c74e6a7a755f75df39dc9a7dc5197ded60c6c2abf3c8fbd17a4917b5c78a143/tensorflow/images/lockup.svg','https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons'],
+       'https://tensorflow-dot-devsite-v2-prod-3p.appspot.com')
+   </script>  </body>
+</html>
