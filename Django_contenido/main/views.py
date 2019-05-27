@@ -37,9 +37,9 @@ def artistasUsiario(request):
             # ...
             # redirect to a new URL:
             id = form.cleaned_data['id']
-            artistas = models.UsuarioArtista.objects.filter(usuario_id = id)
+            artistas = models.UsuarioArtista.objects.filter(usuario__idUsuario = id)
             print(artistas)
-            return render(request, 'artistasUsiario.html', {'form': form,'artistas':artistas})
+            return render(request, 'artistasUsiario.html', {'form': form,'artistas':artistas,'id':id})
 
     # if a GET (or any other method) we'll create a blank form
     else:

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang='es'>
+<header>
+  	<nav>
+  		<ul>
+			<li><a href='/inicio'>Inicio</a></li>
+		</ul>
+	</nav>
+ </header>
 {% block content %}
 <form method="post">
     {% csrf_token %}
@@ -8,7 +15,9 @@
     {{ id}}
     <ul>
     {% for artista in artistas %}
-    	<li>{{ artista }}</li>
+    	<li>{{ artista.artista.nombre }}
+    	--
+    	{{artista.tiempoEscucha }}</li>
     {% endfor %}
     </ul>
 </form>

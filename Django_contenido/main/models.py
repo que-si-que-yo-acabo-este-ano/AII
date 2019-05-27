@@ -30,7 +30,7 @@ class UsuarioArtista(models.Model):
     
 class UsuarioEtiquetaArtista(models.Model):
     usuario = models.ForeignKey("Usuario", on_delete=models.CASCADE)
-    artista = models.ForeignKey("Artista", on_delete=models.CASCADE)
+    artista = models.ForeignKey("Artista", on_delete=models.CASCADE, null=True)
     etiqueta = models.ForeignKey("Etiqueta", on_delete=models.CASCADE) 
     dia = models.IntegerField()
     mes = models.IntegerField()
