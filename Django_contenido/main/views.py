@@ -1,17 +1,14 @@
 from django.shortcuts import render
 from main.models import Artista, UsuarioEtiquetaArtista, UsuarioArtista
 from collections import Counter
-from main import forms,models
+from main import forms, models
 
 # Create your views here.
 
 
 
-
-
-
 def artistTopTagsByUsers(artist):
-    artistSearched = Artista.objects.get(nombre= artist)
+    artistSearched = Artista.objects.get(idArtista= artist)
     allTagsObj = UsuarioEtiquetaArtista.objects.filter(artista= artistSearched)
     allTags = [obj.etiqueta for obj in allTagsObj]
     top4Tuples = Counter(allTags).most_common(4)
@@ -28,6 +25,8 @@ def userTopTags(user):
 
 def contentRecommendation():
     pass
+
+
 def artistasUsiario(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
