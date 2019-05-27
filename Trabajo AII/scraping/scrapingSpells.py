@@ -76,6 +76,6 @@ def lecturaSpells():
                     
                 listaFinal.append(resultado)
                     
-    return resultado
+    return listaFinal
 
 print(lecturaSpells())
