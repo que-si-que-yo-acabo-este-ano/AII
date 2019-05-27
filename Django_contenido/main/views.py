@@ -3,9 +3,16 @@ from main.models import Artista, UsuarioEtiquetaArtista, UsuarioArtista, Usuario
 from collections import Counter
 from main import forms, models
 import math
+from math import sqrt
 
 # Create your views here.
 
+def artistTopTagsByUsersTest(artist):
+    artistSearched = Artista.objects.get(idArtista= artist)
+    allTagsObj = UsuarioEtiquetaArtista.objects.filter(artista= artistSearched)
+    allTags = [obj.etiqueta for obj in allTagsObj]
+    top4Tuples = Counter(allTags).most_common(4)
+    return top4Tuples
 
 
 def artistTopTagsByUsers(artist):
@@ -13,6 +20,7 @@ def artistTopTagsByUsers(artist):
     allTagsObj = UsuarioEtiquetaArtista.objects.filter(artista= artistSearched)
     allTags = [obj.etiqueta for obj in allTagsObj]
     top4Tuples = Counter(allTags).most_common(4)
+    contentRecommendation(10)
     return top4Tuples
 
 
@@ -31,37 +39,72 @@ def userTopTags(user):
 def contentRecommendation(user):
     userObj = Usuario.objects.get(idUsuario= user)
     artists = [x for x in Artista.objects.all()]
+    print('------- Inicio --------')
     for userArtistObj in UsuarioArtista.objects.filter(usuario= userObj):
         artists.remove(userArtistObj.artista)
+        print('Dentro for remove artist')
     tagsForComparison = []
-    artistsTags = []
+    artistsTagsList = []
+    print('-------- Antes del for artistTagsList ---------')
+    tempCont = 0
     for artist in artists:
-        tagsOfArtist = [tagTuple[0] for tagTuple in artistTopTagsByUsers(artist)]
+        tagsOfArtist = [tagTuple[0] for tagTuple in artistTopTagsByUsersTest(artist.idArtista)]
         tagsForComparison.extend(tagsOfArtist)
-        artistsTags.append((artist,tagsOfArtist))
-    tagsForComparison = Counter(tagsForComparison)
+        artistsTagsList.append((artist,tagsOfArtist))
+        tempCont += 1
+        if tempCont%1000==0:
+            print('Dentro for artistTagsList' + str(tempCont))
+    tagsForComparison = Counter(tagsForComparison).most_common()
     userTags = [tagTuple[0] for tagTuple in userTopTags(user)]
     
     tfUserVector = [userTags.count(tag[0]) for tag in tagsForComparison]
     
-    nArtists = len(artists)
+    nArtists = len(artistsTagsList)
     idfVector = [(numOcurrTag[0],math.log(nArtists/numOcurrTag[1])) for numOcurrTag in tagsForComparison]
     userVector = []
+    print('-------- Antes del for userVector ---------')
     for tag in idfVector:
-        if tag[0] in userTags:
-            userVector.append(tag)
+        print('Dentro for userVector')
+        if tag[0] in userTags:            
+            userVector.append(1.0)
+            #userVector.append(tag)
         else:
-            userVector.append(tag[0],0.0)
+            userVector.append(0.0)
+            #userVector.append((tag[0],0.0))
     artistsVectors = []
-    for artist in artistsTags:
+    print(userVector)
+    print('-------- Antes del for artistsVectors ---------')
+    tempCont = 0
+    for artist in artistsTagsList:
         artistVector = []
+        if tempCont%1000==0:
+            print('Dentro for artistTagsList' + str(tempCont))
         for tag in idfVector:
             if tag[0] in artist[1]:
-                artistVector.append(tag)
+                artistVector.append(1.0)
+                #artistVector.append(tag)
             else:
-                artistVector.append(tag[0],0.0)
+                artistVector.append(0.0)
+                #artistVector.append((tag[0],0.0))
         artistsVectors.append((artist,artistVector))
-        
+        tempCont += 1
+    
+    simVector = []
+    for artist in artistsVectors:
+        top = sum([userVector[i] * artist[1][i] for i in range(len(userVector))])
+        #print('Top ' + str(top))
+        bottomLeft = sqrt(sum([pow(x,2) for x in userVector]))
+        #print('BottomLeft ' + str(bottomLeft))
+        bottomRight = sqrt(sum([pow(y,2) for y in artist[1]]))
+        #print('BottomRight ' + str(bottomRight))
+        sim = (top)/(bottomLeft)*(bottomRight)
+        #print('-----')
+        #print(sim)
+        #print('-----')
+        #print('------------------------------------------------')
+        simVector.append((artist[0],sim))
+    recommendedArtists = sorted(simVector, key=lambda x: -x[1])[:2]
+    print(recommendedArtists)
     # Hallar similitud entre userVector y cada uno de los artistsVectors
                 
             
