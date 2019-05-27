@@ -20,4 +20,5 @@ from principal import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('filmsOfYear/',views.films_of_year),
+    path('recNotRated1/',views.rec_not_rated_users)
 ]

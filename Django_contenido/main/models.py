@@ -14,8 +14,8 @@ class Etiqueta(models.Model):
 class Artista(models.Model):
     idArtista = models.IntegerField(primary_key=True)
     nombre = models.CharField(max_length=30)
-    url = models.URLField()
-    pictureUrl = models.URLField()
+    url = models.URLField(null=True)
+    pictureUrl = models.URLField(null=True)
     
     def __str__(self):
         return self.nombre
