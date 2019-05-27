@@ -1,1 +1,5 @@
 .metadata
+
+*.pyc
+
+Django_contenido/Django_contenido/__pycache__/

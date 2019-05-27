@@ -24,15 +24,7 @@ def lecturaSpells():
     open_url("http://beta.hardcodex.ru/spells/get/all/_/_/_/front/_#",file)
     html_doc = open(file,"r",encoding="utf-8")
     soup = beautifulRead(html_doc)
-    resultado = {
-        "name":[],
-        "castingTime":[],
-        "range":[],
-        "components":[],
-        "duration":[],
-        "text":[],
-        "class":[]
-        }
+    listaFinal = []
     
 
     i = 0
@@ -44,9 +36,17 @@ def lecturaSpells():
             if  not name in lsitaHechizos:
                 print(i)
                 i=i+1
+                resultado = {
+                    "name":[],
+                    "castingTime":[],
+                    "range":[],
+                    "components":[],
+                    "duration":[],
+                    "text":[],
+                    "class":[]
+                    }
                 
-                
-                resultado["name"].append(name)
+                resultado["name"] = name
                 lsitaHechizos.append(name)
                 
                 j=0
@@ -55,25 +55,27 @@ def lecturaSpells():
                         parameter = li.get_text()
                         if j==0 :
                             finalParameter= parameter[12:]
-                            resultado["castingTime"].append(finalParameter)
+                            resultado["castingTime"] = finalParameter
                         elif j == 1:
                             finalParameter = parameter[5:]
-                            resultado["range"].append(finalParameter)
+                            resultado["range"] = finalParameter
                         elif j==2:
                             finalParameter = parameter[10:]
                             finalParameter=finalParameter.replace(", ","-")
-                            resultado["components"].append(finalParameter)
+                            resultado["components"] = finalParameter
                         elif j==3:
                             finalParameter = parameter[8:]
-                            resultado["duration"].append(finalParameter)
+                            resultado["duration"] = finalParameter
                         
                         j=j+1
                 clases = spell.find("b", attrs={"class":"class srclass"}).get_text().replace(" ","").split(",")
-                resultado["class"].append(clases)
+                resultado["class"] = clases
                 
                 for p in spell.find(attrs={"class":"body" }).find_all("p"):
-                    resultado["text"].append(p.get_text().strip())
+                    resultado["text"] = p.get_text().strip()
                     
-    return resultado
+                listaFinal.append(resultado)
+                    
+    return listaFinal
 
 print(lecturaSpells())
