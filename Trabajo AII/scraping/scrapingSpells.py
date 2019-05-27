@@ -76,4 +76,4 @@ def lecturaSpells():
                     
     return resultado
 
-lecturaSpells()
+print(lecturaSpells())
