@@ -19,6 +19,6 @@ from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('artistTopTags/', views.artistTags)
+    path('artistTopTags/', views.artistTags),
     path('artistasUsuario/', views.artistasUsuario)
 ]
