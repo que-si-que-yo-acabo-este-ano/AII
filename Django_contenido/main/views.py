@@ -43,44 +43,55 @@ def contentRecommendation(user):
     for userArtistObj in UsuarioArtista.objects.filter(usuario= userObj):
         artists.remove(userArtistObj.artista)
         print('Dentro for remove artist')
+    print('-------- Antes del for artistTagsList ---------')
+    #tempCont = 0
     tagsForComparison = []
     artistsTagsList = []
-    print('-------- Antes del for artistTagsList ---------')
-    tempCont = 0
     for artist in artists:
-        tagsOfArtist = [tagTuple[0] for tagTuple in artistTopTagsByUsersTest(artist.idArtista)]
-        tagsForComparison.extend(tagsOfArtist)
+        tagsOfArtist = artistTopTagsByUsersTest(artist.idArtista)
+        tagsForComparison.extend([x[0] for x in tagsOfArtist])
         artistsTagsList.append((artist,tagsOfArtist))
-        tempCont += 1
-        if tempCont%1000==0:
-            print('Dentro for artistTagsList' + str(tempCont))
+        #tempCont += 1
+        #if tempCont%1000==0:
+            #print('Dentro for artistTagsList' + str(tempCont))
     tagsForComparison = Counter(tagsForComparison).most_common()
-    userTags = [tagTuple[0] for tagTuple in userTopTags(user)]
+    userTagsCount = userTopTags(user)
+    userTags = [tagTuple[0] for tagTuple in userTagsCount]
+    userTagsCountDict = dict(userTagsCount)
     
-    tfUserVector = [userTags.count(tag[0]) for tag in tagsForComparison]
-    
+    tfUserVector = []
+    for tagTop in tagsForComparison:
+        if tagTop[0] in userTags:
+            tfUserVector.append(userTagsCountDict.get(tagTop[0]))
+        else:
+            tfUserVector.append(0)
+            
+            
+    #tfUserVector = [userTags.count(tag[0]) for tag in tagsForComparison] # Modificar
     nArtists = len(artistsTagsList)
     idfVector = [(numOcurrTag[0],math.log(nArtists/numOcurrTag[1])) for numOcurrTag in tagsForComparison]
-    userVector = []
-    print('-------- Antes del for userVector ---------')
-    for tag in idfVector:
-        print('Dentro for userVector')
-        if tag[0] in userTags:            
-            userVector.append(1.0)
-            #userVector.append(tag)
-        else:
-            userVector.append(0.0)
-            #userVector.append((tag[0],0.0))
-    artistsVectors = []
-    print(userVector)
+#    userVector = []
+#     print('-------- Antes del for userVector ---------')
+#     for tag in idfVector:
+#         print('Dentro for userVector')
+#         if tag[0] in userTags:            
+#             userVector.append(1.0)
+#             #userVector.append(tag)
+#         else:
+#             userVector.append(0.0)
+#             #userVector.append((tag[0],0.0))
+#     print(userVector)
+    userVector = [x*y for x,y in zip(tfUserVector,idfVector)] # Si asi funciona el for de encima sobra
+    # TODO Lo mismo del userVector aplicarlo al artistVector
     print('-------- Antes del for artistsVectors ---------')
     tempCont = 0
+    artistsVectors = []
     for artist in artistsTagsList:
         artistVector = []
         if tempCont%1000==0:
             print('Dentro for artistTagsList' + str(tempCont))
         for tag in idfVector:
-            if tag[0] in artist[1]:
+            if tag[0] in artist[1][0]:
                 artistVector.append(1.0)
                 #artistVector.append(tag)
             else:
