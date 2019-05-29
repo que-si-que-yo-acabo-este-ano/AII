@@ -29,12 +29,11 @@ def lecturaSpells():
 
     i = 0
     for spell in soup.find(attrs={"class":"pages col-xs-12 col-sm-12 col-lg-9 pull-right"}).select('div[class*="card cardBlock"]'):
-        lsitaHechizos = []
+        listaHechizos = []
         nombre = spell.find(attrs = {"class":"name lined srname"})
         if(nombre!=None):
             name = nombre.get_text()
-            if  not name in lsitaHechizos:
-                print(i)
+            if  not name in listaHechizos:
                 i=i+1
                 resultado = {
                     "name":[],
@@ -53,7 +52,7 @@ def lecturaSpells():
                 resultado["name"] = name
                 if "Ritual" in name:
                     resultado["hasRitual"] = True
-                lsitaHechizos.append(name)
+                listaHechizos.append(name)
                 
                 j=0
                 for ul in spell.find(attrs={"class":"body"}).find_all("ul"):
