@@ -99,8 +99,7 @@ def lecturaSpells():
                     
     return listaFinal
 
-  
-      
-    
+spells = lecturaSpells()
 
-lecturaSpells()
+for spell in lecturaSpells():
+    print(spell["class"])
