@@ -12,7 +12,7 @@
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
-    {{ id}}
+    {{ idUser}}
     <ul>
     {% for artistasUsuario in artistasUsuarios %}
     	<li>{{ artistasUsuario.artista.nombre }}
