@@ -1,8 +1,8 @@
 #encoding:utf-8
 
 from idlelib.iomenu import encoding
-import urllib.request, re
-
+import urllib.request
+import re
 from bs4 import BeautifulSoup
 from whoosh.automata.fsa import find_all_matches
 
@@ -70,6 +70,7 @@ def lecturaSpells():
                         
                         j=j+1
                 clases = spell.find("b", attrs={"class":"class srclass"}).get_text().replace(" ","").split(",")
+                
                 resultado["class"] = clases
                 
                 nivelEscuela = spell.find("b", attrs={"class":"type srtype"}).get_text()
@@ -93,7 +94,10 @@ def lecturaSpells():
                     
     return listaFinal
 
-spells = lecturaSpells()
-
-for spell in lecturaSpells():
-    print(spell["class"])
+# spells = lecturaSpells()
+# for spell in lecturaSpells():
+#     print(spell["class"])
+#     
+prueba = "Fighter(EldritchKnight)"
+regex = re.search("([\w]*)[(]([\w]*)[)]",prueba)
+print(regex.groups())
