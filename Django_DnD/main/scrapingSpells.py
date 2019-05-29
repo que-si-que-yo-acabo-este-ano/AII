@@ -40,6 +40,8 @@ def lecturaSpells():
                     "level":[],
                     "school":[],
                     "castingTime":[],
+                    "hasRitual":False,
+                    "requireConcentration":False,
                     "range":[],
                     "components":[],
                     "duration":[],
@@ -48,6 +50,8 @@ def lecturaSpells():
                     }
                 
                 resultado["name"] = name
+                if "Ritual" in name:
+                    resultado["hasRitual"] = True
                 listaHechizos.append(name)
                 
                 j=0
@@ -66,8 +70,10 @@ def lecturaSpells():
                             resultado["components"] = finalParameter
                         elif j==3:
                             finalParameter = parameter[8:]
+                            if "Concentration" in finalParameter:
+                                resultado["requireConcentration"] = True
                             resultado["duration"] = finalParameter
-                        
+                            
                         j=j+1
                 clases = spell.find("b", attrs={"class":"class srclass"}).get_text().replace(" ","").split(",")
                 
