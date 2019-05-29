@@ -38,6 +38,8 @@ def lecturaSpells():
                 i=i+1
                 resultado = {
                     "name":[],
+                    "level":[],
+                    "school":[],
                     "castingTime":[],
                     "range":[],
                     "components":[],
@@ -71,6 +73,20 @@ def lecturaSpells():
                 clases = spell.find("b", attrs={"class":"class srclass"}).get_text().replace(" ","").split(",")
                 resultado["class"] = clases
                 
+                nivelEscuela = spell.find("b", attrs={"class":"type srtype"}).get_text()
+                nivelEscuela = re.findall(r"[1-9]|\bc[a-z]*|[A-Z][a-z]*", nivelEscuela)
+                nivel=""
+                escuela=""
+                if("cantrip" in nivelEscuela):
+                    nivel = "0"
+                    escuela = nivelEscuela[0]
+                else:
+                    nivel = nivelEscuela[0]
+                    escuela = nivelEscuela[1]
+                
+                resultado["level"] = nivel
+                resultado["school"] = escuela
+                
                 for p in spell.find(attrs={"class":"body" }).find_all("p"):
                     resultado["text"] = p.get_text().strip()
                     
@@ -78,4 +94,8 @@ def lecturaSpells():
                     
     return listaFinal
 
-print(lecturaSpells())
+  
+      
+    
+
+lecturaSpells()
