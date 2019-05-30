@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang='es'>
+	<head>
+		Inicio de Sesion
+	</head>
+	<body>
+		{% if user.is_authenticated %}
+			Hi {{ user.username }}!
+			<p><a href="{% url 'logout' %}">logout</a></p>
+		{% endif %}
+	</body>
+</html>
