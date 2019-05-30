@@ -1,8 +1,8 @@
 #encoding:utf-8
 
 from idlelib.iomenu import encoding
-import urllib.request, re
-
+import urllib.request
+import re
 from bs4 import BeautifulSoup
 from whoosh.automata.fsa import find_all_matches
 
@@ -45,7 +45,7 @@ def lecturaSpells():
                     "range":[],
                     "components":[],
                     "duration":[],
-                    "text":[],
+                    "description":[],
                     "class":[]
                     }
                 
@@ -75,7 +75,20 @@ def lecturaSpells():
                             resultado["duration"] = finalParameter
                             
                         j=j+1
-                clases = spell.find("b", attrs={"class":"class srclass"}).get_text().replace(" ","").split(",")
+                clases = spell.find("b", attrs={"class":"class srclass"}).get_text().split(",")
+                resultado["subclass"] = {}
+                clasesARemover = []
+                clases = [clase.strip() for clase in clases]
+                for clase in clases:
+                    subclase = re.search("([\w]*)\s[(]([\w]*[\s]?[\w]*?)[)]",clase)
+                    if subclase:
+                        if subclase.group(1) in resultado["subclass"].keys():
+                            resultado["subclass"][subclase.group(1)].append(subclase.group(2))
+                        else:
+                            resultado["subclass"][subclase.group(1)] = [subclase.group(2)]
+                        clasesARemover.append(clase)
+                for claseARemover in clasesARemover:
+                    clases.remove(claseARemover)
                 resultado["class"] = clases
                 
                 nivelEscuela = spell.find("b", attrs={"class":"type srtype"}).get_text()
@@ -100,6 +113,11 @@ def lecturaSpells():
     return listaFinal
 
 spells = lecturaSpells()
-
 for spell in lecturaSpells():
     print(spell["class"])
+    print(spell["subclass"])
+         
+# prueba = "Druid (Swamp Dark)"
+# regex = re.search("([\w]*)\s[(]([\w]*[\s]?[\w]*?)[)]",prueba)
+# if regex:
+#     print(regex.groups())
