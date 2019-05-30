@@ -27,5 +27,6 @@ urlpatterns = [
     path('modificarStats/', views.modificarStats),
     path('personajeSeleccionado/', views.personajeSeleccionado),
     path('seleccionarHechizos/', views.seleccionarHechizos),
-    path('recomendarHechizos/', views.recomendarHechizos)
+    path('recomendarHechizos/', views.recomendarHechizos),
+    path('ajax/load-subclass/', views.load_subclass, name='ajax_load_subclass')
 ]

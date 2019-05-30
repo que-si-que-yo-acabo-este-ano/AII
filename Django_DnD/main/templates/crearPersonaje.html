@@ -7,3 +7,38 @@
 		</ul>
 	</nav>
  </header>
+{% block content %}
+  <h2>New Character</h2>
+  <form method="post" id="newCharacter" data-subclass-url="{% url 'ajax_load_subclass' %}" >
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit"> Guardar </button>
+  </form>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#id_classCharacter").change(function () {
+      var url = $("#newCharacter").attr("data-subclass-url");  
+      var classId = $(this).val(); 
+   	
+   	$.ajax({                      
+        url: url,                    
+        data: {
+          'classCharacter': classId
+        },
+        success: function (data) {
+        	$("#id_subclass").html(data);
+        	alert(data);
+        	
+        }
+      });
+
+    });
+    </script>
+    
+{% endblock %}
+
+</html>
