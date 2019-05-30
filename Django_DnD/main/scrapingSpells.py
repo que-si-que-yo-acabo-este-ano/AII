@@ -106,16 +106,16 @@ def lecturaSpells():
                 resultado["school"] = escuela
                 
                 for p in spell.find(attrs={"class":"body" }).find_all("p"):
-                    resultado["text"] = p.get_text().strip()
+                    resultado["description"] = p.get_text().strip()
                     
                 listaFinal.append(resultado)
                     
     return listaFinal
-
-spells = lecturaSpells()
-for spell in lecturaSpells():
-    print(spell["class"])
-    print(spell["subclass"])
+# 
+# spells = lecturaSpells()
+# for spell in lecturaSpells():
+#     print(spell["class"])
+#     print(spell["subclass"])
          
 # prueba = "Druid (Swamp Dark)"
 # regex = re.search("([\w]*)\s[(]([\w]*[\s]?[\w]*?)[)]",prueba)
