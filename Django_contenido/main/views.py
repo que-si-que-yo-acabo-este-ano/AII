@@ -153,7 +153,7 @@ def artistasUsuario(request):
             # redirect to a new URL:
             id = form.cleaned_data['id']
             artistasUsuarios = models.UsuarioArtista.objects.filter(usuario__idUsuario = id)
-            print(artistasUsuarios)
+            print(len(artistasUsuarios))
             return render(request, 'artistasUsuario.html', {'form': form,'artistasUsuarios':artistasUsuarios,'id':id})
 
     # if a GET (or any other method) we'll create a blank form

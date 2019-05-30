@@ -60,10 +60,9 @@ class Spell(models.Model):
     range = models.CharField(max_length=30)
     hasRitual = models.BooleanField()
     requireConcentration = models.BooleanField()
-    classCharacter = models.ForeignKey("Class",on_delete=models.CASCADE)
-    subclass = models.ForeignKey("Subclass",on_delete=models.CASCADE)
+    classes = models.ManyToManyField("Class")
+    subclasses = models.ManyToManyField("Subclass")
     description = models.TextField()
-    source = models.TextField()
     
     def __str__(self):
         return self.name
