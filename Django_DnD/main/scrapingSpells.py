@@ -80,7 +80,7 @@ def lecturaSpells():
                 clasesARemover = []
                 clases = [clase.strip() for clase in clases]
                 for clase in clases:
-                    subclase = re.search("([\w]*)\s[(]([\w]*[\s]?[\w]*?)[)]",clase)
+                    subclase = re.search("([\w]*)\s[(]([\w]*[\s]?[\w]*?[\s]?[\w]*?)[)]",clase)
                     if subclase:
                         if subclase.group(1) in resultado["subclass"].keys():
                             resultado["subclass"][subclase.group(1)].append(subclase.group(2))
