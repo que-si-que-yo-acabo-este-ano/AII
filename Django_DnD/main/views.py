@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from main import forms
-from main.models import Subclass,Class
+from main.models import Subclass,Class, Character
+from main.cbrs import recommendation
 from django.http import HttpResponseRedirect
 
 from django.contrib.auth.forms import UserCreationForm
@@ -42,6 +43,7 @@ def seleccionarHechizos(request):
     return render(request,'seleccionarHechizos.html')
 
 def recomendarHechizos(request):
+    recommendation(Character.objects.get(name='pruebaSpells'))
     return render(request,'recomendarHechizos.html')
 
 class SignUp(generic.CreateView):
