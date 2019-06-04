@@ -35,4 +35,5 @@ urlpatterns = [
     path('logout/',auth_views.LogoutView.as_view(template_name='logout.html')),
     re_path(r'^auth/',include(urls)),
     path('signup/', views.SignUp.as_view(success_url="/login"), name='signup'),
+    path('ajax/load-subclass/', views.load_subclass, name='ajax_load_subclass')
 ]
