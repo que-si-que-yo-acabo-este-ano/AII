@@ -31,7 +31,7 @@ class Character(models.Model):
     name = models.CharField(max_length=15)
     race = models.ForeignKey("Race",on_delete=models.CASCADE)
     classCharacter = models.ForeignKey("Class",on_delete=models.CASCADE)
-    subclass = models.ForeignKey("Subclass",on_delete=models.CASCADE)
+    subclass = models.ForeignKey("Subclass",on_delete=models.CASCADE,null=True)
     level = models.IntegerField(validators=[MinValueValidator(0)])
     strength = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(20)])
     dexterity = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(20)])
