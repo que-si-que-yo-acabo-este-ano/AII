@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang='es'>
-<header>
-  	<nav>
-  		<ul>
-			<li><a href='/crearPersonaje'>Nuevo Personaje</a></li>
-			<li><a href='/mostrarHechizos'>Todos los Hechizos</a></li>
-			<li><a href='/personajeSeleccionado'>Personaje 1</a></li>
-		</ul>
-	</nav>
- </header>
+	<header>
+	  	<nav>
+	  		<ul>
+				<li><a href='/crearPersonaje'>Nuevo Personaje</a></li>
+				<li><a href='/mostrarHechizos'>Todos los Hechizos</a></li>
+				<li><a href='/personajeSeleccionado'>Personaje 1</a></li>
+			</ul>
+		</nav>
+	 </header>
+	 <body>
+		 {% if user.is_authenticated %}
+	  		Hi {{ user.username }}!
+	  		<p><a href="{% url 'logout' %}">logout</a></p>
+		 {% else %}
+	  		<p>You are not logged in</p>
+	  		<p><a href="/signup">registro</a></p>
+	  		<p><a href="/login">login</a></p>
+		 {% endif %}
+	 </body>
+ </html>
