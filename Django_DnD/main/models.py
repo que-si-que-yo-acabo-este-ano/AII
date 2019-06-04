@@ -61,6 +61,8 @@ class Spell(models.Model):
     duration = models.CharField(max_length=20)
     range = models.CharField(max_length=30)
     hasRitual = models.BooleanField()
+    types = (("Damage",'Damage'),('Healing','Healing'),('Utility','Utility'))
+    type = models.CharField(max_length=10,choices=types)
     requireConcentration = models.BooleanField()
     classes = models.ManyToManyField("Class")
     subclasses = models.ManyToManyField("Subclass")
