@@ -9,6 +9,7 @@ def recommendation(character): # Sustituir todo por character y llamar a cada pr
     charSubClass = character.subclass
     charLevel = character.level
     charClass = character.classCharacter
+    charSpells = character.spells
     charSpellsNames = character.spells.values_list('name',flat=True)
     
     if charSubClass:
@@ -17,15 +18,20 @@ def recommendation(character): # Sustituir todo por character y llamar a cada pr
         spells = Spell.objects.filter(Q(level__lte = charLevel), Q(classes__in = [Class.objects.get(name = charClass)])).distinct().exclude(name__in=charSpellsNames)
     
     
+    weightedSpells = []
+    
+    for spell in spells:
+        pass
+    
+    
+    
     
     
     
     setPrueba = set([])
     
-    
     for spell in spells:
         setPrueba.add(spell.duration)
         
-    
     for one in setPrueba:
         print(one)
