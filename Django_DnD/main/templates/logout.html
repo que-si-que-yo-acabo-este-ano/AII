@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang='es'>
-	<head>
-		Inicio de Sesion
-	</head>
-	<body>
-		{% if user.is_authenticated %}
-			Hi {{ user.username }}!
-			<p><a href="{% url 'logout' %}">logout</a></p>
-		{% endif %}
-	</body>
-</html>
+{% extends 'base.html' %}
+
+{% block encabezado %} <h1> Logout </h1> {% endblock %}
+
+{% block contenido %} 
+	{% if user.is_authenticated %}
+		Hi {{ user.username }}!
+		<p><a href="{% url 'logout' %}">logout</a></p>
+	{% endif %}
+{% endblock %}

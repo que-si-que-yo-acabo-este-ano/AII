@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='es'>
+	<head> 
+		<meta charset='utf-8'>
+		<title> DnDBuddy </title>
+		{% load static %}
+		<link rel='stylesheet' href='{% static "css/navigation.css" %}'>
+	</head>
+	<body>
+		<header>
+			{% block encabezado %}{% endblock %}
+		  	<nav>
+		  		<div id="navigation">
+			  		<ul>
+			  			<li><a href='/inicio'> Home </a></li>
+						<li><a href='/crearPersonaje'>New Character</a></li>
+						<li><a href='/mostrarHechizos'>Show all spells</a></li>
+						<li><a href='/personajeSeleccionado'>Select Character</a></li>
+					</ul>
+				</div>
+			</nav>
+		 </header>
+		 <section class=contenido>
+		 	{% block contenido %}{% endblock %}
+		 </section>
+		 <footer>
+		 	<p> Voluntary Work AII &copy;2019</p> 
+		 </footer>
+	</body>
+ </html>
