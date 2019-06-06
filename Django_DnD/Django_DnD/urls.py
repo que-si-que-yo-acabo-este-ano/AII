@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio/', views.inicio),
     path('', views.inicio),
-    path('crearPersonaje/', views.crearPersonaje),
+    path('crearPersonaje/', views.newCharacter),
     path('mostrarHechizos/', views.mostrarHechizos),
     path('personajeSeleccionado/', views.personajeSeleccionado),
     path('modificarStats/', views.modificarStats),
@@ -35,5 +35,5 @@ urlpatterns = [
     path('logout/',auth_views.LogoutView.as_view(template_name='logout.html')),
     re_path(r'^auth/',include(urls)),
     path('signup/', views.SignUp.as_view(success_url="/login"), name='signup'),
-    path('ajax/load-subclass/', views.load_subclass, name='ajax_load_subclass')
+#     path('ajax/load-subclass/', views.load_subclass, name='ajax_load_subclass')
 ]

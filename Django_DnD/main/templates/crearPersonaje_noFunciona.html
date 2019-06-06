@@ -12,7 +12,13 @@
   <form method="post" id="newCharacter" data-subclass-url="{% url 'ajax_load_subclass' %}" >
     {% csrf_token %}
     <table>
-      {{ form.as_table }}
+      {{ form.as_table }}      
+      <script>
+		function myFunction() {
+  			alert("form");
+			}
+	  </script>
+
     </table>
     <button type="submit"> Guardar </button>
   </form>
@@ -31,7 +37,8 @@
         },
         success: function (data) {
         	$("#id_subclass").html(data);
-        	alert(data);
+        	
+        	
         	
         }
       });
