@@ -11,3 +11,5 @@ class newCharacter(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['subclass'].queryset = Subclass.objects.none()
     
+class searchSpellByName(forms.Form):
+    name = forms.CharField(max_length=20)

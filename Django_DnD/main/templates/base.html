@@ -14,11 +14,13 @@
 			  		<ul>
 			  			<li><a href='/inicio'> Home </a></li>
 						<li><a href='/crearPersonaje'>New Character</a></li>
-						<li><a href='/mostrarHechizos'>Show all spells</a></li>
 						<li><a href='/personajeSeleccionado'>Select Character</a></li>
+						<li><a href='/mostrarHechizos'>Show all spells</a></li>
+						<li><a href='/searchSpell'>Search spell</a></li>
 					</ul>
 				</div>
 			</nav>
+			{% block navigation %}{% endblock %}
 		 </header>
 		 <section class=contenido>
 		 	{% block contenido %}{% endblock %}
