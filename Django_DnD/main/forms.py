@@ -58,5 +58,5 @@ class selectSpells(forms.ModelForm):
         model = Character
         fields =["spells"]
     
-
-        
+class searchSpellByName(forms.Form):
+    name = forms.CharField(max_length=20)

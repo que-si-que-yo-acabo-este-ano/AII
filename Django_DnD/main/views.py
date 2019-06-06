@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from main import forms
-from main.models import Subclass,Class
+from main.models import Subclass, Class, Character, Spell
+from main.cbrs import recommendation
 from django.http import HttpResponseRedirect
+from .forms import searchSpellByName
 from main import models
 from django.shortcuts import get_object_or_404
 
@@ -66,7 +68,8 @@ def selectSubclass(request,character_id):
     
     
 def mostrarHechizos(request):
-    return render(request,'mostrarHechizos.html')
+    spells = Spell.objects.all()
+    return render(request,'mostrarHechizos.html', {'spells':spells})
 
 def personajeSeleccionado(request):
     return render(request,'personajeSeleccionado.html')
@@ -74,10 +77,30 @@ def personajeSeleccionado(request):
 def modificarStats(request):
     return render(request,'modificarStats.html')
 
+def searchSpell(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = searchSpellByName(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            spellName = form.cleaned_data['name']
+            spells = Spell.objects.filter(name__icontains=spellName)
+            return render(request, 'searchSpell.html', {'form': form,'spellName':spellName,'spells':spells})
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = searchSpellByName()
+    return render(request,'searchSpell.html',{'form': form})
+
 def seleccionarHechizos(request):
     return render(request,'seleccionarHechizos.html')
 
 def recomendarHechizos(request):
+    recommendation(Character.objects.get(name='pruebaSpells'))
     return render(request,'recomendarHechizos.html')
 
 class SignUp(generic.CreateView):

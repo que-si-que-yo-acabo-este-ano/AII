@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 
-{% block encabezado %} <h1> Show Spells </h1> {% endblock %}
+{% block encabezado %} <h1> Search Spell </h1> {% endblock %}
 
 {% block contenido %} 
-	<h2>Spells</h2>
-		<ul>
+	<br>
+	<form method="post">
+	    {% csrf_token %}
+	    {{ form }}
+	    <input type="submit" value="Submit"><br>
+	    <h2>Coincidences from: {{spellName|capfirst}}</h2>
+	    <ul>
 		{% for spell in spells %}
 		  <li><strong>{{spell.name}}</strong>
 		  	<ul>
@@ -22,4 +27,5 @@
 		  <br>
 		{% endfor %}
 		</ul>
+	</form>
 {% endblock %}
