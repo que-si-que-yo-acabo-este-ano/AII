@@ -7,31 +7,66 @@ from django.db.models import Q
 
 def recommendation(character): # Sustituir todo por character y llamar a cada propiedad 
     charSubClass = character.subclass
-    charLevel = character.level
+    charMaxSpellLevel = character.level // 2
     charClass = character.classCharacter
-    charSpells = character.spells
+    charSpells = character.spells.all()
     charSpellsNames = character.spells.values_list('name',flat=True)
     
     if charSubClass:
-        spells = Spell.objects.filter(Q(level__lte = charLevel), Q(classes__in = [Class.objects.get(name = charClass)]) | Q(subclasses__in = [Subclass.objects.get(name = charSubClass)])).distinct().exclude(name__in=charSpellsNames)
+        spells = Spell.objects.filter(Q(level__lte = charMaxSpellLevel), Q(classes__in = [Class.objects.get(name = charClass)]) | Q(subclasses__in = [Subclass.objects.get(name = charSubClass)])).distinct().exclude(name__in=charSpellsNames)
     else:
-        spells = Spell.objects.filter(Q(level__lte = charLevel), Q(classes__in = [Class.objects.get(name = charClass)])).distinct().exclude(name__in=charSpellsNames)
+        spells = Spell.objects.filter(Q(level__lte = charMaxSpellLevel), Q(classes__in = [Class.objects.get(name = charClass)])).distinct().exclude(name__in=charSpellsNames)
     
     
     weightedSpells = []
     
     for spell in spells:
-        pass
-    
-    
-    
-    
-    
-    
-    setPrueba = set([])
-    
-    for spell in spells:
-        setPrueba.add(spell.duration)
+        total = len(charSpells)
+        duration = spell.duration
+        durationCount = 0
+        castingTime = spell.castingTime
+        castingTimeCount = 0
+        distance = spell.range
+        rangeCount = 0
+        spellType = spell.type
+        spellTypeCount = 0
+        levelWeight = 0
         
-    for one in setPrueba:
+        for known in charSpells:
+            testDuration = duration != known.duration
+            testCastingTime = castingTime != known.castingTime
+            testDistance = distance != known.range
+            testSpellType = spellType != known.type
+            if testDuration:
+                durationCount += 1
+            if testCastingTime:
+                castingTimeCount += 1
+            if testDistance:
+                rangeCount += 1
+            if testSpellType:
+                spellTypeCount += 1
+        
+        if spell.level == charMaxSpellLevel:
+            levelWeight = 1
+        elif (spell.level == charMaxSpellLevel-1):
+            levelWeight = 0.85
+        else:
+            levelWeight = 0.5
+            
+        
+        sim = (((durationCount/total)/3 + (castingTimeCount/total)/3 + (rangeCount/total)/3)*0.35 + (spellTypeCount/total)*0.5 + levelWeight*0.15)
+        
+        weightedSpells.append((spell.name,sim))
+    
+    
+    weightedSpells.sort(key= lambda x: x[1])
+    
+        
+    for one in weightedSpells:
         print(one)
+        
+        
+        
+        
+        
+        
