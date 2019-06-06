@@ -25,6 +25,8 @@ urlpatterns = [
     path('inicio/', views.inicio),
     path('', views.inicio),
     path('crearPersonaje/', views.newCharacter),
+    path('seleccionarSubclase/<int:character_id>', views.selectSubclass),
+    path('seleccionarHechizos/<int:character_id>', views.seleccionarHechizos),
     path('mostrarHechizos/', views.mostrarHechizos),
     path('personajeSeleccionado/', views.personajeSeleccionado),
     path('modificarStats/', views.modificarStats),

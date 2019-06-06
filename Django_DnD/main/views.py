@@ -2,11 +2,14 @@ from django.shortcuts import render
 from main import forms
 from main.models import Subclass,Class
 from django.http import HttpResponseRedirect
+from main import models
+from django.shortcuts import get_object_or_404
 
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.template.context_processors import request
+from numpy import character
 # Create your views here.
 
 def inicio(request):
@@ -31,16 +34,37 @@ def newCharacter(request):
     if request.method == 'POST':
         form = forms.newCharacter(request.POST)
         if form.is_valid():
-            form.save()
+#             nameClass = form.cleaned_data['classCharacter']
+#             subclasses = Subclass.objects.filter(fromClass__name = nameClass)
             
-            return HttpResponseRedirect('../')
+            character = form.save()
+            return HttpResponseRedirect("/seleccionarSubclase/"+ str(character.id))
     else:
         form = forms.newCharacter()
         
     return render(request,'crearPersonaje.html',{'form':form})
 
+def selectSubclass(request,character_id):
+    if request.method == 'POST':
+        character = get_object_or_404(models.Character, pk=character_id)
+        subclass = get_object_or_404(models.Subclass, pk= request.POST['subclass'])
+        character.subclass = subclass
+        character.save()
+        return HttpResponseRedirect('/seleccionarHechizos/' + str(character.id))
+    character = get_object_or_404(models.Character, pk=character_id)
+    
+    subclasses = Subclass.objects.filter(fromClass__name = character.classCharacter)
+    return render(request,'seleccionarSubclase.html',{'subclasses':subclasses,'character':character})
 
-
+# def selecSpells(request,character_id):
+#     if request.method == 'POST'
+#         print("meh")
+#     
+#     character = get_object_or_404(models.Character, pk=character_id)
+#     spells = models.Spell.objects.filter(subclasses == character.subclass)
+    
+    
+    
 def mostrarHechizos(request):
     return render(request,'mostrarHechizos.html')
 

@@ -47,13 +47,11 @@ from dataclasses import fields
 class newCharacter(forms.ModelForm):
     class Meta:
         model = Character
-        fields = ['name','classCharacter','race','level','strength','dexterity','constitution',
+        fields = ['user','name','classCharacter','race','level','strength','dexterity','constitution',
                   'intelligence','wisdom','charisma','maxHP','armorClass']
         
-class selectSubclass(forms.ModelForm):
-    class Meta:
-        model = Character
-        fields =["subclass"]
+class selectSubclass(forms.Form):
+    subclassSselected = forms.CharField(max_length=50)
         
 class selectSpells(forms.ModelForm):
     class Meta:
