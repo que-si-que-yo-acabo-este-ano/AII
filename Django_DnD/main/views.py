@@ -19,21 +19,6 @@ def inicio(request):
     characters = models.Character.objects.all()
     return render(request,'inicio.html',{'characters':characters})
 
-# def crearPersonaje_nofunciona(request):
-#     if request.method == 'POST':
-#         form = forms.newCharacter(request.POST)
-#         if form.is_valid():
-#             print("b")
-#             form.save()
-#             return HttpResponseRedirect('../')
-#     else:
-#         form = forms.newCharacter()       
-#     return render(request,'crearPersonaje.html',{'form':form})
-# def load_subclass(request):
-#     clas = request.GET.get('classCharacter')
-#     subclasses = Subclass.objects.filter(fromClass_id=clas).order_by('name')
-#     return render(request, 'hr/city_dropdown_list_subclass.html', {'subclasses': subclasses})
-
 def newCharacter(request):
     if request.method == 'POST':
         form = forms.newCharacter(request.POST)
@@ -59,7 +44,6 @@ def selectSubclass(request,character_id):
 def selecSpells(request,character_id):
     if request.method == 'POST':
         character = get_object_or_404(models.Character, pk=character_id)
-#         spell = get_object_or_404(models.Subclass, pk= request.POST['spell'])
         print("---------------")
         spellList = list()
         for spell in request.POST.getlist('spellss'):
@@ -88,24 +72,32 @@ def personajeSeleccionado(request,character_id):
     character = get_object_or_404(models.Character, pk=character_id)
     return render(request,'personajeSeleccionado.html/',{'character':character})
 
-def modificarStats(request):
-    return render(request,'modificarStats.html')
+def modificarStats(request,character_id):
+    if request.method == 'POST':
+        form = forms.modifyStats(request.POST)
+        if form.is_valid():
+            print(form)
+            character = get_object_or_404(models.Character, pk=character_id)
+            if form.cleaned_data['str'] != None : character.strength = form.cleaned_data['str']
+            if form.cleaned_data['dxt'] != None : character.dexterity = form.cleaned_data['dxt']
+            if form.cleaned_data['const'] != None : character.constitution = form.cleaned_data['const']
+            if form.cleaned_data['int'] != None : character.intelligence = form.cleaned_data['int']
+            if form.cleaned_data['wsd'] != None : character.wisdom = form.cleaned_data['wsd']
+            if form.cleaned_data['cha'] != None : character.charisma = form.cleaned_data['cha']
+            character.save()
+            return HttpResponseRedirect('../personajeSeleccionado/' + str(character_id))
+    else:
+        form = forms.modifyStats()
+    character = get_object_or_404(models.Character, pk=character_id)
+    return render(request,'modificarStats.html',{'form':form ,'character':character})
 
 def searchSpell(request):
-    # if this is a POST request we need to process the form data
     if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
         form = searchSpellByName(request.POST)
-        # check whether it's valid:
         if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
             spellName = form.cleaned_data['name']
             spells = Spell.objects.filter(name__icontains=spellName)
             return render(request, 'searchSpell.html', {'form': form,'spellName':spellName,'spells':spells})
-
-    # if a GET (or any other method) we'll create a blank form
     else:
         form = searchSpellByName()
     return render(request,'searchSpell.html',{'form': form})
