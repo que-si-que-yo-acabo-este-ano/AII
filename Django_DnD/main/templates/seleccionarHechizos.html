@@ -1,6 +1,22 @@
-{% extends 'base.html' %}
-
-{% block encabezado %} <h1> Select Spells </h1> {% endblock %}
-
-{% block contenido %} 
+<!DOCTYPE html>
+<html lang='es'>
+<header>
+  	<nav>
+  		<ul>
+			<li><a href='/inicio'>Inicio</a></li>			
+		</ul>
+	</nav>
+ </header>
+{% block content %}
+<form method='post'>
+	{% csrf_token %}
+	<select multiple="multiple" name="spellss">
+	{% for spell in spells %}
+    	<option  value="{{ spell.name }}">{{ spell.name }}</option>
+	{% endfor %}
+	</select>
+	
+	<button type="submit"> Guardar </button> 
+</form>
 {% endblock %}
+</html>

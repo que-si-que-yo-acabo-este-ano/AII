@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from .forms import searchSpellByName
 from main import models
 from django.shortcuts import get_object_or_404
+from django.db.models import Q
 
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
@@ -15,7 +16,8 @@ from numpy import character
 # Create your views here.
 
 def inicio(request):
-    return render(request,'inicio.html')
+    characters = models.Character.objects.all()
+    return render(request,'inicio.html',{'characters':characters})
 
 # def crearPersonaje_nofunciona(request):
 #     if request.method == 'POST':
@@ -35,10 +37,7 @@ def inicio(request):
 def newCharacter(request):
     if request.method == 'POST':
         form = forms.newCharacter(request.POST)
-        if form.is_valid():
-#             nameClass = form.cleaned_data['classCharacter']
-#             subclasses = Subclass.objects.filter(fromClass__name = nameClass)
-            
+        if form.is_valid():         
             character = form.save()
             return HttpResponseRedirect("/seleccionarSubclase/"+ str(character.id))
     else:
@@ -54,18 +53,32 @@ def selectSubclass(request,character_id):
         character.save()
         return HttpResponseRedirect('/seleccionarHechizos/' + str(character.id))
     character = get_object_or_404(models.Character, pk=character_id)
-    
     subclasses = Subclass.objects.filter(fromClass__name = character.classCharacter)
     return render(request,'seleccionarSubclase.html',{'subclasses':subclasses,'character':character})
 
-# def selecSpells(request,character_id):
-#     if request.method == 'POST'
-#         print("meh")
-#     
-#     character = get_object_or_404(models.Character, pk=character_id)
-#     spells = models.Spell.objects.filter(subclasses == character.subclass)
+def selecSpells(request,character_id):
+    if request.method == 'POST':
+        character = get_object_or_404(models.Character, pk=character_id)
+#         spell = get_object_or_404(models.Subclass, pk= request.POST['spell'])
+        print("---------------")
+        spellList = list()
+        for spell in request.POST.getlist('spellss'):
+            spel = get_object_or_404(models.Spell, pk=spell )
+            spellList.append(spel)
+        character.spells.add(*spellList)
+        character.save()
+        return HttpResponseRedirect("../")
+    character = get_object_or_404(models.Character, pk=character_id)
+    charSubClass = character.subclass
+    charMaxSpellLevel = character.level // 2
+    charClass = character.classCharacter
+    charSpellsNames = character.spells.values_list('name',flat=True)
+    if charSubClass:
+        spells = Spell.objects.filter(Q(level__lte = charMaxSpellLevel), Q(classes__in = [Class.objects.get(name = charClass)]) | Q(subclasses__in = [Subclass.objects.get(name = charSubClass)])).distinct()
+    else:
+        spells = Spell.objects.filter(Q(level__lte = charMaxSpellLevel), Q(classes__in = [Class.objects.get(name = charClass)])).distinct()
     
-    
+    return render(request,'seleccionarHechizos.html',{'spells':spells,'character':character})
     
 def mostrarHechizos(request):
     spells = Spell.objects.all()

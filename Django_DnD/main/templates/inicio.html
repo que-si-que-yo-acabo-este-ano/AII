@@ -6,6 +6,13 @@
 	{% if user.is_authenticated %}
 		<br>
 		Hi {{ user.username }}!
+		<p>
+		{% for character in characters %}
+			{%if character.user.username == user.username %}
+				<li> {{character.name}} </li>
+			{% endif %}    		
+		{% endfor %}
+		</p>
 		<p><a href="{% url 'logout' %}">logout</a></p>
 	{% else %}
 		<p>You are not logged in</p>
