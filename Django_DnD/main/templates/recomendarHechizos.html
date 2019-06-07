@@ -4,13 +4,7 @@
 
 {% block contenido %} 
 	<br>
-	<form method="post">
-	    {% csrf_token %}
-	    {{ form }}
-	    <input type="submit" value="Submit"><br>
-	    {% if spells %}
-	    <h2>Coincidences from: {{characterName|capfirst}}</h2>
-	    {% endif %}
+	    <h2>Character: {{characterName|capfirst}}</h2>
 	    <ul>
 		{% for spell in spells %}
 		  <li><strong>{{spell.0.name}}</strong>
@@ -29,5 +23,4 @@
 		  <br>
 		{% endfor %}
 		</ul>
-	</form>
 {% endblock %}

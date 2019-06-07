@@ -34,7 +34,7 @@ urlpatterns = [
     path('modificarStats/<int:character_id>', views.modificarStats),
     path('personajeSeleccionado/', views.personajeSeleccionado),
     path('seleccionarHechizos/', views.seleccionarHechizos),
-    path('recomendarHechizos/', views.recomendarHechizos),
+    path('recomendarHechizos/<int:character_id>', views.recomendarHechizos),
     path('login/',auth_views.LoginView.as_view(template_name='login.html')),
     path('logout/',auth_views.LogoutView.as_view(template_name='logout.html')),
     re_path(r'^auth/',include(urls)),
