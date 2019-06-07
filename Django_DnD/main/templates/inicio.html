@@ -9,7 +9,7 @@
 		<p>
 		{% for character in characters %}
 			{%if character.user.username == user.username %}
-				<li> {{character.name}} </li>
+				<li href="{% url 'main.views.personajeSeleccionado' character_id=character.id %}"> {{character.name}} </li>
 			{% endif %}    		
 		{% endfor %}
 		</p>

@@ -84,8 +84,8 @@ def mostrarHechizos(request):
     spells = Spell.objects.all()
     return render(request,'mostrarHechizos.html', {'spells':spells})
 
-def personajeSeleccionado(request):
-    return render(request,'personajeSeleccionado.html')
+def personajeSeleccionado(request,character_id):
+    return render(request,'personajeSeleccionado.html/' + str(character_id))
 
 def modificarStats(request):
     return render(request,'modificarStats.html')
