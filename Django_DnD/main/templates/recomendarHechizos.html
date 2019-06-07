@@ -3,4 +3,31 @@
 {% block encabezado %} <h1> Recommend Spells </h1> {% endblock %}
 
 {% block contenido %} 
+	<br>
+	<form method="post">
+	    {% csrf_token %}
+	    {{ form }}
+	    <input type="submit" value="Submit"><br>
+	    {% if spells %}
+	    <h2>Coincidences from: {{characterName|capfirst}}</h2>
+	    {% endif %}
+	    <ul>
+		{% for spell in spells %}
+		  <li><strong>{{spell.0.name}}</strong>
+		  	<ul>
+		  		<li>Level: {{spell.0.level}}</li>
+		  		<li>School: {{spell.0.school}}</li>
+		  		<li>Casting time: {{spell.0.castingTime}}</li>
+		  		<li>Components: {{spell.0.components}}</li>
+		  		<li>Duration: {{spell.0.duration}}</li>
+		  		<li>Has Ritual: {{spell.0.hasRitual}}</li>
+		  		<li>Require concentration: {{spell.0.requireConcentration}}</li>
+		  		<li>Type: {{spell.0.type}}</li>
+		  		<li>Description: {{spell.0.description}}</li>
+		  	</ul>	
+		  </li>
+		  <br>
+		{% endfor %}
+		</ul>
+	</form>
 {% endblock %}

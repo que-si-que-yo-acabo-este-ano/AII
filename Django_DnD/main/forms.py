@@ -60,3 +60,6 @@ class selectSpells(forms.ModelForm):
     
 class searchSpellByName(forms.Form):
     name = forms.CharField(max_length=20)
+    
+class recommendSpell(forms.Form):
+    name = forms.CharField(max_length=20)

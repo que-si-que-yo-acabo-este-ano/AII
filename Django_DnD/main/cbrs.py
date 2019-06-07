@@ -7,7 +7,7 @@ from django.db.models import Q
 
 def recommendation(character): # Sustituir todo por character y llamar a cada propiedad 
     charSubClass = character.subclass
-    charMaxSpellLevel = character.level // 2
+    charMaxSpellLevel = character.level+1 // 2
     charClass = character.classCharacter
     charSpells = character.spells.all()
     charSpellsNames = character.spells.values_list('name',flat=True)
@@ -56,16 +56,13 @@ def recommendation(character): # Sustituir todo por character y llamar a cada pr
         
         sim = (((durationCount/total)/3 + (castingTimeCount/total)/3 + (rangeCount/total)/3)*0.35 + (spellTypeCount/total)*0.5 + levelWeight*0.15)
         
-        weightedSpells.append((spell.name,sim))
+        weightedSpells.append((spell,sim))
     
     
-    weightedSpells.sort(key= lambda x: x[1])
+    weightedSpells.sort(key= lambda x: -x[1])
+    print(weightedSpells)
+    return weightedSpells[:5]
     
-        
-    for one in weightedSpells:
-        print(one)
-        
-        
         
         
         

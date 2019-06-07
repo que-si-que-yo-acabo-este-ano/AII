@@ -114,8 +114,24 @@ def seleccionarHechizos(request):
     return render(request,'seleccionarHechizos.html')
 
 def recomendarHechizos(request):
-    recommendation(Character.objects.get(name='pruebaSpells'))
-    return render(request,'recomendarHechizos.html')
+ # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = searchSpellByName(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            characterName = form.cleaned_data['name']
+            spells = recommendation(Character.objects.get(name="Jose"))
+            print(spells)
+            return render(request, 'recomendarHechizos.html', {'form': form,'characterName':characterName,'spells':spells})
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = searchSpellByName()
+    return render(request,'recomendarHechizos.html',{'form': form})
 
 class SignUp(generic.CreateView):
     form_class = UserCreationForm

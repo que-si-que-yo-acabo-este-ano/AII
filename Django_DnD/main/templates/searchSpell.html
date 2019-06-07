@@ -8,7 +8,9 @@
 	    {% csrf_token %}
 	    {{ form }}
 	    <input type="submit" value="Submit"><br>
+	    {% if spells %}
 	    <h2>Coincidences from: {{spellName|capfirst}}</h2>
+	    {% endif %}
 	    <ul>
 		{% for spell in spells %}
 		  <li><strong>{{spell.name}}</strong>
