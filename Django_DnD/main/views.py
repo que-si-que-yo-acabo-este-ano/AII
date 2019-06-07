@@ -85,7 +85,8 @@ def mostrarHechizos(request):
     return render(request,'mostrarHechizos.html', {'spells':spells})
 
 def personajeSeleccionado(request,character_id):
-    return render(request,'personajeSeleccionado.html/' + str(character_id))
+    character = get_object_or_404(models.Character, pk=character_id)
+    return render(request,'personajeSeleccionado.html/',{'character':character})
 
 def modificarStats(request):
     return render(request,'modificarStats.html')
