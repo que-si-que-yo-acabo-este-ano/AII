@@ -5,16 +5,43 @@
 {% block navigation %} 
 	<nav>
 		<ul>
-			<li><a href='/modificarStats'>Modify Stats</a></li>
+			<li><a href="/modificarStats/{{character.id}}"> Modify Stats</a></li>
 			<li><a href='/seleccionarHechizos'>Select Spells</a></li>
 			<li><a href='/recomendarHechizos'>Recommend Spells</a></li>
 		</ul>
 	</nav>
 	
+	<ul>
 	<p>
-		<li> {{character.name}} </li>
-		<li> {{character.classCharacter}} </li>
-		<li> {{character.subclass}} </li>
-	</p>		
+		<li><strong> Name: </strong>{{character.name}} -- <strong>Level: </strong>{{character.level}} </li>
+		<li><strong> Class: </strong>{{character.classCharacter}} -- <strong>Subclass: </strong>{{character.subclass}}</li>
+	</p>
+	
+	<h2><strong> Stadistics </strong></h2>
+	<li> Strength: {{character.strength}} </li>
+	<li> Dexterity: {{character.dexterity}} </li>
+	<li> Constitution: {{character.constitution}} </li>
+	<li> Intelligence: {{character.intelligence}} </li>
+	<li> Wisdom: {{character.wisdom}} </li>
+	<li> Charisma: {{character.charisma}} </li>
+	
+	
+	<h2><strong> Spells </strong></h2>
+	{% for spell in character.spells.all %}
+		<li><strong>{{spell.name}}</strong>
+		<ul>
+		<li>Level: {{spell.level}}</li>
+  		<li>School: {{spell.school}}</li>
+  		<li>Casting time: {{spell.castingTime}}</li>
+  		<li>Components: {{spell.components}}</li>
+  		<li>Duration: {{spell.duration}}</li>
+  		<li>Has Ritual: {{spell.hasRitual}}</li>
+  		<li>Require concentration: {{spell.requireConcentration}}</li>
+  		<li>Type: {{spell.type}}</li>
+  		<li>Description: {{spell.description}}</li>
+  		</ul>
+		</li>
+	{% endfor %}
+	</ul>	
 		
 {% endblock %}

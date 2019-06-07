@@ -31,7 +31,7 @@ urlpatterns = [
     path('mostrarHechizos/', views.mostrarHechizos),
     path('searchSpell/',views.searchSpell),
     path('personajeSeleccionado/', views.personajeSeleccionado),
-    path('modificarStats/', views.modificarStats),
+    path('modificarStats/<int:character_id>', views.modificarStats),
     path('personajeSeleccionado/', views.personajeSeleccionado),
     path('seleccionarHechizos/', views.seleccionarHechizos),
     path('recomendarHechizos/', views.recomendarHechizos),

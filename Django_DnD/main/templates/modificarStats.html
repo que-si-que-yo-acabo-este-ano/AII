@@ -1,7 +1,8 @@
-{% extends 'personajeSeleccionado.html' %}
-
 {% block encabezado %} <h1> Modify Stats </h1> {% endblock %}
-
 {% block contenido %} 
-
+<form method='post'>
+	{% csrf_token %}
+	{{form.as_p}}
+	<button type="submit"> Guardar </button> 
+</form>
 {% endblock %}
