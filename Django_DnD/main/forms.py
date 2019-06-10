@@ -10,7 +10,7 @@ class newCharacter(forms.ModelForm):
         model = Character
         fields = ['user','name','classCharacter','race','level','strength','dexterity','constitution',
                   'intelligence','wisdom','charisma','maxHP','armorClass']
-        
+            
 class selectSubclass(forms.Form):
     subclassSselected = forms.CharField(max_length=50)
         
