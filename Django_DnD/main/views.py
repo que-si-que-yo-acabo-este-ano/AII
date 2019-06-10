@@ -107,8 +107,11 @@ def seleccionarHechizos(request):
 
 def recomendarHechizos(request,character_id):
     character = get_object_or_404(models.Character,pk=character_id)
-    spells = recommendation(character)
-    return render(request,'recomendarHechizos.html',{'spells': spells,'characterName':character.name})
+    spells = []
+    if character.spells.exists():
+        print("======",character.spells)
+        spells = recommendation(character)
+    return render(request,'recomendarHechizos.html',{'spells': spells,'characterName':character.name,'character':character})
 
 class SignUp(generic.CreateView):
     form_class = UserCreationForm
