@@ -23,6 +23,7 @@ from django.urls.conf import re_path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio/', views.inicio),
+    path('seleccionarNuevosHechizos/<int:character_id>', views.seleccionarNuevosHechizos),
     path('', views.inicio),
     path('crearPersonaje/', views.newCharacter),
     path('seleccionarSubclase/<int:character_id>', views.selectSubclass),
@@ -33,7 +34,6 @@ urlpatterns = [
     path('personajeSeleccionado/', views.personajeSeleccionado),
     path('modificarStats/<int:character_id>', views.modificarStats),
     path('personajeSeleccionado/', views.personajeSeleccionado),
-    path('seleccionarHechizos/', views.seleccionarHechizos),
     path('recomendarHechizos/<int:character_id>', views.recomendarHechizos),
     path('login/',auth_views.LoginView.as_view(template_name='login.html')),
     path('logout/',auth_views.LogoutView.as_view(template_name='logout.html')),
