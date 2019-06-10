@@ -102,8 +102,31 @@ def searchSpell(request):
         form = searchSpellByName()
     return render(request,'searchSpell.html',{'form': form})
 
-def seleccionarHechizos(request):
-    return render(request,'seleccionarHechizos.html')
+def seleccionarNuevosHechizos(request,character_id):
+    if request.method == 'POST':
+        character = get_object_or_404(models.Character, pk=character_id)
+        print("---------------")
+        spellList = list()
+        for spell in request.POST.getlist('spellss'):
+            spel = get_object_or_404(models.Spell, pk=spell )
+            spellList.append(spel)
+        character.spells.add(*spellList)
+        character.save()
+        return HttpResponseRedirect("../personajeSeleccionado/" + str(character_id))
+    character = get_object_or_404(models.Character, pk=character_id)
+    charSubClass = character.subclass
+    charMaxSpellLevel = character.level // 2
+    charClass = character.classCharacter
+    charSpellsNames = character.spells.values_list('name',flat=True)
+    if charSubClass:
+        spells = Spell.objects.filter(Q(level__lte = charMaxSpellLevel), Q(classes__in = [Class.objects.get(name = charClass)]) | Q(subclasses__in = [Subclass.objects.get(name = charSubClass)])).distinct()
+    else:
+        spells = Spell.objects.filter(Q(level__lte = charMaxSpellLevel), Q(classes__in = [Class.objects.get(name = charClass)])).distinct()
+    spellsNoSelected = []
+    for spell in spells:
+        if not spell in character.spells.all(): spellsNoSelected.append(spell)
+        
+    return render(request,'seleccionarNuevosHechizos.html',{'spells':spellsNoSelected,'character':character})
 
 def recomendarHechizos(request,character_id):
     character = get_object_or_404(models.Character,pk=character_id)
