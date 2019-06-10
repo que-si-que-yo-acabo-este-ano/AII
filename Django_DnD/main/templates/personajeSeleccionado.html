@@ -5,6 +5,7 @@
 {% block navigation %} 
 	<nav>
 		<ul>
+			<li><a href="/personajeSeleccionado/{{character.id}}"> Selected Character</a></li>
 			<li><a href="/modificarStats/{{character.id}}"> Modify Stats</a></li>
 			<li><a href='/seleccionarNuevosHechizos/{{character.id}}'>Select Spells</a></li>
 			<li><a href='/recomendarHechizos/{{character.id}}'>Recommend Spells</a></li>
@@ -16,8 +17,11 @@
 		<li><strong> Name: </strong>{{character.name}} -- <strong>Level: </strong>{{character.level}} </li>
 		<li><strong> Class: </strong>{{character.classCharacter}} -- <strong>Subclass: </strong>{{character.subclass}}</li>
 	</p>
-	
-	<h2><strong> Stadistics </strong></h2>
+		
+{% endblock %}
+
+{% block contenido %} 
+<h2><strong> Stadistics </strong></h2>
 	<li> Strength: {{character.strength}} </li>
 	<li> Dexterity: {{character.dexterity}} </li>
 	<li> Constitution: {{character.constitution}} </li>
@@ -43,5 +47,4 @@
 		</li>
 	{% endfor %}
 	</ul>	
-		
 {% endblock %}
