@@ -4,13 +4,14 @@ from itertools import chain
 from dataclasses import fields
 from whoosh.util.numeric import max_value
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.contrib.auth.models import User
 
 class newCharacter(forms.ModelForm):
     class Meta:
         model = Character
-        fields = ['user','name','classCharacter','race','level','strength','dexterity','constitution',
+        fields = ['name','classCharacter','race','level','strength','dexterity','constitution',
                   'intelligence','wisdom','charisma','maxHP','armorClass']
-            
+        
 class selectSubclass(forms.Form):
     subclassSselected = forms.CharField(max_length=50)
         

@@ -21,10 +21,11 @@ def inicio(request):
 
 def newCharacter(request):
     if request.method == 'POST':
-        form = forms.newCharacter(request.user, request.POST)
-        print(request.user)
+        form = forms.newCharacter(request.POST)
         if form.is_valid():         
-            character = form.save()
+            character = form.save(commit=False)
+            character.user = request.user
+            character.save()
             return HttpResponseRedirect("/seleccionarSubclase/"+ str(character.id))
     else:
         form = forms.newCharacter()

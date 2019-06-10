@@ -2,7 +2,10 @@
 
 {% block encabezado %} <h1> Select Spells </h1> {% endblock %}
 
+{% block navigation %}{% endblock %}
+
 {% block contenido %}
+<br>
 <form method='post'>
 	{% csrf_token %}
 	<select multiple="multiple" name="spellss">
