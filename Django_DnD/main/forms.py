@@ -2,7 +2,6 @@ from django import forms
 from .models import Character,Subclass   
 from itertools import chain
 from dataclasses import fields
-from whoosh.util.numeric import max_value
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth.models import User
 
