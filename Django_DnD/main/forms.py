@@ -15,6 +15,7 @@ class selectSubclass(forms.Form):
     subclassSselected = forms.CharField(max_length=50)
         
 class modifyStats(forms.Form):
+    lvl = forms.IntegerField(required = False,validators=[MinValueValidator(0)])
     str = forms.IntegerField(required = False,validators=[MinValueValidator(0), MaxValueValidator(20)])
     dxt = forms.IntegerField(required = False,validators=[MinValueValidator(0), MaxValueValidator(20)])
     const = forms.IntegerField(required = False,validators=[MinValueValidator(0), MaxValueValidator(20)])

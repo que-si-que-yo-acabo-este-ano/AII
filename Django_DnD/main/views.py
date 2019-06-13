@@ -7,7 +7,6 @@ from .forms import searchSpellByName
 from main import models
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
-
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
@@ -82,6 +81,7 @@ def modificarStats(request,character_id):
         form = forms.modifyStats(request.POST)
         if form.is_valid():
             character = get_object_or_404(models.Character, pk=character_id)
+            if form.cleaned_data['lvl'] != None : character.level = form.cleaned_data['lvl']
             if form.cleaned_data['str'] != None : character.strength = form.cleaned_data['str']
             if form.cleaned_data['dxt'] != None : character.dexterity = form.cleaned_data['dxt']
             if form.cleaned_data['const'] != None : character.constitution = form.cleaned_data['const']
@@ -130,6 +130,21 @@ def seleccionarNuevosHechizos(request,character_id):
         if not spell in character.spells.all(): spellsNoSelected.append(spell)
         
     return render(request,'seleccionarNuevosHechizos.html',{'spells':spellsNoSelected,'character':character})
+
+def deseleccionarHechizos(request,character_id):
+    if request.method == 'POST':
+        character = get_object_or_404(models.Character,pk=character_id)
+        spellList = list()
+        for spell in request.POST.getlist('spells'):
+            hechizo = get_object_or_404(models.Spell,pk=spell)
+            spellList.append(hechizo)
+        character.spells.remove(*spellList)
+        character.save()
+        return HttpResponseRedirect("../personajeSeleccionado/" + str(character_id))
+    character = get_object_or_404(models.Character,pk=character_id)
+    spells = character.spells.all()
+    return render(request,'deseleccionarHechizos.html',{'spells':spells,'character':character})
+
 
 def recomendarHechizos(request,character_id):
     character = get_object_or_404(models.Character,pk=character_id)
