@@ -12,7 +12,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.template.context_processors import request
-from numpy import character
 # Create your views here.
 
 def inicio(request):
@@ -26,7 +25,12 @@ def newCharacter(request):
             character = form.save(commit=False)
             character.user = request.user
             character.save()
-            return HttpResponseRedirect("/seleccionarSubclase/"+ str(character.id))
+            subclasses = list(Subclass.objects.values_list("fromClass").distinct())
+            subclassesAvailables = [subclase[0] for subclase in subclasses]
+            if character.classCharacter.name in subclassesAvailables:
+                return HttpResponseRedirect("/seleccionarSubclase/"+ str(character.id))
+            else:
+                return HttpResponseRedirect("/seleccionarHechizos/"+ str(character.id))
     else:
         form = forms.newCharacter()
         
@@ -46,7 +50,6 @@ def selectSubclass(request,character_id):
 def selecSpells(request,character_id):
     if request.method == 'POST':
         character = get_object_or_404(models.Character, pk=character_id)
-        print("---------------")
         spellList = list()
         for spell in request.POST.getlist('spellss'):
             spel = get_object_or_404(models.Spell, pk=spell )
@@ -78,7 +81,6 @@ def modificarStats(request,character_id):
     if request.method == 'POST':
         form = forms.modifyStats(request.POST)
         if form.is_valid():
-            print(form)
             character = get_object_or_404(models.Character, pk=character_id)
             if form.cleaned_data['str'] != None : character.strength = form.cleaned_data['str']
             if form.cleaned_data['dxt'] != None : character.dexterity = form.cleaned_data['dxt']
@@ -107,7 +109,6 @@ def searchSpell(request):
 def seleccionarNuevosHechizos(request,character_id):
     if request.method == 'POST':
         character = get_object_or_404(models.Character, pk=character_id)
-        print("---------------")
         spellList = list()
         for spell in request.POST.getlist('spellss'):
             spel = get_object_or_404(models.Spell, pk=spell )
@@ -134,7 +135,6 @@ def recomendarHechizos(request,character_id):
     character = get_object_or_404(models.Character,pk=character_id)
     spells = []
     if character.spells.exists():
-        print("======",character.spells)
         spells = recommendation(character)
     return render(request,'recomendarHechizos.html',{'spells': spells,'characterName':character.name,'character':character})
 
