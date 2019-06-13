@@ -35,15 +35,16 @@
 	{% for spell in character.spells.all %}
 		<li><strong>{{spell.name}}</strong>
 		<ul>
-		<li>Level: {{spell.level}}</li>
-  		<li>School: {{spell.school}}</li>
-  		<li>Casting time: {{spell.castingTime}}</li>
-  		<li>Components: {{spell.components}}</li>
-  		<li>Duration: {{spell.duration}}</li>
-  		<li>Has Ritual: {{spell.hasRitual}}</li>
-  		<li>Require concentration: {{spell.requireConcentration}}</li>
-  		<li>Type: {{spell.type}}</li>
-  		<li>Description: {{spell.description}}</li>
+		  	<li>Level: {{spell.level}}</li>
+		  	<li>School: {{spell.school}}</li>
+		  	<li>Casting time: {{spell.castingTime}}</li>
+			<li>Duration: {{spell.duration}}</li>
+	  		<li>Range: {{spell.range}}</li>
+	  		<li>Components: {{spell.components}}</li>
+	  		<li>Has Ritual: {{spell.hasRitual}}</li>
+	  		<li>Require concentration: {{spell.requireConcentration}}</li>
+	  		<li>Type: {{spell.type}}</li>
+	  		<li>Description: {{spell.description}}</li>
   		</ul>
 		</li>
 	{% endfor %}

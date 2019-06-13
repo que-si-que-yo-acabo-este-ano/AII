@@ -7,7 +7,7 @@ from django.db.models import Q
 
 def recommendation(character): # Sustituir todo por character y llamar a cada propiedad 
     charSubClass = character.subclass
-    charMaxSpellLevel = character.level+1 // 2
+    charMaxSpellLevel = (character.level+1) // 2
     charClass = character.classCharacter
     charSpells = character.spells.all()
     charSpellsNames = character.spells.values_list('name',flat=True)

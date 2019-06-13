@@ -58,7 +58,7 @@ def selecSpells(request,character_id):
         return HttpResponseRedirect("../")
     character = get_object_or_404(models.Character, pk=character_id)
     charSubClass = character.subclass
-    charMaxSpellLevel = character.level // 2
+    charMaxSpellLevel = (character.level+1) // 2
     charClass = character.classCharacter
     charSpellsNames = character.spells.values_list('name',flat=True)
     if charSubClass:
@@ -118,7 +118,7 @@ def seleccionarNuevosHechizos(request,character_id):
         return HttpResponseRedirect("../personajeSeleccionado/" + str(character_id))
     character = get_object_or_404(models.Character, pk=character_id)
     charSubClass = character.subclass
-    charMaxSpellLevel = character.level // 2
+    charMaxSpellLevel = (character.level+1) // 2
     charClass = character.classCharacter
     charSpellsNames = character.spells.values_list('name',flat=True)
     if charSubClass:
